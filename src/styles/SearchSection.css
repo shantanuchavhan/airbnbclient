@@ -1,0 +1,128 @@
+.Search-section{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 80px;
+    height: 130px;
+    box-shadow: 0px 16px 8px rgba(0, 0, 0, 0.2); 
+    padding-left: 3px;
+    z-index: 1000;
+    text-align: center;
+    position: fixed;
+  }
+
+  .Search-section form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+    border-radius: 50%;
+  
+    border-radius: 42px;
+    padding: 0;
+   
+    
+    
+  }
+
+  .Search-section form label{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding:12px 40px;
+    padding-left: 48px;
+  
+    
+  }
+
+  .Search-section form input{
+    border: none;
+    background-color: #edeaea;
+    width: 100px;
+   
+    color: gray;
+    
+  }
+
+  .section-1{
+    padding-right: 240px;
+  }
+ 
+  .section-2{
+    display: flex;
+  }
+  .section-4{
+    display: flex;
+    gap: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+  .Search-section form button{
+    padding: 16px 20px;
+    border-radius: 30px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    margin-right: 8px;
+    
+
+  }
+  .Submitbutton{
+    padding: 19px;
+    background-color: rgb(252, 252, 252);
+    
+    overflow: hidden;
+    border-radius:  0 48px 48px 0px;
+  }
+  .bar{
+    font-weight: 100;
+    color: #a5a1a1;
+  }
+  
+
+
+.Active{
+  background-color: rgb(252, 252, 252);
+  border-radius: 42px;
+  box-shadow:8px 8px 8px 8px rgba(0, 0, 0, 0.1);;
+  transition: 0.4s ease ;
+}
+
+.Active div input{
+  color: gray;
+  background-color: white;
+  border: none;
+}
+
+.Active .bar{
+  display: none;
+  color: rgb(186, 186, 186);
+}
+
+
+.faint{
+  color: rgb(114, 114, 114);
+  font-size: 14px;
+}
+
+.GuestActive{
+  background-color: rgb(252, 252, 252);
+  border-radius:  48px 0 0 48px;
+  padding: 26px 16px;
+  box-shadow:12px 12px 12px 12px rgba(0, 0, 0, 0.1);;
+  transition: 0.1s ease ;
+
+}
+
+.GuestBar{
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  top: 10;
+}

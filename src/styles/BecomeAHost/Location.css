@@ -1,0 +1,24 @@
+
+
+.map-container {
+    position: relative;
+    display: inline-block; /* Display the input and image inline */
+  }
+  
+  .mapImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .locationInput {
+    position: absolute;
+    top: 48px; /* Adjust this value to position the input vertically */
+    left: 48px; /* Adjust this value to position the input horizontally */
+    width: 600px; /* Set the width of the input as needed */
+    padding:24px 32px 24px 56px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    z-index: 100;
+    box-shadow: 8px 10px 80px 1px;
+  }
+  

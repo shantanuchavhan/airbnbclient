@@ -1,0 +1,37 @@
+a {
+  text-decoration: none;
+}
+.fillRatingSvg svg {
+  width: 10px;   /* Adjust the width to your desired size */
+  height: 10px;  /* Adjust the height to your desired size */
+  fill: yellow;  /* Set the color for the filled star */
+}
+
+
+
+
+
+.Image-Detail{
+    padding: 16px;
+    color: rgb(26, 25, 25);
+    text-align: start;
+  }
+  
+  .Image-Detail img{
+    height: 280px;
+    width: 298px;
+    border-radius: 16px;
+    background-color: antiquewhite;
+  }
+  
+  .gray{
+    color: rgb(117, 115, 115);
+  }
+  
+  .Image-Detail h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    
+  }
+
+ 

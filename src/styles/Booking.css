@@ -1,0 +1,85 @@
+
+.flex-justifyBetween{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.gray{
+    color: rgb(86, 86, 86);
+}
+.lightGray{
+    color: rgb(158, 158, 158);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    width: 98%;
+    padding: 8px 16px;
+    justify-content: space-between;
+    
+  }
+.BookingOverviewCard{
+    margin-top: 120px;
+    width: 440px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    padding-bottom:0 ;
+    border-radius: 16px;
+}
+.BookingOverviewCard__roomDetails{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+}
+.BookingOverviewCard__roomDetails__img{
+    width: 136px;
+    height: 120px;
+    border: 0.8px solid gray;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.BookingOverviewCard__roomDetails__img img{
+    width: 136px;
+    height: 136px;
+    object-fit: cover;
+}
+
+
+.BookingOverviewCard__roomPriceDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.BottomBorder{
+    border-bottom: 1px solid rgb(185, 182, 182);
+    padding-bottom:12px ;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.BookingPage__main{
+    display: flex;
+    margin-top: 120px;
+}
+
+

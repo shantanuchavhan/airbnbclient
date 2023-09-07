@@ -1,0 +1,46 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    border: 2px solid rgb(218, 217, 217);
+    padding: 0 20px;
+    
+  }
+  
+  footer .links{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+  }
+  
+  footer .links a{
+    color: gray;
+  }
+  
+  footer .selectors{
+    display: flex;
+    align-items: center;
+    color: gray;
+    gap: 16px;
+   
+  }
+  
+  footer .selectors .lang{
+    display: flex;
+    gap: 16px;
+  }
+  
+  footer .selectors .lang svg{
+    
+    width: 24px;
+    height: 24px;
+  }
+
+  .PublishListing{
+    background-color: rgb(234, 42, 93);
+    padding: 8px 16px;
+    color: white;
+    border-radius: 10px ;
+  }

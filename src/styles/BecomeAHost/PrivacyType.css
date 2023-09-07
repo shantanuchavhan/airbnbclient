@@ -1,0 +1,39 @@
+
+p{
+    margin-top: 2px;
+}
+
+
+.Privacy-Options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Privacy-Options__Option{
+    
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 8px 16px;
+    padding-top: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 0.8px solid rgb(197, 197, 197);
+}
+.roomCategoryimg{
+    width: 56px;
+    padding-bottom: 16px;
+}
+
+
+
+.Options__Option__desc{
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.selected {
+    border: 3px solid #0f0f0f; /* Adjust the color and size as needed */
+}

@@ -1,0 +1,61 @@
+.discount p{
+    margin-bottom: 0;
+}
+.discounts{
+    display: flex;
+    flex-direction: column;
+  
+    gap: 32px;
+}
+
+.discount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+    border: 1px solid rgb(214, 213, 213);
+    padding: 32px 40px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+}
+
+
+.discount__features{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+}
+
+.discount__checked{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+}
+
+.discount__checked svg{
+    padding: 2px;
+    background-color: black;
+    color: white;
+}
+
+
+.discount__features__percent{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    gap: 4px;
+
+}
+
+.discount__features__percent__input{
+    border:1px solid gray;
+    padding: 2px ;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+}

@@ -1,0 +1,12 @@
+/* CommonTransition.css */
+
+/* Define a fade-in transition */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+  }
+  
+ .loading {
+    opacity: 0;
+  }
+  

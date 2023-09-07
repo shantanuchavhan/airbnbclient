@@ -1,0 +1,30 @@
+
+.Structure{
+    padding:0 400px;
+    
+}
+
+.structureForm{
+    display: flex;
+    flex-direction: column;
+  
+    padding: 24px 0px;
+}
+
+.Options{
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    column-gap: 40px;
+    row-gap: 16px;
+}
+
+
+
+   
+.structureImage{
+    width: 56px;
+    margin: 0;
+}                                                                                       
+
+
+

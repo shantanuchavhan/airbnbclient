@@ -1,0 +1,84 @@
+
+
+.Photos{
+
+    width: 700px;
+    padding: 16px;
+
+}
+.HeaderPhotos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+
+}
+
+.addImageBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border:1px  dotted rgb(44, 43, 43);
+    height: 50vh;
+}
+
+.ImageIcon{
+    
+}
+
+.addImageBox div h4{
+    font-size: 20px;
+    margin: 0;
+    color: rgb(29, 29, 29);
+}
+
+.addImageBox div h5{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.border-none-input{
+    margin-left: 70px;
+    border: none;
+    outline: none;
+}
+
+
+.addImageBox .ImageIcon svg{
+    height: 60px;
+    width: 60px;
+    fill: white;
+    color: rgb(249, 154, 154);
+}
+
+.selected-images{
+    align-items: center;
+    justify-content: center;
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+    width: 100%;
+    column-gap: 32px;
+    row-gap: 32px;
+  
+    border: 1px solid gray;
+}
+
+.image{
+    border: 1px solid gray;
+    padding: 16px;
+}
+
+.selected-images .span{
+    grid-column: span 2;
+    width: 95%;
+    
+}
+
+.notSpan img{
+    width: 100%;
+    height: fit-content;
+}

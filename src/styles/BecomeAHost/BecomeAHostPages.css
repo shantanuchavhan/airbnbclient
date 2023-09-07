@@ -1,0 +1,119 @@
+/* BecomeAHostPages.css */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Example font family */
+    background-color: #ffffff; /* Example background color */
+  }
+.Links{
+  color: black;
+}
+
+textarea{
+  width: 600px;
+  font-size: 22px;
+  padding: 32px;
+}
+  
+  .layoutContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+.mainContentWrapperr{
+
+}
+  
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    width: 98%;
+    padding: 8px 16px;
+    justify-content: space-between;
+  }
+
+  .header div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+ 
+  }
+
+  
+  
+
+
+
+  .mainContentContainer {
+    flex-grow: 1;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 150px; /* Height of your fixed header */
+    overflow-y: auto;
+    padding-bottom: 120px;
+  }
+  
+  .mainContentWrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+.footer {
+    position: fixed;
+    border-top: 1px solid gray;
+    bottom: 0;
+    width: 96%;
+    background-color: white; /* Added background color for visibility */
+    padding: 20px 30px; /* Added padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+  }
+  
+  
+
+
+  .AboutYourPlace{
+    padding: 100px;
+    padding-top: 0;
+    padding-left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .AboutYourPlace div{
+    width: 80%;
+  }
+
+  .BackFooterBtn{
+    padding: 8px 24px;
+    font-size: 18px;
+    background-color: rgb(253, 250, 250);
+    color: rgb(20, 20, 20);
+    border: none;
+    text-decoration: underline;
+  }
+
+  .nextFooterBtn{
+    padding: 8px 24px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+  }
+
+  .header-btns{
+    display: flex;
+  }

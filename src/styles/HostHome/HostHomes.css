@@ -1,0 +1,77 @@
+
+
+p{
+    font-size: 1.2rem;
+    color: gray;
+}
+
+svg{
+    height: 30px;
+    width: 30px;
+
+}
+body{
+    line-height: 1.9rem;
+}
+.borderBottom{
+    border-bottom:1px solid gray ;
+}
+.black{
+    color: black;
+}
+.gray{
+    color: gray;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: white;
+ 
+   
+
+}
+.Airbnblogo{
+    width: 8rem;
+}
+
+.AirbnbSetupButton{
+    display: flex;
+    align-items: center;
+    margin-right: 4.6rem;
+    background-color: #e01661;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 16px;
+}
+
+
+
+
+
+.sections{
+    padding: 6.4rem 9.6rem;
+
+}
+
+.learnMoreBtn{
+    padding: 1rem 3.9rem;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+
+}
+
+
+
+
+
+
+
+

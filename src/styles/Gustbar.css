@@ -1,0 +1,42 @@
+.Guestbar{
+    
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    gap: 32px;
+    background-color: white ;
+    margin-left: 670px;
+    z-index: 900;
+    border: 1px solid gray;
+    position: absolute;
+    transition: 2s ease;
+    padding: 32px 0;
+}
+
+.Guest-Type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+svg{
+    width: 20px;
+    height: 20px;
+}
+
+.Animation{
+    transition: 2s ease                                     ;
+}
+
+
+.Counting{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.PetCount{
+    display: flex;
+    margin-left: 16px;
+}

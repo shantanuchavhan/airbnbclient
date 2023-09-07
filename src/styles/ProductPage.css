@@ -1,0 +1,402 @@
+
+.ProductMain{
+    padding:32px 80px;
+    box-sizing: border-box;
+   
+
+}
+
+
+.details1-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.details1-link div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+
+}
+
+.image-section__imgShow{
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 28px;
+    gap: 16px;
+}
+
+.image-section__imgShow-gridLayout{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 16px;
+    column-gap: 16px;
+    
+    
+}
+.image-section__imgShow-gridLayout img{
+    width: 320px;
+    height: 210px;
+}
+.image-section__imgShow__coverimg{
+   
+    width: 600px;
+    height: 440px;
+}
+
+
+
+
+
+
+
+article{
+    margin-top: 54px;
+    position: relative;
+}
+
+.Description-1{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    
+}
+
+.Description-1 div h2{
+    margin-bottom: 8px;
+}
+
+.Description-1 .Features{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+}
+
+.Description-1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.Description-1 .Rating{
+    display: flex;
+    gap: 8px;
+}
+
+.descroptions{
+    padding: 32px 0;
+    border-top: 1px solid rgb(217, 216, 216);
+    width: 56%;
+}
+
+.description-2 div{
+    margin-bottom:16px;
+}
+
+.description-2 div h4{
+    margin-bottom: 4px;
+
+}
+
+.description-4 h2{
+    margin-bottom: 24px;
+} 
+
+.description-4 .sleep-info{
+    border: 2px solid gray;
+    width: 25%;
+    padding: 24px;
+}
+
+.description-4 .sleep-info h4{
+    width: 20ch;
+}
+
+.description-5 h2{
+    margin-bottom: 24px;
+}
+.description-5 .FeatureList{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 16px;
+}
+
+.description-5 .FeatureList h4{
+    margin-bottom: 24px;
+}
+
+.description-5 a{
+    text-decoration: none;
+    padding: 16px 24px;
+    border: 2px solid gray;
+    color: black;
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+
+.Inputs-Layout{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+
+
+.GuestCountWrapper{
+   
+    grid-column: span 2;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-top: 4px;
+    border-top: 1px solid gray;
+    
+    
+}
+
+
+
+
+select{
+    grid-column: span 2;
+    height: 40px;
+}
+
+.description-7{
+    width: 32%;
+    padding: 32px;
+    border: 1px solid rgb(198, 196, 196);
+    background-color: #ffffff;
+    border-radius: 10PX;
+    box-shadow: #9b9696;
+   position: absolute;
+   top: 4%;
+   right: 0%;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.ReservationBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.Inputs-Layout__Input{
+    border: none;
+    width: 80%;
+    padding: 28px 28px 12px;
+
+}
+.border-left{
+    border-left:1px solid gray ;
+
+}
+.ReservationBox select{
+    height: 60px;
+   border:none;
+   border-top: 1px solid gray;
+}
+
+.ReservationBox__section1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ReservationBox__section1 div{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+
+    
+}
+
+.ReservationBox__section1__averageRating{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.ReservationBox button{
+    padding: 16px 0;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: #e51d54;
+    color: white;
+
+}
+
+.GuestCountWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 8px;
+    cursor: pointer;
+}
+
+
+.GuestBardivfixed{
+    position: fixed;
+    top:300px;
+    margin-left: 190px;
+    width: 400px;
+}
+.GuestBardiv{
+    position: relative;
+    top:300px;
+    margin-left: 190px;
+    width: 400px;
+}
+
+.ratings{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.fillRatingSvg{
+    fill: black;
+    color: rosybrown;
+}
+
+.reviews{
+    margin-top: 24px;
+    padding-top: 48px;
+    border-top: 0.8px solid rgb(212, 210, 210);
+    width: 56%;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.review{
+    margin-bottom: 32px;
+    
+}
+
+.review svg{
+    font-size: 6px;
+}
+
+.review_comment{
+    border-bottom: 1px solid black;
+    
+
+}
+
+.commentHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.validationMessage{
+color:red;
+text-decoration: underline;
+
+}
+
+.fixed-component {
+    position: relative;
+    /* Other styles */
+  }
+  
+  .fixed {
+    position: fixed;
+    margin-top:  5%;
+   right: 3%;
+   
+    /* Add any other styles for the fixed state */
+  }
+  
+
+.viewPhotos{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: absolute;
+    overflow: auto;
+    top: 0%;
+    left: 0;
+    background-color: rgba(24, 24, 24, 0.991);
+    z-index: 1000;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    width: 1300px;
+
+}
+
+
+
+.ViewPhotos-container{
+   
+  z-index: 100;
+
+}
+
+.ViewPhotos-container svg{
+    position: fixed;
+    z-index: 1001;
+    fill: rgb(201, 184, 184);
+    top: 20%;
+    right: 20%;
+    width: 40px;
+    height: 40px;
+
+}
+
+
+.viewPhotos-img{
+    width: 800px;
+    height: fit-content;
+}
+
+.allViewReviews{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    overflow: auto;
+    top: 0%;
+    left: 0;
+    background-color: rgba(35, 35, 35, 0.991);
+    z-index: 2000;
+    width: 100%;
+    
+   
+    padding: 80px;
+    width: 1300px;
+    color: aliceblues;
+    height: 400vh;
+    position: fixed;
+
+}
+
+.ViewReviews-container svg{
+    position: fixed;
+    z-index:5000;
+    fill: rgba(241, 240, 240, 0.973);
+    top: 20%;
+    right: 20%;
+    width: 40px;
+    height: 40px;
+
+}

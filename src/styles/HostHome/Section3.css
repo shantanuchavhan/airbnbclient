@@ -1,0 +1,58 @@
+
+.section3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding:0 16rem;
+}
+
+.section3__Headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.section3__Headline__title{
+    height: 6.6rem;
+    width: 18.6rem;
+
+   
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+
+  tr th{
+  /* Add padding to the top of each cell within a row */
+    padding-bottom: 24px; 
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  
+  tr td {
+    padding-top: 24px; /* Add padding to the top of each cell within a row */
+    padding-bottom: 24px; /* Add padding to the bottom of each cell within a row */
+    
+    padding-right: 60px;
+}
+
+  
+  tr:not(:last-child) {
+    
+    border-bottom: 3px solid rgb(202, 198, 198); /* Add a border to the bottom of each row except the last one */
+  }
+.section3__footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0.6rem;
+    border-top: 3px solid rgb(202, 198, 198);
+}

@@ -1,0 +1,96 @@
+::-webkit-scrollbar {
+    width: 0.1em; /* Set a width to create some spacing for the content */
+  }
+::-webkit-verticlescrollbar {
+    width: 0.1em; /* Set a width to create some spacing for the content */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb (drag handle) */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the scrollbar thumb when hovered */
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  /* Styling the corner between vertical and horizontal scrollbars (optional) */
+  ::-webkit-scrollbar-corner {
+    background-color: #f1f1f1;
+  }
+
+.filters-container{
+  overflow: hidden;
+  padding:8px 0px 8px 0px;
+  height: 120px; 
+  
+  margin-top: -50px;
+  position: fixed;
+  background-color: white;
+
+
+
+}
+
+.filters{
+    display: flex;
+    gap: 16px;
+    overflow:scroll;
+    margin: 24px;
+    padding-bottom: 48px;
+}
+
+.filters .filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; 
+    width: 100px;
+}
+
+.filters .filter h3{
+    width: 130px;
+    margin: 8px;
+    font-size: 13px;
+    color: #5d5d5d;
+    
+}
+.filters .filter img{
+    padding: 0%;
+    margin: 0%;
+    width: 32px;
+    height: 32px;
+    color: #888;
+    
+}
+
+.active{
+    border-bottom:2px solid #303030;
+    border-radius: 16px;
+    padding: 8px;
+    color: #303030;
+    
+  }
+
+.active h3{
+  color: #303030;
+}
+ 
+.scrollbar-right{
+  color: rgb(169, 167, 167);
+  position: absolute;
+  top: 10;
+  margin-left: 1280px;
+  background-color: #303030;
+  transition: 2s ease-in;
+}
+.scrollbar-left{
+  color: rgb(169, 167, 167);
+  position: absolute;
+  bottom: 10;
+
+  background-color: #303030;
+}
