@@ -42,7 +42,7 @@ svg{
 .roomImages{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  padding:24px  48px;
+  padding:24px  16px;
   padding-top: 96px;
 }
 

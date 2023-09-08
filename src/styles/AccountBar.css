@@ -2,11 +2,11 @@
 .AccountBar{
     height: 280px;
     width: 200px;
-    position: absolute;
+    position: fixed;
+    margin-top: -32px;
     z-index: 100;
     border-radius: 10px;
-    margin-left: 1230px;
-    margin-top: -40px;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 24px;
     font-weight: 300;
-    background-color: rgba(254, 126, 126);
+    background-color: #333333; /* Replace with the hex code that represents your chosen deep charcoal color */;
     box-shadow:10px 10px 16px 8px rgba(0, 0, 0, 0.2); 
     position: fixed;
 }
