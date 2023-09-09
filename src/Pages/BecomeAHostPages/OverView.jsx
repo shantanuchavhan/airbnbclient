@@ -5,7 +5,7 @@ import OverViewimg2 from  '../../Images/Feature-describe-image2.webp'
 import OverViewimg3 from  '../../Images/Feature-describe-image3.webp'
 import { useEffect,useState } from 'react';
 import '../../styles/CommonTransition.css'
-const OverView = ({}) => {
+const OverView = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {

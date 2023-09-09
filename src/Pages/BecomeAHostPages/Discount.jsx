@@ -13,7 +13,7 @@ const Discount = ({ discounts, getDiscounts }) => {
       setIsLoading(false);
     }, 200);
   }, []);
-  useEffect(() => {
+  useEffect((discounts) => {
     
     if (discounts) {
       setSelectDiscounts(discounts);

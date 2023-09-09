@@ -3,17 +3,17 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { setAmenities,addPhoto ,getDiscounts,addLegal,setTitle,setDescription,setPrice,setStructure,setPrivacyType, setLocation,setFloorPlan,setId} from '../../Redux/Actions/Listingactions'
+import { setAmenities,addPhoto ,getDiscounts,setTitle,setDescription,setPrice,setStructure,setPrivacyType, setLocation,setFloorPlan,setId} from '../../Redux/Actions/Listingactions'
 import setCurrentProduct from '../../Redux/Actions/setCurrentProduct'
 import setCurrentUserListings from '../../Redux/Actions/setCurrentUserListings'
 import '../../styles/HostingPage.css'
 import DeleteBox from '../../components/DeleteBox';
 
-const AllListing = ({userName,ListingReducer,setAmenities,addPhoto ,getDiscounts,addLegal,setTitle,setDescription,setPrice,setId,setStructure,setPrivacyType, setLocation,setFloorPlan,setCurrentUserListings,setCurrentProduct,currentUserListings}) => {
+const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDescription,setPrice,setId,setStructure,setPrivacyType, setLocation,setFloorPlan,setCurrentUserListings,setCurrentProduct,currentUserListings}) => {
     const navigate = useNavigate();
     const [isDeleteBox, setIsDeleteBox] = useState(null);
     
-    useEffect(() => { // Use useEffect hook
+    useEffect((setCurrentUserListings,userName) => { // Use useEffect hook
         fetch("http://localhost:5000/allListing", {
         method: 'POST',
         headers: {

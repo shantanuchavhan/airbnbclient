@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styles/Gustbar.css'
 const GuestBar = ({totalCount,setTotalCount,AdultCount,setAdultCount,ChildCount,setChildCount,InfantCount,setInfantCount,PetCount,setPetCount,marginTopinPx}) => {
     
@@ -51,7 +51,7 @@ const GuestBar = ({totalCount,setTotalCount,AdultCount,setAdultCount,ChildCount,
     };
 
   return (
-    <div style={{position: "absolute", marginTop: marginTopinPx}} className='Guestbar ${GuestbarAnimation ? Animation : ""} '>
+    <div style={{position: "absolute", marginTop: marginTopinPx}} className='Guestbar'>
         
         <div className="Guest-Type">
             <div className="Guest-Type-Name">Adult</div>

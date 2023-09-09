@@ -12,8 +12,7 @@ import Beachfront from '../../Images/icons/Beachfront.jpg';
 import farm from '../../Images/icons/farm.jpg';
 import Camping from '../../Images/icons/Camping.jpg';
 import TinyHomes from '../../Images/icons/Tiny-homes.jpg';
-import Rooms from '../../Images/icons/Rooms.jpg';
-import Trending from '../../Images/icons/Trending.jpg'; 
+
 import FeatureLayout from '../../components/Become-a-Host/FeatureLayout'
 import { setAmenities } from '../../Redux/Actions/Listingactions';
 

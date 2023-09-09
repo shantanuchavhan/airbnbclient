@@ -6,8 +6,7 @@ import TitleComponent from '../../components/Become-a-Host/TitleComponent';
 import '../../styles/BecomeAHost/PrivacyType.css'
 
 import home from '../../Images/icons/Amazing-views.jpg';
-import room from '../../Images/icons/Beachfront.jpg';
-import sharedRoom from '../../Images/icons/Camping.jpg';
+
 
 import { setPrivacyType } from '../../Redux/Actions/Listingactions';
 
@@ -19,7 +18,7 @@ const PrivacyType = ({privacyType,setPrivacyType}) => {
     }, 200);
   }, []);
   
-  const [selected,setSelected]=useState(null)
+  
 
   const TitleData={
     title:"What type of place will guests have?",
@@ -27,7 +26,7 @@ const PrivacyType = ({privacyType,setPrivacyType}) => {
   }
 
   function selectOption(option){
-      setSelected(option)
+      
       setPrivacyType(option)
       console.log(privacyType)
   }

@@ -5,13 +5,13 @@ const Footer = () => {
     <div>
         <footer>
         <div className="links">
-          <a href="">@2023 airbnb,inc.</a>
+          <span href="">@2023 airbnb,inc.</span>
           <div>.</div>
-          <a href="">Privacy</a>
+          <span href="">Privacy</span>
           <div>.</div>
-          <a href="">Terms</a>
+          <span href="">Terms</span>
           <div className="">.</div>
-          <a href="">Sitemap</a>
+          <span href="">Sitemap</span>
         </div>
         <div className="selectors">
           <div className="lang">

@@ -68,7 +68,7 @@ const Photos = ({photos,addPhoto}) => {
        
           <div key={index} className={`image ${index === 0 ? 'span' : 'notSpan'}`}>
             <div onClick={()=>{removeImg(index)}} style={{color:'red'}} >X</div>
-            {file instanceof File && <img src={URL.createObjectURL(file)} alt={`Image ${index}`} />}
+            {file instanceof File && <img src={URL.createObjectURL(file)} alt="img" />}
           </div>
         ))}
         </div>

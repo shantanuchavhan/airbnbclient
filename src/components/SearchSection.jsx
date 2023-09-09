@@ -54,7 +54,7 @@ const SearchSection = ({GuestToggle, isAddDateActive, isCheckinActive, isCheckou
     const [location,setLocation]=useState("")
     const [checkInDate,setCheckInDate]=useState("")
     const [checkOutDate,setCheckOutDate]=useState("")
-    const [Guests,setGuests]=useState("")
+
     
    
   return (
@@ -85,7 +85,7 @@ const SearchSection = ({GuestToggle, isAddDateActive, isCheckinActive, isCheckou
           <label onClick={WhoSection} className={`section-4 ${isWhoActive ? "GuestActive" : ""}`}>
             <div className='border-right'>
               <div >Who</div>
-              { totalGuestCount==0 ? <div   className='faint'>Add Guests</div>: <div   className='faint'>{totalGuestCount} Guests</div>  }
+              { totalGuestCount===0 ? <div   className='faint'>Add Guests</div>: <div   className='faint'>{totalGuestCount} Guests</div>  }
               
             </div>
            

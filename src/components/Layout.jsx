@@ -1,13 +1,12 @@
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import Home from '../Pages/home'
-import { Outlet, Link } from "react-router-dom";
-import GuestBar from './GuestBar';
+
+import { Outlet} from "react-router-dom";
+
 import { connect } from 'react-redux'; 
 import '../App.css'
-import SearchSection from './SearchSection';
-import {  useSelector } from 'react-redux/es/hooks/useSelector';
+
 
 
 const Layout = ({children}) => { 

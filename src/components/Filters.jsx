@@ -7,7 +7,7 @@ import Beachfront from '../Images/icons/Beachfront.jpg';
 import Camping from '../Images/icons/Camping.jpg';
 import farm from '../Images/icons/farm.jpg';
 import HistoricalHomes from '../Images/icons/Historical-homes.jpg';
-import IconicCities from '../Images/icons/Iconic-cities.jpg';
+
 import Pools from '../Images/icons/Pools.jpg';
 import Lakefront from '../Images/icons/Lakefront.jpg';
 import Trending from '../Images/icons/Trending.jpg';
@@ -34,7 +34,7 @@ const Filters = ({active    ,currentSelected}) => {
     { filterName: 'Earth Home', filterIcon: AmazingView },
     { filterName: 'Camping', filterIcon: Camping },
     { filterName: 'Pool', filterIcon: Pools },
-    { filterName: 'Cave', filterIcon: Pools },
+    { filterName: 'Cave', filterIcon: HistoricalHomes},
     // ... Add other filters ...
   ];
 
@@ -58,7 +58,7 @@ const Filters = ({active    ,currentSelected}) => {
       <div className="filters" ref={filtersContainerRef}>
         {filterList.map((filter, index) => (
           
-          <div className={`filter ${active==filter.filterName ? 'active':""}`} onClick={()=>{currentSelected(filter.filterName)}}>
+          <div className={`filter ${active===filter.filterName ? 'active':""}`} onClick={()=>{currentSelected(filter.filterName)}}>
             <img src={filter.filterIcon} alt="" />
             <h3>{filter.filterName}</h3>
           </div>

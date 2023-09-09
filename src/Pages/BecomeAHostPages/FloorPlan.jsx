@@ -14,7 +14,7 @@ const FloorPlan = ({ guestCount, bedCount, bathroomCount, setFloorPlan,floorplan
     }, 200);
   }, []);
   console.log(guestCount,bathroomCount,floorplans)
-  const[minus,setMinus]=useState(true)
+ 
   const increment = (type, value) => {
     setFloorPlan(type, value + 1);
   }
@@ -45,11 +45,10 @@ const FloorPlan = ({ guestCount, bedCount, bathroomCount, setFloorPlan,floorplan
 
           <h3>{guestCount}</h3>
 
-          {
-            minus ? <svg onClick={() => decrement('guest', guestCount)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+          <svg onClick={() => decrement('guest', guestCount)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>: ''
-          }
+          
         </div>
       </div>
 
@@ -62,11 +61,10 @@ const FloorPlan = ({ guestCount, bedCount, bathroomCount, setFloorPlan,floorplan
 
           <h3>{bedCount}</h3>
 
-          {
-            minus ? <svg onClick={() => decrement('bed', bedCount)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+        <svg onClick={() => decrement('bed', bedCount)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>:""
-          }
+         
         </div>
       </div>
 
@@ -79,11 +77,10 @@ const FloorPlan = ({ guestCount, bedCount, bathroomCount, setFloorPlan,floorplan
 
           <h3>{bathroomCount||1}</h3>
 
-          {
-            minus ? <svg onClick={() => decrement('bathroom', bathroomCount||1)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+         <svg onClick={() => decrement('bathroom', bathroomCount||1)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg> : ""
-          }
+  
         </div>
       </div>
 

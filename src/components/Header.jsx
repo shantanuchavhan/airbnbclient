@@ -7,16 +7,16 @@ import AcountBar from './AcountBar'
 import { GuestToggle } from '../Redux/Actions/GuestToggleAction'
 import { connect } from 'react-redux';
 import { ChangeUsername } from '../Redux/Actions/ChangeUserName';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as  Link} from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
 
 const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
  
-  const [UserName,setuserName]=useState()
+  
   const navigate = useNavigate();
   
-  useEffect(() => {
+  useEffect((ChangeUsername) => {
     fetch('http://localhost:5000/profile', {
       credentials: 'include',
     })
@@ -24,7 +24,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
       .then((data) => {
         console.log(data.username,"data")
         ChangeUsername(data.username)
-        setuserName(data.username); // Assuming the server sends the username as a plain string
+  
       })
       .catch((error) => {
         console.error('Error fetching profile:', error);
@@ -38,7 +38,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   const headerRef = useRef(null);
   const [searchToggle,setSearchToggle]=useState(false)
 
-  useEffect(() => {
+  useEffect((GuestToggle) => {
     const handleClickOutside = (event) => {
       console.log("event.taregt")
       if (headerRef.current && !headerRef.current.contains(event.target)) {
@@ -62,7 +62,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   
 
   const [accountBarToggle, setAccountBarToggle ]=useState(false)
-  const [loginToggle, setLoginToggle ]=useState(false)
+
   const [isAddDateActive,setIsAddDateActive]=useState(true)
   const [isCheckinActive,setIsCheckinActive]=useState(false)
   const [isCheckoutActive,setIsCheckoutActive]=useState(false)
@@ -109,16 +109,16 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   }
 
   const searchSection =(e)=>{
-    if (e.target.innerHTML=='Anywhere') {
+    if (e.target.innerHTML==='Anywhere') {
       AddLocationActive()
      
    }
   
-   else if (e.target.innerHTML=='Any Week') {
+   else if (e.target.innerHTML==='Any Week') {
       CheckinActive()
      
    }
-   else if (e.target.innerHTML=='Add Guests') {
+   else if (e.target.innerHTML==='Add Guests') {
       console.log("Adding guest")
       WhoActive() 
    }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/Login.css'
-import { Navigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ChangeUsername } from '../Redux/Actions/ChangeUserName';
@@ -9,8 +8,8 @@ import SetListSetup from '../Redux/Actions/SetListSetup';
 import ValidityMessge from '../components/ValidityMessge';
 import PinkButton from '../components/PinkButton';
 import SetIsBooking from '../Redux/Actions/SetIsBooking';
-const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetListSetup,SetIsBooking,isBooking }) => {
-  const [redirect,setRedirect] = useState("");
+const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetIsBooking,isBooking }) => {
+  
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
   const navigate=useNavigate()
