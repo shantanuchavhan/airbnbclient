@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 import { combineReducers } from 'redux';
 // Import your root reducer
 import GuestToggleReducer from './Reducers/GuestToggleReducer';
-import SearchSectionToggleReducer from './Reducers/SearchSectionToggleReducer';
+// import SearchSectionToggleReducer from './Reducers/SearchSectionToggleReducer';
 import UserNameReducer from './Reducers/UserNameReducre';
 import ListingReducer from './Reducers/ListingReducers';
 import CurrentProductReducer from './Reducers/CurrentProductReducer';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../../styles/BecomeAHost/Option.css'
 
 const Option = ({optionName,optionIcon,selectedOptions,handleOptionSelect}) => {

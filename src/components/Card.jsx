@@ -3,13 +3,13 @@ import { useEffect,useState } from 'react';
 import '../styles/HostingPage.css';
 import '../styles/Card.css';
 import '../styles/CommonTransition.css'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as  Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
 
 
-const Card = ({ image, location, price, id, setCurrentProduct, currentProduct, roomData }) => {
+const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {

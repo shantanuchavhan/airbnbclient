@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import '../../styles/BecomeAHost/BecomeAHostPages.css';
 import { connect } from 'react-redux';

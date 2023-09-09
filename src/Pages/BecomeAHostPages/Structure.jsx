@@ -4,7 +4,7 @@ import { setStructure } from '../../Redux/Actions/Listingactions';
 import { useEffect,useState } from 'react';
 import '../../styles/CommonTransition.css'
 import TitleComponent from '../../components/Become-a-Host/TitleComponent';
-import Option from '../../components/Become-a-Host/Option';
+
 
 import '../../styles/BecomeAHost/Structure.css';
 
@@ -13,7 +13,7 @@ import Beachfront from '../../Images/icons/Beachfront.jpg';
 import Camping from '../../Images/icons/Camping.jpg';
 import farm from '../../Images/icons/farm.jpg';
 import HistoricalHomes from '../../Images/icons/Historical-homes.jpg';
-import IconicCities from '../../Images/icons/Iconic-cities.jpg';
+// import IconicCities from '../../Images/icons/Iconic-cities.jpg';
 import Pools from '../../Images/icons/Pools.jpg';
 import Lakefront from '../../Images/icons/Lakefront.jpg';
 import Trending from '../../Images/icons/Trending.jpg';

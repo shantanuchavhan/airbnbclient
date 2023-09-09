@@ -9,7 +9,7 @@ import '../App.css'
 import Card from '../components/Card'
 const Home = ({rooms,setRooms}) => {
   const [active,setActive]=useState("Amazing-View")
-  const [noResponse,setNoResponse]=useState()
+  
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -17,8 +17,8 @@ const Home = ({rooms,setRooms}) => {
     }, 160);
   }, []);
   
-  useEffect(() => {
-    console.log(active, "active");
+  useEffect((setRooms) => {
+    
     fetch('http://localhost:5000/filter', {
       method: 'POST',
       headers: {

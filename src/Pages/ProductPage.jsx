@@ -11,9 +11,9 @@ import ValidityMessge from '../components/ValidityMessge'
 import ViewPhotos from '../components/ProductpageComponent/ViewPhotos'
 import SetIsBooking from '../Redux/Actions/SetIsBooking'
 import '../styles/ProductPage.css'
-import { Link } from 'react-router-dom'
+
 import ViewReviews from '../components/ProductpageComponent/ViewReviews'
-import Cookies from 'js-cookie';
+
 
 
 
@@ -90,7 +90,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
   
 
   function getTotalReservationAmount(data,datename) {
-    if(datename=="updatedStartDate"){
+    if(datename==="updatedStartDate"){
         console.log(data,endDate,"datehhjhj")
         setStartDate(data);
         if (data && endDate) {
@@ -146,7 +146,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
   
     function Reserve() {
 
-        if(userName==""){
+        if(userName===""){
             setIsLoginRequired(true)
 
         }else{
@@ -271,14 +271,13 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
             
             <div className="image-section__imgShow-gridLayout">
                 {currentProduct.photos.map((photo, index) => {
-                    if(index<5){
-                        if (index > 0) {
-                            return <img key={index} src={"http://localhost:5000/" + photo} alt="" />;
-                            }
-                            return null;
+                    if (index < 5) {
+                    return <img key={index} src={"http://localhost:5000/" + photo} alt="" />;
                     }
+                    return null;
                 })}
             </div>
+
 
             </div>
             
@@ -362,7 +361,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
             </div>
             <div className="descroptions description-3">
                 <p>{currentProduct.description}</p>
-<a href="">Show more left arrow</a>
+<span href="">Show more left arrow</span >
             </div>
 
             <div className="descroptions description-4">
@@ -384,9 +383,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                     )}
                     
                 </div>
-                <a href="">
-                    Show all Ammenities
-                </a>
+               
             </div>
             {/* <div className="descroptions descroption-6">
                 <h2>Select Check-in date</h2>
