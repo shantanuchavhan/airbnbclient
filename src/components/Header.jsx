@@ -7,7 +7,7 @@ import AcountBar from './AcountBar'
 import { GuestToggle } from '../Redux/Actions/GuestToggleAction'
 import { connect } from 'react-redux';
 import { ChangeUsername } from '../Redux/Actions/ChangeUserName';
-import { BrowserRouter as  Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
 

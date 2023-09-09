@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react';
 import '../styles/HostingPage.css';
 import '../styles/Card.css';
 import '../styles/CommonTransition.css'
-import { BrowserRouter as  Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
