@@ -30,7 +30,7 @@ const Structure = ({ structure, setStructure,userName ,ChangeUsername,ListingRed
     }, 200);
   }, []);
 
-  useEffect(() => {
+  useEffect((ChangeUsername) => {
     fetch('http://localhost:5000/profile', {
       credentials: 'include',
     })
