@@ -14,7 +14,7 @@ const AcountBar = ({toggle,setToggle,userName,ChangeUsername}) => {
   }
   function logout() {
     // Call the logout API
-    fetch('http://localhost:5000/logout', {
+    fetch('https://airbnbcloneshantanu.onrender.com/api/logout', {
     method: 'POST',
     credentials: 'include', // Send cookies along with the request
     })
