@@ -163,7 +163,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
         
             console.log(data, "reserve Data");
         
-            fetch('http://localhost:5000/Reserve', {
+            fetch('http://localhost:5000/api/Reserve', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

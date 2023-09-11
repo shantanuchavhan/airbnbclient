@@ -19,7 +19,7 @@ const TripsPage = ({ userName,setCurrentProduct }) => {
     useEffect(() => {
         
         // Fetch trip data from the server
-        fetch("http://localhost:5000/Trips", {
+        fetch("http://localhost:5000/api/Trips", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

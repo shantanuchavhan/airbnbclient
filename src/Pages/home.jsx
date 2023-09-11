@@ -17,9 +17,9 @@ const Home = ({rooms,setRooms}) => {
     }, 160);
   }, []);
   
-  useEffect((setRooms) => {
+  useEffect(() => {
     
-    fetch('http://localhost:5000/filter', {
+    fetch('http://localhost:5000/api/filter', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,11 +29,12 @@ const Home = ({rooms,setRooms}) => {
     .then(response => response.json())
     .then(data => {
       setRooms(data);
+      console.log(data,"iguyggugyug")
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
-  }, []); // Pass an empty array as the second argument
+  }, [setRooms]); // Pass an empty array as the second argument
   
  
   
@@ -43,7 +44,7 @@ const Home = ({rooms,setRooms}) => {
   function currentSelected(filterName) {
     setActive(filterName); // Assuming setActive is a state setter function for your active filter state
   
-    fetch('http://localhost:5000/filter', {
+    fetch('http://localhost:5000/api/filter', {
       method: 'POST', // Set the HTTP method
       headers: {
         'Content-Type': 'application/json' // Specify the content type
@@ -53,7 +54,7 @@ const Home = ({rooms,setRooms}) => {
     .then(response => response.json()) // Call .json() to parse response data
     .then(data => {
       setRooms(data)
-      console.log(rooms)
+      console.log(data)
       
     })
     .catch(error => {

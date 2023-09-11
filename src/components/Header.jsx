@@ -16,7 +16,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   
   const navigate = useNavigate();
   
-  useEffect((ChangeUsername) => {
+  useEffect(() => {
     fetch('http://localhost:5000/profile', {
       credentials: 'include',
     })
@@ -29,7 +29,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
       .catch((error) => {
         console.error('Error fetching profile:', error);
       });
-  }, []);
+  }, [ChangeUsername]);
 
   console.log(userName,"username")
     
@@ -38,7 +38,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   const headerRef = useRef(null);
   const [searchToggle,setSearchToggle]=useState(false)
 
-  useEffect((GuestToggle) => {
+  useEffect(() => {
     const handleClickOutside = (event) => {
       console.log("event.taregt")
       if (headerRef.current && !headerRef.current.contains(event.target)) {
@@ -55,7 +55,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, []);
+  }, [GuestToggle]);
 
 
 
