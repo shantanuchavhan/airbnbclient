@@ -19,7 +19,7 @@ const Home = ({rooms,setRooms}) => {
   
   useEffect(() => {
     
-    fetch('http://localhost:5000/api/filter', {
+    fetch('https://airbnbcloneshantanu.onrender.com/api/filter', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const Home = ({rooms,setRooms}) => {
   function currentSelected(filterName) {
     setActive(filterName); // Assuming setActive is a state setter function for your active filter state
   
-    fetch('http://localhost:5000/api/filter', {
+    fetch('https://airbnbcloneshantanu.onrender.com/api/filter', {
       method: 'POST', // Set the HTTP method
       headers: {
         'Content-Type': 'application/json' // Specify the content type
