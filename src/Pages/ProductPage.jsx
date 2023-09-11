@@ -163,7 +163,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
         
             console.log(data, "reserve Data");
         
-            fetch('http://localhost:5000/api/Reserve', {
+            fetch('https://airbnbcloneshantanu.onrender.com/api/Reserve', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -267,12 +267,12 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
         
         <div className="image-section__imgShow"  onClick={handleViewPhotosClick}>
             
-            <img className="image-section__imgShow__coverimg" src={"http://localhost:5000/"+ currentProduct.photos[0]} alt="" />
+            <img className="image-section__imgShow__coverimg" src={"https://airbnbcloneshantanu.onrender.com/api/"+ currentProduct.photos[0]} alt="" />
             
             <div className="image-section__imgShow-gridLayout">
                 {currentProduct.photos.map((photo, index) => {
                     if (index < 5) {
-                    return <img key={index} src={"http://localhost:5000/" + photo} alt="" />;
+                    return <img key={index} src={"https://airbnbcloneshantanu.onrender.com/api/" + photo} alt="" />;
                     }
                     return null;
                 })}
@@ -329,7 +329,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                 </div>
                
                 </div> 
-                <img src={"http://localhost:5000/"+ currentProduct.photos[0]} alt="hghj" className="Ownerimg" />
+                <img src={"https://airbnbcloneshantanu.onrender.com/api/"+ currentProduct.photos[0]} alt="hghj" className="Ownerimg" />
                 <div style={{display:'flex', gap:'24px',alignItems:'center' }}>
                     <h3>Rs.{currentProduct.price} </h3><span style={{color:'gray'}}>ninght</span>
                     <div className='Rating'>
