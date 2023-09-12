@@ -11,13 +11,12 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
   const navigate=useNavigate()
 
   useEffect(() => {
-    console.log(userName,"userName")
-    fetch("https://airbnbcloneshantanu.onrender.com/api/Bookings", {
+    fetch("http://localhost:5000/Bookings", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ userName }),
+      body: JSON.stringify({ owner: userName.userName }),
     })
       .then(response => {
         if (!response.ok) {
@@ -36,7 +35,7 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
 
   function deleteBooking(id) {
     console.log(id, "Booking");
-    fetch("https://airbnbcloneshantanu.onrender.com/api/Booking/delete", {
+    fetch("http://localhost:5000/Booking/delete", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -63,7 +62,7 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
     {bookings.length > 0 ? (
       bookings.map((booking, index) => (
         <div key={index} className="Trip">
-          {booking.listing.photos && <img onClick={()=>ViewListing(booking.listing)} className="Trip__image" src={`https://airbnbcloneshantanu.onrender.com/api/${booking.listing.photos[0]}`} alt="" />}
+          {booking.listing.photos && <img onClick={()=>ViewListing(booking.listing)} className="Trip__image" src={`http://localhost:5000/${booking.listing.photos[0]}`} alt="" />}
             <h3 onClick={()=>ViewListing(booking.listing)} className=" Trip__Title">{booking.listing.title}</h3>
             <h4  className="Trip__division">{new Date(booking.startDate).toISOString().split('T')[0]}</h4>
             <h4  className="Trip__division">{new Date(booking.endDate).toISOString().split('T')[0]}</h4>
