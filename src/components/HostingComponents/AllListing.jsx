@@ -13,17 +13,22 @@ const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDe
     const navigate = useNavigate();
     const [isDeleteBox, setIsDeleteBox] = useState(null);
     console.log(userName,"userName")
-    useEffect((setCurrentUserListings,userName) => { // Use useEffect hook
-        fetch("https://airbnbcloneshantanu.onrender.com/api/allListing", {
+    useEffect(() => {
+      // Use userName and setCurrentUserListings here
+      fetch("https://airbnbcloneshantanu.onrender.com/api/allListing", {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({userName}),
-        }).then((response) => response.json()).then((data) => {
-        setCurrentUserListings(data);
+        body: JSON.stringify({ userName }), // Assuming userName is defined elsewhere
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Use data and setCurrentUserListings here
+          setCurrentUserListings(data);
         });
-    }, [userName]);
+    }, [userName, setCurrentUserListings]); // Dependencies go in the array
+    
 
 
 
