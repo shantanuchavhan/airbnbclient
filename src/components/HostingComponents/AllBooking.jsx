@@ -35,7 +35,7 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
 
   function deleteBooking(id) {
     console.log(id, "Booking");
-    fetch("http://localhost:5000/Booking/delete", {
+    fetch("https://airbnbcloneshantanu.onrender.com/api/Booking/delete", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
