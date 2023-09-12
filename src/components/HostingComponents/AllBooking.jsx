@@ -11,12 +11,13 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
   const navigate=useNavigate()
 
   useEffect(() => {
+    console.log(userName,"userName")
     fetch("https://airbnbcloneshantanu.onrender.com/api/Bookings", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ owner: userName.userName }),
+      body: JSON.stringify({ userName }),
     })
       .then(response => {
         if (!response.ok) {
