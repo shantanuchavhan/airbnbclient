@@ -75,10 +75,8 @@ const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings})
 
   // Send the HTTP request to the server
   fetch(apiUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    method: httpMethod,
+    
     body: formData,
 
   })
