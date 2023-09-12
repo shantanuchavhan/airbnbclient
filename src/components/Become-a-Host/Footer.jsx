@@ -1,91 +1,152 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { createOrUpdateListing } from '../../Redux/Actions/listingActions'; // Replace with your actual action
 
-const Footer = ({ listing, userName, createOrUpdateListing }) => {
+import { useLocation, useNavigate, Link } from 'react-router-dom';
+import '../../styles/BecomeAHost/BecomeAHostPages.css';
+import { connect } from 'react-redux';
+import setCurrentUserListings from '../../Redux/Actions/setCurrentUserListings';
+
+const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings}) => {
   const [lastPage, setLastPage] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const currentPathName = location.pathname.split('/').pop();
 
   useEffect(() => {
-    setLastPage(currentPathName === 'publish-celebration');
+    if (currentPathName === 'publish-celebration') {
+      setLastPage(true);
+    } else {
+      setLastPage(false);
+    }
   }, [currentPathName]);
 
+
   const PageList = [
-    'overview', 'about-your-place', 'structure', 'privacy-type', 'location',
-    'floor-plan', 'stand-out', 'amenities', 'photos', 'title', 'description',
-    'finish-setup', 'price', 'discount', 'publish-celebration'
+    "overview", "about-your-place", "structure", "privacy-type", "location",
+    "floor-plan", "stand-out", "amenities", "photos", "title", "description",
+    "finish-setup", "price", "discount", "publish-celebration"
   ];
 
   const currentIndex = PageList.indexOf(currentPathName);
 
-  const nextPath = () => {
+  const Next = () => {
     if (currentIndex < PageList.length - 1) {
-      return `/Become-a-Host/${PageList[currentIndex + 1]}`;
+      const nextPath = '/Become-a-Host/' + PageList[currentIndex + 1];
+      navigate(nextPath);
+    } else {
+      setLastPage(true);
     }
-    return null;
   };
 
-  const goBack = () => {
+  const Back = () => {
     if (currentIndex > 0) {
-      const prevPath = `/Become-a-Host/${PageList[currentIndex - 1]}`;
+      const prevPath = '/Become-a-Host/' + PageList[currentIndex - 1];
       navigate(prevPath);
     }
   };
 
-  const handlePublish = async () => {
-    try {
-      const formData = new FormData();
-      for (const photo of listing.photos) {
-        formData.append('photos', photo);
+  const userData=userName
+  // console.log(userData.userName,"userData.userName")
+  let formData=new FormData()
+  for (let i = 0; i < listing.photos.length; i++) {
+    console.log(listing.photos[i], "listingPhotos");
+    formData.append('photos',listing.photos[i])   
+  }
+  listing={...listing,ownerName:userData.userName}
+ 
+  formData.append('listing', JSON.stringify(listing));
+  
+  
+  
+
+  
+  function CreateAListing() {
+ if (listing.id !== null) {
+  const url = `https://airbnbcloneshantanu.onrender.com/api/listings/${listing.id}`;
+
+  fetch(url, {
+    method: 'PUT',
+    body: formData
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
-      formData.append('listing', JSON.stringify({ ...listing, ownerName: userName.userName }));
-      
-      const response = await createOrUpdateListing(listing.id, formData);
-      if (response) {
-        alert('Listing updated successfully');
-      } else {
-        alert('Listing created successfully');
-      }
-    } catch (error) {
+      return response.json();
+    })
+    .then(data => {
+      alert('Listing updated successfully');
+      console.log(data, "datalog");
+      setCurrentUserListings([...currentUserListings, ...data.listings]);
+    })
+    .catch(error => {
       alert(`Error: ${error.message}`);
+      console.error('Fetch Error:', error);
+    });
+}else{
+    fetch('https://airbnbcloneshantanu.onrender.com/api/listing', {
+  method: 'POST',
+  body: formData
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok',response.error);
     }
-  };
+    return response.json();
+  })
+  .then(data => {
+    alert('Listing created succesfully')
+    console.log(data,"datalog")
+    setCurrentUserListings([...currentUserListings,...data.listings])
+    // 
+    
+  })
+  .catch(error => {
+    alert(error)
+    console.error('Fetch Error:', error);
+  });
+
+  }
+    
+
+  
+  
+
+
+  }
+
+  
 
   return (
     <div className="footer">
       <div>
-        <button className="BackFooterBtn" onClick={goBack}>
-          Go Back
-        </button>
+        <button className='BackFooterBtn' onClick={Back}>Go Back</button>
       </div>
-      {!lastPage && (
+      {!lastPage ? (
         <div>
-          <button className="nextFooterBtn" onClick={() => navigate(nextPath())}>
-            Next
-          </button>
+          <button className='nextFooterBtn' onClick={Next}>Next</button>
         </div>
-      )}
-      {lastPage && (
+      ) : (
         <div>
-          <Link className="Links" onClick={handlePublish} to="/hosting">
-            <h3 className="PublishListing">Publish Listing</h3>
-          </Link>
+          <Link className='Links' onClick={CreateAListing} to='/hosting'><h3 className="PublishListing">Publish Listing</h3></Link>
         </div>
       )}
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({
-  listing: state.ListingReducer,
-  userName: state.userName,
-});
-
-const mapDispatchToProps = {
-  createOrUpdateListing, // Replace with your actual action
+const mapStateToProps = (state) => {
+  return {
+    listing: state.ListingReducer,
+    userName:state.userName,
+    currentUserListings:state.currentUserListingsReducer.currentUserListings
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Footer);
+const mapDispatchToProps = {
+ 
+ setCurrentUserListings
+  
+  
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(Footer);
