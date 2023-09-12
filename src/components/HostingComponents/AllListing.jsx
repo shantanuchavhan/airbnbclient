@@ -12,18 +12,18 @@ import DeleteBox from '../../components/DeleteBox';
 const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDescription,setPrice,setId,setStructure,setPrivacyType, setLocation,setFloorPlan,setCurrentUserListings,setCurrentProduct,currentUserListings}) => {
     const navigate = useNavigate();
     const [isDeleteBox, setIsDeleteBox] = useState(null);
-    
+    console.log(userName,"userName")
     useEffect((setCurrentUserListings,userName) => { // Use useEffect hook
         fetch("https://airbnbcloneshantanu.onrender.com/api/allListing", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({owner: userName.userName }),
+        body: JSON.stringify({userName}),
         }).then((response) => response.json()).then((data) => {
         setCurrentUserListings(data);
         });
-    }, []);
+    }, [userName]);
 
 
 
