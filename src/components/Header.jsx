@@ -17,7 +17,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    fetch('http://localhost:5000/profile', {
+    fetch('https://airbnbcloneshantanu.onrender.com/api/profile', {
       credentials: 'include',
     })
       .then((response) => response.json())
