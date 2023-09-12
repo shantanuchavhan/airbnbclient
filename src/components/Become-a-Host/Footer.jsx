@@ -54,65 +54,56 @@ const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings})
   listing={...listing,ownerName:userData.userName}
  
   formData.append('listing', JSON.stringify(listing));
-  
-  
-  
 
-  
   function CreateAListing() {
- if (listing.id !== null) {
-  const url = `https://airbnbcloneshantanu.onrender.com/api/listings/${listing.id}`;
+  // Check if listing.id exists (update) or not (create)
+  const isUpdate = listing.id !== null;
 
-  fetch(url, {
-    method: 'PUT',
-    body: formData
+  // Define the API endpoint URL
+  const apiUrl = isUpdate
+    ? `https://airbnbcloneshantanu.onrender.com/api/listings/${listing.id}`
+    : 'https://airbnbcloneshantanu.onrender.com/api/listing';
+
+  // Define the HTTP method based on whether it's an update or create
+  const httpMethod = isUpdate ? 'PUT' : 'POST';
+
+  // Create a new FormData object and append the listing data
+  const formData = new FormData();
+  for (const key in listing) {
+    formData.append(key, listing[key]);
+  }
+
+  // Send the HTTP request to the server
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: formData,
+
   })
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       return response.json();
     })
-    .then(data => {
-      alert('Listing updated successfully');
-      console.log(data, "datalog");
+    .then((data) => {
+      // Handle success: Listing created or updated
+      const successMessage = isUpdate
+        ? 'Listing updated successfully'
+        : 'Listing created successfully';
+
+      alert(successMessage);
+      console.log(data, 'datalog');
       setCurrentUserListings([...currentUserListings, ...data.listings]);
     })
-    .catch(error => {
+    .catch((error) => {
+      // Handle error
       alert(`Error: ${error.message}`);
       console.error('Fetch Error:', error);
     });
-}else{
-    fetch('https://airbnbcloneshantanu.onrender.com/api/listing', {
-  method: 'POST',
-  body: formData
-})
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok',response.error);
-    }
-    return response.json();
-  })
-  .then(data => {
-    alert('Listing created succesfully')
-    console.log(data,"datalog")
-    setCurrentUserListings([...currentUserListings,...data.listings])
-    // 
-    
-  })
-  .catch(error => {
-    alert(error)
-    console.error('Fetch Error:', error);
-  });
-
-  }
-    
-
-  
-  
-
-
-  }
+}
 
   
 
