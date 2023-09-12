@@ -55,7 +55,7 @@ const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDe
     
       }
     function deleteit(listing){
-        fetch("https://airbnbcloneshantanu.onrender.com/api/delete",{
+        fetch("https://airbnbcloneshantanu.onrender.com/api/Listing/delete",{
           method:"POST",
           headers: {
             'Content-Type': 'application/json',
