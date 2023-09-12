@@ -11,7 +11,7 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
   const navigate=useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:5000/Bookings", {
+    fetch("https://airbnbcloneshantanu.onrender.com/api/Bookings", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
