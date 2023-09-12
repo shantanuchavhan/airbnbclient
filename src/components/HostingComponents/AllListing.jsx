@@ -19,7 +19,7 @@ const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDe
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userName }),
+        body: JSON.stringify({ owner: userName.userName }),
         }).then((response) => response.json()).then((data) => {
         setCurrentUserListings(data);
         });
