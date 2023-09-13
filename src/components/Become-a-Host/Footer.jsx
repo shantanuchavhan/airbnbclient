@@ -60,51 +60,60 @@ const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings})
 
   
   function CreateAListing() {
-    try {
-      const url = listing.id
-        ? `https://airbnbcloneshantanu.onrender.com/api/listings/${listing.id}`
-        : 'https://airbnbcloneshantanu.onrender.com/api/listing';
-  
-      const method = listing.id ? 'PUT' : 'POST';
-  
-      const formData = new FormData(); // Create a FormData object for handling multipart/form-data
-  
-      // Append your form fields to formData
-      formData.append('field1', value1); // Replace 'field1' and value1 with your field name and value
-      formData.append('field2', value2); // Replace 'field2' and value2 with your field name and value
-      // ...
-  
-      // Append your file input field to formData
-      formData.append('photos', fileInput.files[0]); // Replace 'photos' with your file input name
-  
-      fetch(url, {
-        method,
-        body: formData,
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          if (listing.id) {
-            alert('Listing updated successfully');
-          } else {
-            alert('Listing created successfully');
-          }
-          setCurrentUserListings([...currentUserListings, ...data.listings]);
-        })
-        .catch(error => {
-          alert(`Error: ${error.message}`);
-          console.error('Fetch Error:', error);
-        });
-    } catch (error) {
+ if (listing.id !== null) {
+  const url = `https://airbnbcloneshantanu.onrender.com/api/listings/${listing.id}`;
+
+  fetch(url, {
+    method: 'PUT',
+    body: formData
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      alert('Listing updated successfully');
+      console.log(data, "datalog");
+      setCurrentUserListings([...currentUserListings, ...data.listings]);
+    })
+    .catch(error => {
       alert(`Error: ${error.message}`);
       console.error('Fetch Error:', error);
+    });
+}else{
+    fetch('https://airbnbcloneshantanu.onrender.com/api/listing', {
+  method: 'POST',
+  body: formData
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok',response.error);
     }
+    return response.json();
+  })
+  .then(data => {
+    alert('Listing created succesfully')
+    console.log(data,"datalog")
+    setCurrentUserListings([...currentUserListings,...data.listings])
+    // 
+    
+  })
+  .catch(error => {
+    alert(error)
+    console.error('Fetch Error:', error);
+  });
+
   }
+    
+
   
+  
+
+
+  }
+
   
 
   return (

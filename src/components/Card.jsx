@@ -16,7 +16,7 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
       setIsLoading(false);
     }, 200);
   }, []);
-  image = "https://airbnbcloneshantanu.onrender.com/api/" + image;
+  image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
   const setProduct = () => {
     const productId = roomData._id; // Replace with the actual product ID

@@ -17,7 +17,7 @@ const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetIsBooking,isBoo
   async function Login(event){
     console.log(email,"email")
     
-    const response = await fetch('https://airbnbcloneshantanu.onrender.com/api/login', {
+    const response = await fetch('https://airbnbcloneshantanu.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

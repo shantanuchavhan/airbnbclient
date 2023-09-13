@@ -11,7 +11,7 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
   const navigate=useNavigate()
 
   useEffect(() => {
-    fetch("https://airbnbcloneshantanu.onrender.com/api/Bookings", {
+    fetch("https://airbnbcloneshantanu.onrender.com/Bookings", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
 
   function deleteBooking(id) {
     console.log(id, "Booking");
-    fetch("https://airbnbcloneshantanu.onrender.com/api/Booking/delete", {
+    fetch("https://airbnbcloneshantanu.onrender.com/Booking/delete", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',

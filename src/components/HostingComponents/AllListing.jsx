@@ -15,7 +15,7 @@ const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDe
     console.log(userName,"userName")
     useEffect(() => {
       // Use userName and setCurrentUserListings here
-      fetch("https://airbnbcloneshantanu.onrender.com/api/allListing", {
+      fetch("https://airbnbcloneshantanu.onrender.com/allListing", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDe
     
       }
     function deleteit(listing){
-        fetch("https://airbnbcloneshantanu.onrender.com/api/Listing/delete",{
+        fetch("https://airbnbcloneshantanu.onrender.com/Listing/delete",{
           method:"POST",
           headers: {
             'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDe
     {currentUserListings.length > 0 ? (
       currentUserListings.map((listing) => (
         <div key={listing._id} className="Listing">
-          <img onClick={()=>{ViewListing(listing)}} className="ListingImage" src={`https://airbnbcloneshantanu.onrender.com/api/${listing.photos[0]}`} alt="" />
+          <img onClick={()=>{ViewListing(listing)}} className="ListingImage" src={`https://airbnbcloneshantanu.onrender.com/${listing.photos[0]}`} alt="" />
       <div onClick={()=>{ViewListing(listing)}} className="listing_data"> <h4>{listing.title}</h4></div>
       <div onClick={()=>{ViewListing(listing)}} className="listing_data"> <h4>{listing.price}</h4></div>
       <div className="listing_data" onClick={() => edit(listing)}>
