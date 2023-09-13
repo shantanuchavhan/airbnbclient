@@ -61,7 +61,7 @@ const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings})
   
   function CreateAListing() {
  if (listing.id !== null) {
-  const url = `https://airbnbcloneshantanu.onrender.com/api/listings/${listing.id}`;
+  const url = `https://airbnbcloneshantanu.onrender.com/listings/${listing.id}`;
 
   fetch(url, {
     method: 'PUT',
@@ -83,7 +83,7 @@ const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings})
       console.error('Fetch Error:', error);
     });
 }else{
-    fetch('https://airbnbcloneshantanu.onrender.com/api/listing', {
+    fetch('https://airbnbcloneshantanu.onrender.com/listing', {
   method: 'POST',
   body: formData
 })
