@@ -65,7 +65,8 @@ const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings})
 
   fetch(url, {
     method: 'PUT',
-    body: formData
+    body: formData,
+    enctype:"multipart/form-data"
   })
     .then(response => {
       if (!response.ok) {
@@ -85,7 +86,8 @@ const Footer = ({ listing,userName ,setCurrentUserListings,currentUserListings})
 }else{
     fetch('https://airbnbcloneshantanu.onrender.com/listing', {
   method: 'POST',
-  body: formData
+  body: formData,
+  enctype:"multipart/form-data"
 })
   .then(response => {
     if (!response.ok) {
