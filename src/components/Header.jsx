@@ -144,7 +144,10 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   return (
     <div className='HEADER' ref={headerRef}>
         <header className="App-header">
+        <div className='div-1'>
         <Link to="/"> <Logo/></Link>
+           </div>
+        
        
         <div className='div-2'>
           <h4 onClick={searchSection}>Anywhere</h4>
