@@ -117,7 +117,7 @@ svg{
 }
 
 /* Medium screens (551px to 930px) */
-@media screen and (min-width: 551px) and (max-width: 743px) {
+@media (min-width: 551px) and (max-width: 743px) {
   /* CSS rules for medium screens go here */
   .roomImages {
     display: grid;
@@ -128,7 +128,7 @@ svg{
 }
 
 /* Large screens (931px and above) */
-@media screen and (min-width: 743px) and (max-width: 930px) {
+@media (min-width: 743px) and (max-width: 930px) {
   /* CSS rules for large screens go here */
   .roomImages {
     display: grid;
