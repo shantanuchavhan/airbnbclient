@@ -111,8 +111,8 @@ svg{
 /* Small screens (up to 550px) */
 @media screen and (max-width: 550px) {
   .roomImages {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display:flex;
+    flex-direction: column;
     background-color:#de1263;
     padding-top: 96px;
     align-items: center;
