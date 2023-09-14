@@ -122,19 +122,28 @@ svg{
 @media screen and (min-width: 551px) and (max-width: 743px) {
   .roomImages {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 24px 16px;
     padding-top: 96px;
   }
 }
 
 /* Large screens (744px and above) */
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 744px) and (max-width: 990px) {
   .roomImages {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 16px;
+    padding-top: 96px;
+    
+  }
+}@media screen and (min-width: 991px)  {
+  .roomImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 24px 16px;
     padding-top: 96px;
     
   }
 }
+
