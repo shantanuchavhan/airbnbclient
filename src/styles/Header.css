@@ -5,7 +5,7 @@ header{
     height: 80px;
     gap: 48px;
     border-bottom:2px solid rgb(243, 242, 242);
-    position:relative;
+    position:fixed;
     z-index:1000;
   }
   .HEADER{
@@ -159,7 +159,7 @@ header{
    
   }
   .div-2{
-    position: fixed;
+    position:fixed;
     margin: 16px 20px;
     padding: 6px 11px;
   }
