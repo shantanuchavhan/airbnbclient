@@ -157,4 +157,27 @@ svg{
     
   }
 }
-
+@media screen and (max-width: 744px)  {
+  h1{
+    font-size: 1.553rem;
+    margin: 0;
+  }
+  h2{
+    font-size:1.163rem;
+    margin: 0;
+  }
+  h3{
+    font-size:0.9rem;
+    margin: 0;
+    font-weight: 300;
+  }
+  h4{
+    font-size: 0.6rem;
+    margin: 0;
+  }
+  h5{
+    font-size:0.3rem;
+    margin: 0;
+  }
+  
+}
