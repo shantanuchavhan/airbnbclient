@@ -9,7 +9,7 @@ const RatingReview = ({ userName, listingId, bookedUsers, listingOwner }) => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/listings/${listingId}/reviews`)
+    fetch(`https://airbnbcloneshantanu.onrender.com/listings/${listingId}/reviews`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -35,7 +35,7 @@ const RatingReview = ({ userName, listingId, bookedUsers, listingOwner }) => {
         text: newReview,
         rating: ratings,
       };
-      fetch(`http://localhost:5000/listings/${listingId}/reviews`, {
+      fetch(`https://airbnbcloneshantanu.onrender.com/listings/${listingId}/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const RatingReview = ({ userName, listingId, bookedUsers, listingOwner }) => {
 //   // Define a function to delete a comment
 function deleteComment(listingId, reviewId) {
 
-  fetch(`http://localhost:5000/listings/${listingId}/reviews/${reviewId}`, {
+  fetch(`https://airbnbcloneshantanu.onrender.com/listings/${listingId}/reviews/${reviewId}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',

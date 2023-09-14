@@ -12,7 +12,7 @@ const ViewReviews = ({reviews,userName,listingId,listingOwner}) => {
       console.log(viewReviews,"iyguyggy")
     function deleteComment(listingId, reviewId) {
 
-        fetch(`http://localhost:5000/listings/${listingId}/reviews/${reviewId}`, {
+        fetch(`https://airbnbcloneshantanu.onrender.com/listings/${listingId}/reviews/${reviewId}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
