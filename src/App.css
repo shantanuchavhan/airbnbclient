@@ -103,20 +103,23 @@ svg{
 }
 
 
+
+
+
+
 /* Small screens (up to 550px) */
 @media screen and (max-width: 550px) {
-  /* CSS rules for small screens go here */
   .roomImages {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     padding: 24px 16px;
     padding-top: 96px;
+    background-color:#de1263;
   }
 }
 
 /* Medium screens (551px to 743px) */
 @media screen and (min-width: 551px) and (max-width: 743px) {
-  /* CSS rules for medium screens go here */
   .roomImages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -125,14 +128,13 @@ svg{
   }
 }
 
-/* Large screens (931px and above) */
+/* Large screens (744px and above) */
 @media screen and (min-width: 744px) {
-  /* CSS rules for large screens go here */
   .roomImages {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 24px 16px;
     padding-top: 96px;
+    
   }
 }
-
