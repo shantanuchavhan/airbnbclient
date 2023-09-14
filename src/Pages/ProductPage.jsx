@@ -271,7 +271,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
             
             <div className="image-section__imgShow-gridLayout">
                 {currentProduct.photos.map((photo, index) => {
-                    index+1
+                    index+=1
                     if (index < 5) {
                     return <img key={index} src={photo} alt="" />;
                     }
