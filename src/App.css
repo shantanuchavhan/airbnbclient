@@ -112,10 +112,11 @@ svg{
   .roomImages {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 24px 16px;
+    
     padding-top: 96px;
     align-items: center;
     justify-content: center;
+
     
   }
 }
