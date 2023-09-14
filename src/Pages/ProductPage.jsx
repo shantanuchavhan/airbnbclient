@@ -267,12 +267,12 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
         
         <div className="image-section__imgShow"  onClick={handleViewPhotosClick}>
             
-            <img className="image-section__imgShow__coverimg" src={"https://airbnbcloneshantanu.onrender.com/"+ currentProduct.photos[0]} alt="" />
+            <img className="image-section__imgShow__coverimg" src={currentProduct.photos[0]} alt="" />
             
             <div className="image-section__imgShow-gridLayout">
                 {currentProduct.photos.map((photo, index) => {
                     if (index < 5) {
-                    return <img key={index} src={"https://airbnbcloneshantanu.onrender.com/" + photo} alt="" />;
+                    return <img key={index} src={photo} alt="" />;
                     }
                     return null;
                 })}
