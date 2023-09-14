@@ -99,15 +99,7 @@ header{
 
   
 
-  @media screen and (max-width: 930px) {
-    /* CSS rules to apply when the screen width is 768px or less */
-    .roomImages{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      padding:24px  16px;
-      padding-top: 96px;
-    }
-  }
+ 
   
   
  
