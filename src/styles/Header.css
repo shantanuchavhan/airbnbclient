@@ -110,27 +110,35 @@ header{
   }
   
   
-  /* This is a basic media query for screens with a maximum width of 768px */
-  @media screen and (max-width: 743px) {
-    /* CSS rules to apply when the screen width is 768px or less */
-    .div-1{
-      display: none;
-     
-    }
-    .div-3{
-      display: none;
-    }
+ 
+
+
+  /* Small screens (up to 550px) */
+@media screen and (max-width: 550px) {
+  /* CSS rules for small screens go here */
+  .div-1{
+    display: none;
+   
   }
-  
-  
-  /* This is a basic media query for screens with a maximum width of 768px */
-  @media screen and (max-width: 550px) {
-    /* CSS rules to apply when the screen width is 768px or less */
-    .div-1{
-      display: none;
-     
-    }
-    .div-3{
-      display: none;
-    }
+  .div-3{
+    display: none;
   }
+}
+
+/* Medium screens (551px to 930px) */
+@media screen and (min-width: 551px) and (max-width: 743px) {
+  /* CSS rules for medium screens go here */
+  .div-1{
+    display: none;
+   
+  }
+  .div-3{
+    display: none;
+  }
+}
+
+/* Large screens (931px and above) */
+@media screen and (min-width: 743px) and (max-width: 930px) {
+  /* CSS rules for large screens go here */
+ 
+}

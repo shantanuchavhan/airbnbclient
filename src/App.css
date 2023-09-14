@@ -105,37 +105,37 @@ svg{
 
 
 
-@media screen and (max-width: 930px) {
-  /* CSS rules to apply when the screen width is 768px or less */
-  .roomImages{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding:24px  16px;
-    padding-top: 96px;
-  }
-}
-
-
-/* This is a basic media query for screens with a maximum width of 768px */
-@media screen and (max-width: 743px) {
-  /* CSS rules to apply when the screen width is 768px or less */
-  .roomImages{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    padding:24px  16px;
-    padding-top: 96px;
-  }
-}
-
-
-/* This is a basic media query for screens with a maximum width of 768px */
+/* Small screens (up to 550px) */
 @media screen and (max-width: 550px) {
-  /* CSS rules to apply when the screen width is 768px or less */
-  .roomImages{
+  /* CSS rules for small screens go here */
+  .roomImages {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-    padding:24px  16px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 24px 16px;
     padding-top: 96px;
   }
 }
+
+/* Medium screens (551px to 930px) */
+@media screen and (min-width: 551px) and (max-width: 743px) {
+  /* CSS rules for medium screens go here */
+  .roomImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 16px;
+    padding-top: 96px;
+  }
+}
+
+/* Large screens (931px and above) */
+@media screen and (min-width: 743px) and (max-width: 930px) {
+  /* CSS rules for large screens go here */
+  .roomImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 16px;
+    padding-top: 96px;
+  }
+}
+
 
