@@ -30,7 +30,7 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
         <div className='Image-Detail'>
           <img src={image} alt="" />
           <div className="details">
-            <h3>{location}</h3>
+            <h3 className="details__location">{location}</h3>
             {Array.from({ length: 5 }, (_, index) => (
               <svg
               key={index}
