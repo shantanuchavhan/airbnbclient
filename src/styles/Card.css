@@ -34,4 +34,10 @@ a {
     
   }
 
+
+  @media screen and (max-width: 550px) {
+    .details__location{
+      width: 60%;
+    }
+  }
  
