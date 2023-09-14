@@ -112,10 +112,11 @@ svg{
   .roomImages {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    
+    background-color:#de1263;
     padding-top: 96px;
     align-items: center;
     justify-content: center;
+
 
     
   }
@@ -126,7 +127,8 @@ svg{
   .roomImages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 24px 16px;
+    align-items: center;
+    justify-content: center;
     padding-top: 96px;
   }
 }
@@ -136,7 +138,8 @@ svg{
   .roomImages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 24px 16px;
+    align-items: center;
+    justify-content: center;
     padding-top: 96px;
     
   }
@@ -144,8 +147,10 @@ svg{
   .roomImages {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 24px 16px;
+    align-items: center;
+    justify-content: center;
     padding-top: 96px;
+   
     
   }
 }
