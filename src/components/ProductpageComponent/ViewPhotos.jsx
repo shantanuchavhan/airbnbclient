@@ -4,7 +4,7 @@ const ViewPhotos = ({photos}) => {
   return (
     <div className="viewPhotos">
         {photos.map((photo)=>(
-            <img className="viewPhotos-img" src={"http://localhost:5000/" + photo} alt="" />
+            <img className="viewPhotos-img" src={photo} alt="" />
 
         ))}
       
