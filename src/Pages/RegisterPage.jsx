@@ -29,7 +29,7 @@ const RegisterPage = () => {
     console.log('registering...');
 
     try {
-      const response = await fetch('https://airbnbcloneshantanu.onrender.com/api/register', {
+      const response = await fetch('https://airbnbcloneshantanu.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
