@@ -81,7 +81,7 @@ const AllListing = ({userName,setAmenities,addPhoto ,getDiscounts,setTitle,setDe
     {currentUserListings.length > 0 ? (
       currentUserListings.map((listing) => (
         <div key={listing._id} className="Listing">
-          <img onClick={()=>{ViewListing(listing)}} className="ListingImage" src={`https://airbnbcloneshantanu.onrender.com/${listing.photos[0]}`} alt="" />
+          <img onClick={()=>{ViewListing(listing)}} className="ListingImage" src={listing.photos[0]} alt="" />
       <div onClick={()=>{ViewListing(listing)}} className="listing_data"> <h4>{listing.title}</h4></div>
       <div onClick={()=>{ViewListing(listing)}} className="listing_data"> <h4>{listing.price}</h4></div>
       <div className="listing_data" onClick={() => edit(listing)}>
