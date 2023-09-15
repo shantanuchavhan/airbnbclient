@@ -1,8 +1,10 @@
 import React from 'react'
 import '../styles/Footer.css'
-import { useState } from 'react'
+// import { useState } from 'react'
+import { connect } from 'react-redux';
 const FooterMobile = ({userName}) => {
-    const [isLogin,setIsLogin]=useState(true)
+    
+
     const logout = [
         {
             name:"Explore",
@@ -49,20 +51,24 @@ const FooterMobile = ({userName}) => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>
         }]
+        
+        
 
   return (
     <div className="FooterMobile">
       {
-        isLogin ? login.map((value)=>(
+        userName ? login.map((value)=>(
             <div className="FooterMobile__Section">
-        {value.svg}
-        <h3>{value.name}</h3>
-        
+                
+                <div className={value.name==="Trips" ? "airbnblogo":""}>
+            {value.svg}
+            </div>
+            <h3>{value.name}</h3>
        </div>
         )):
         logout.map((value)=>(
             <div className="FooterMobile__Section">
-            <div className={value.name==="Trips" || "airbnblogo"}>
+            <div className={value.name==="Trips" ? "airbnblogo":""}>
             {value.svg}
             </div>
             <h3>{value.name}</h3>
@@ -75,4 +81,11 @@ const FooterMobile = ({userName}) => {
   )
 }
 
-export default FooterMobile
+const mapStateToProps = (state) => {
+    return {
+      userName: state.userName, 
+     
+    };
+  };
+
+export default connect( mapStateToProps) (FooterMobile)
