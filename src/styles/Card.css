@@ -36,8 +36,11 @@ a {
 
 
   @media screen and (max-width: 550px) {
-    .details__location{
-      width: 60%;
+    .Image-Detail img{
+      height: 360px;
+      width: 360px;
+      border-radius: 16px;
+      background-color: antiquewhite;
     }
   }
  
