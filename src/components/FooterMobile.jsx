@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Footer.css'
+import { useState } from 'react'
 const FooterMobile = ({userName}) => {
     const [isLogin,setIsLogin]=useState(false)
     const logout = [
@@ -61,10 +62,9 @@ const FooterMobile = ({userName}) => {
         )):
         logout.map((value)=>(
             <div className="FooterMobile__Section">
-        {value.svg}
-        <h3>{value.name}</h3>
-        
-       </div>
+            {value.svg}
+            <h3>{value.name}</h3>
+        </div>
 
         ))
       }
