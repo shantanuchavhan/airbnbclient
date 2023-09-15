@@ -114,7 +114,6 @@ svg{
   .roomImages {
     display:flex;
     flex-direction: column;
-    background-color:#de1263;
     padding-top: 96px;
     align-items: center;
     justify-content: center;
