@@ -63,7 +63,7 @@ const FooterMobile = ({userName}) => {
   return (
     <div className="FooterMobile">
       {
-        userName ? login.map((value)=>(
+        userName.userName!=="" ? login.map((value)=>(
             <div className="FooterMobile__Section">
                 
                 <div className={value.name==="Trips" ? "airbnblogo":""}>
