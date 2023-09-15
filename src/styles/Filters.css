@@ -100,7 +100,7 @@
   .filters-container{
     overflow: hidden;
     padding:16px 0px 16px 0px;
-    height: 100px; 
+    height: 90px; 
     position: fixed;
     background-color: rgb(255, 255, 255);
   
@@ -120,11 +120,11 @@
   color: #888;
   
 }
-.filters .filter h3{
-  
-  font-size: 12px;
+.filters .filter h3 {
+  width: 100px;
+  margin: 2px;
+  font-size: 11.5px;
   color: #5d5d5d;
-  
 }
 }
 
