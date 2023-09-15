@@ -108,7 +108,7 @@
   }
   .filters{
     display:flex;
-    gap: 2px;
+    gap: 0px;
     overflow: scroll;
     padding: 0 16px;
     padding-bottom: 32px;
@@ -122,8 +122,8 @@
   
 }
 .filters .filter h3 {
-  width: 80px;
-  margin: 2px;
+  width: 76px;
+  margin: 0px;
   font-size: 12.2px;
   color: #5d5d5d;
 }
