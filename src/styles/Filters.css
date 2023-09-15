@@ -107,7 +107,7 @@
   }
   .filters{
     display:flex;
-    gap: 8px;
+    gap: 4px;
     overflow: scroll;
     padding: 0 24px;
     padding-bottom: 32px;
