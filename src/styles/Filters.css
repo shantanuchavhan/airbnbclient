@@ -111,7 +111,14 @@
     gap: 1px;
     overflow: scroll;
     padding: 0 14px;
-    padding-bottom: 32px;
+    padding-bottom: 24px;
+  }
+  .active{
+    border-bottom:1.6px solid #303030;
+    border-radius: 8px;
+    padding: 4px;
+    color: #303030;
+    
   }
 .filters .filter img{
   padding: 0%;
