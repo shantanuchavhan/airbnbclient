@@ -106,12 +106,12 @@
   
   }
   .filters{
-    display: flex;
+    display:flex;
     gap: 8px;
-    overflow:scroll;
-    margin:0 24px;
+    overflow: scroll;
+    padding: 0 24px;
     padding-bottom: 48px;
-}
+  }
 .filters .filter img{
   padding: 0%;
   margin: 0%;
