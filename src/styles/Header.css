@@ -102,12 +102,14 @@ header{
   .HeaderMobile{
     position: fixed;
     top: 0%;
-    width: 100%;
+    width: 92%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 8px;
+    gap: 16px;
+    padding:0px 36px ;
+    
     
     
   }
