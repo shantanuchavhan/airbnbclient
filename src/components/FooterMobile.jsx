@@ -4,7 +4,7 @@ import '../styles/Footer.css'
 import { connect } from 'react-redux';
 const FooterMobile = ({userName}) => {
     
-
+    console.log(userName)
     const logout = [
         {
             name:"Explore",
