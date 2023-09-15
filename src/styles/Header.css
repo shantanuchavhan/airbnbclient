@@ -102,17 +102,13 @@ header{
   .HeaderMobile{
     position: fixed;
     top: 0%;
-    width: 100%;
+    width: 90%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 16px;
-    padding: 0 16px;
-   
-    
-    
-    
+    padding: 0 24px;    
   }
 
   .flexAj{
@@ -135,13 +131,13 @@ header{
   .SearchSectionMobile{
     border: 1.2px solid rgb(232, 231, 231);
     border-radius: 30px;
-    flex: 1.6;
+    flex: 1.8;
     padding:0px 24px;
     box-shadow: 2px 30px 80px 0px rgba(190, 190, 190, 0.2);
   }
 
   .filterMobile{
-    flex: 0.4;
+    flex: 0.2;
     margin-top: 14px;
   }
 
