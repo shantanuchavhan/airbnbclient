@@ -102,9 +102,14 @@ header{
   .HeaderMobile{
     position: fixed;
     top: 0%;
-    padding: 8px 16px;
     width: 100%;
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 32px;
+    
   }
 
   .flexAj{
@@ -129,16 +134,16 @@ header{
     border-radius: 30px;
     flex: 2;
     padding:0px 16px;
-    
+    box-shadow: 2px 30px 60px 0px rgba(190, 190, 190, 0.2);
   }
 
   .filterMobile{
     flex: 0.6;
-    margin-top: 4px;
+    margin-top: 14px;
   }
 
   .filterMobile svg{
-    border: 1px solid rgb(180, 179, 179);
+    border: 1px solid rgb(213, 211, 211);
     border-radius: 100%;
     padding: 8px;
   }
