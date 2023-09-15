@@ -36,7 +36,7 @@ header{
     border: 2px solid rgb(240, 237, 237);
     border-radius: 50px;
     box-shadow: 2px;
-    transition: 2s ease-in;
+   
     
   }
   
@@ -97,9 +97,41 @@ header{
     color: rgb(65, 65, 65);
   }
 
-  
 
- 
+
+  .HeaderMobile{
+    position: fixed;
+    top: 0%;
+    padding: 8px 16px;
+    width: 100%;
+    background-color: white;
+  }
+
+  .flexAj{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+  }
+
+  .flexA{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .SearchSectionMobile{
+    border: 1.2px solid rgb(232, 231, 231);
+    border-radius: 30px;
+    flex: 2;
+    padding:0px 16px;
+    
+  }
+
+  .filterMobile{
+    flex: 0.5;
+  }
+
   
   
  
@@ -132,7 +164,9 @@ header{
   }
 }
 
-
+.marginTop-10{
+  margin-top: -10px;
+}
 
 
 

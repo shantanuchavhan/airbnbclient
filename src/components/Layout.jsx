@@ -6,14 +6,21 @@ import { Outlet} from "react-router-dom";
 
 import { connect } from 'react-redux'; 
 import '../App.css'
-
+import HeaderMobile from './HeaderMobile';
 
 
 const Layout = ({children}) => { 
 
   return (
     <div className='Layout'>
-      <Header></Header>
+      <div className="largerHeader">
+        <Header></Header>
+      </div>
+      <div className="smallHeader">
+      <HeaderMobile></HeaderMobile>
+      </div>
+      
+      
       <div className="MainContent">
         <Outlet>{children}</Outlet>
       </div>
