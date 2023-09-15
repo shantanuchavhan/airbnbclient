@@ -46,11 +46,11 @@
         flex-direction: column;
         justify-content: center;       
         min-height: 50vh;
-        border: 1px solid rgb(81, 77, 77);
         gap: 16px;      
         padding: 0 24px;
-        margin: 0;
+        margin: -50px;
         padding-top: 0;
+        border: none;
     }
   
   /* Medium screens (551px to 743px) */
@@ -62,11 +62,11 @@
         flex-direction: column;
         justify-content: center;       
         min-height: 50vh;
-        border: 1px solid rgb(81, 77, 77);
         gap: 16px;      
         padding: 0 24px;
-        margin: -40px;
+        margin: -50px;
         padding-top: 0;
+        border: none;
     }
   
   /* Large screens (744px and above) */

@@ -54,8 +54,9 @@
         justify-content: center;
         gap: 0px;      
         padding: 0 24px;
-        margin: 0;
+        margin: -50px;
         padding-top: 0;
+        border: none;
        
     }
   
@@ -77,6 +78,9 @@
         padding: 0 24px;
         margin: 0;
         padding-top: 0;
+        margin: -50px;
+        padding-top: 0;
+        border: none;
        
     }
   }
