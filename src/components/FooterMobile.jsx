@@ -55,6 +55,8 @@ const FooterMobile = ({userName}) => {
       const navigateTo=(section)=>{
         if(section==="Login"){
             navigate('/Login')
+        }else if(section==="Explore"){
+            navigate('/')
         }
       } 
         
