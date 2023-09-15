@@ -132,7 +132,7 @@ header{
   .SearchSectionMobile{
     border: 1.2px solid rgb(232, 231, 231);
     border-radius: 30px;
-    flex: 2;
+    flex: 1.4;
     padding:0px 16px;
     box-shadow: 2px 30px 60px 0px rgba(190, 190, 190, 0.2);
   }
