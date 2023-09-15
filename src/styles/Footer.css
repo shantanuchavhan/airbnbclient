@@ -44,3 +44,22 @@ footer{
     color: white;
     border-radius: 10px ;
   }
+
+  .FooterMobile{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      color: gray;
+      
+  }
+
+  .FooterMobile__Section svg{
+    width: 40px;
+    font-weight:1000;
+    
+  }
+  
+  .FooterMobile__Section h3{
+    margin-top: -10px;
+  }

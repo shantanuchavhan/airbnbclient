@@ -3,7 +3,7 @@ import Footer from './Footer'
 import Header from './Header'
 
 import { Outlet} from "react-router-dom";
-
+import FooterMobile from './FooterMobile';
 import { connect } from 'react-redux'; 
 import '../App.css'
 import HeaderMobile from './HeaderMobile';
@@ -27,6 +27,9 @@ const Layout = ({children}) => {
       
       <div className="largeFooter">
         <Footer />
+      </div>
+      <div className="smallFooter">
+        <FooterMobile/>
       </div>
       
     </div>
