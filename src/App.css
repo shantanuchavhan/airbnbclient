@@ -128,6 +128,13 @@ svg{
     display: block;
   
   }
+  .largeFooter{
+    display: none;
+  }
+  .smallFooter{
+    display: block;
+  
+  }
 }
 
 /* Medium screens (551px to 743px) */
@@ -144,6 +151,13 @@ svg{
   }
   
   .smallHeader{
+    display: block;
+  
+  }
+  .largeFooter{
+    display: none;
+  }
+  .smallFooter{
     display: block;
   
   }
@@ -167,15 +181,29 @@ svg{
     display: none;
   
   }
+  .largeFooter{
+    
+    display: block;
+  }
+  .smallFooter{
+    display: none;
+  
+  }
 }@media screen and (min-width: 991px)  {
   .roomImages {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
-    padding-top: 96px;
-   
+    padding-top: 96px;       
+  }
+  .largeFooter{
     
+    display: block;
+  }
+  .smallFooter{
+    display: none;
+  
   }
 }
 @media screen and (max-width: 744px)  {

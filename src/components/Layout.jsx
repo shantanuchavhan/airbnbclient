@@ -25,8 +25,10 @@ const Layout = ({children}) => {
         <Outlet>{children}</Outlet>
       </div>
       
+      <div className="largeHeader">
+        <Footer />
+      </div>
       
-      <Footer />
     </div>
   )
 }
