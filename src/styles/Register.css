@@ -45,9 +45,9 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;       
-        min-height: 60vh;
+        min-height: 50vh;
         border: 1px solid rgb(81, 77, 77);
-        gap: 0px;      
+        gap: 16px;      
         padding: 0 24px;
         margin: 0;
         padding-top: 0;
@@ -61,11 +61,11 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;       
-        min-height: 60vh;
+        min-height: 50vh;
         border: 1px solid rgb(81, 77, 77);
-        gap: 0px;      
+        gap: 16px;      
         padding: 0 24px;
-        margin: 0;
+        margin: -40px;
         padding-top: 0;
     }
   
