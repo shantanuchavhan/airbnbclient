@@ -100,16 +100,17 @@
   .filters-container{
     overflow: hidden;
     padding:16px 0px;
-    height: 75px; 
+    height: 70px; 
+    margin-top: -46px;
     position: fixed;
     background-color: rgb(255, 255, 255);
   
   }
   .filters{
     display:flex;
-    gap: 4px;
+    gap: 2px;
     overflow: scroll;
-    padding: 0 24px;
+    padding: 0 16px;
     padding-bottom: 32px;
   }
 .filters .filter img{
