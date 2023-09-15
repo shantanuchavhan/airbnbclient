@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/Footer.css'
 import { useState } from 'react'
 const FooterMobile = ({userName}) => {
-    const [isLogin,setIsLogin]=useState(false)
+    const [isLogin,setIsLogin]=useState(true)
     const logout = [
         {
             name:"Explore",
@@ -62,7 +62,9 @@ const FooterMobile = ({userName}) => {
         )):
         logout.map((value)=>(
             <div className="FooterMobile__Section">
+            <div className={value.name==="Trips" || "airbnblogo"}>
             {value.svg}
+            </div>
             <h3>{value.name}</h3>
         </div>
 
