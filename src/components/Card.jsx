@@ -22,6 +22,7 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
     const productId = roomData._id; // Replace with the actual product ID
     Cookies.set('productIdCookie', productId.toString());
     setCurrentProduct(roomData);
+    console.log(roomData,"roomdata")
   };
 
   return (
