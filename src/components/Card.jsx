@@ -21,7 +21,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   // image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
   const setProduct = () => {
-    console.log(navigateToLogin)
+   
     // if(navigateToLogin===true){
       
     //   navigate('/Login')
