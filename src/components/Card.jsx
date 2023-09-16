@@ -29,7 +29,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   };
   
   const addToWishList = () => {
-    console.log(userName.userName,"addtowishlist")
+    console.log(userName,"addtowishlist")
     if(userName.userName===""){
       console.log("Login")
       navigate('/Login')
