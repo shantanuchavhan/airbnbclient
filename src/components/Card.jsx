@@ -68,7 +68,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
     }
   }
   
-  }
+  
 
   return (
     
