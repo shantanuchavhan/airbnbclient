@@ -42,6 +42,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
     if(userName===""){
       console.log("Login")
       setNavigateToLogin(true)
+      console.log(navigateToLogin)
       navigate('/Login')
     }else{
       const productId = roomData._id; 
