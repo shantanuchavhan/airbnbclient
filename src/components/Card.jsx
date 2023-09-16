@@ -33,8 +33,8 @@ const Card = ({ key,userName, roomData,allWishList }) => {
     if(userName===""){
       console.log("Login")
       navigate('/Login')
-    }
-    const productId = roomData._id; 
+    }else{
+      const productId = roomData._id; 
     fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist/${userName}`,{
       method: 'POST', // Set the HTTP method
       headers: {
@@ -42,6 +42,8 @@ const Card = ({ key,userName, roomData,allWishList }) => {
       },
       body: JSON.stringify({ id:productId })
     })
+    }
+    
 
   }
 
