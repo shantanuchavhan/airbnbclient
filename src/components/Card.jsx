@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react';
 import '../styles/HostingPage.css';
 import '../styles/Card.css';
 import '../styles/CommonTransition.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
@@ -23,6 +23,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
     const productId = roomData._id; // Replace with the actual product ID
     Cookies.set('productIdCookie', productId.toString());
     setCurrentProduct(roomData);
+    navigate('/Product')
   };
   
   const addToWishList = () => {
@@ -42,7 +43,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   }
 
   return (
-    <Link to="/Product">
+    
       <div onClick={setProduct}  className={`card ${isLoading ? 'loading' : ''}`}>
         <div className='Image-Detail'>
           <img src={roomData.photos[0]} alt="" />
@@ -85,7 +86,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
             </div>
         </div>
       </div>
-    </Link>
+    
   );
 }
 
