@@ -1,5 +1,6 @@
 .Card{
   position: relative;
+  z-index: -1;
 }
 
 a {
@@ -54,4 +55,8 @@ a {
   position: absolute;
   top: 5%;
   right: 5%;
+}
+.wishlistIcon svg{
+  color: white;
+  background-color: rgba(15, 15, 15, 0.326);
 }
