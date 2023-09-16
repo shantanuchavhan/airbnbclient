@@ -20,47 +20,44 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   }, []);
   // image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
-  const addToWishList = () => {
-    if (userName === "") {
-      setNavigateToLogin(true)
-      navigate('/Login');
-    } else {
-      const productId = roomData._id;
-      fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist/${userName}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ id: productId })
-      })
-        .then(response => {
-          if (response.ok) {
-            console.log('Product added to wishlist.');
-            // Once the wishlist update is successful, you can execute setProduct.
-            setProduct();
-          } else {
-            console.error('Failed to add product to wishlist.');
-          }
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    }
-  };
-  
   const setProduct = () => {
     setTimeout(() => {
-      if(navigateToLogin){
-          return
+      if(navigateToLogin===true){
+      
+        navigate('/Login')
+  
+  
       }else{
         const productId = roomData._id; // Replace with the actual product ID
-      Cookies.set('productIdCookie', productId.toString());
-      setCurrentProduct(roomData);
-      navigate('/Product');
+        Cookies.set('productIdCookie', productId.toString());
+        setCurrentProduct(roomData);
+        navigate('/Product')
+  
       }
-      
     }, 1000);
+    
+    
+  };
+  
+  const addToWishList = () => {
+    console.log(userName,"addtowishlist")
+    if(userName===""){
+      console.log("Login")
+      setNavigateToLogin(true)
+      navigate('/Login')
+    }else{
+      const productId = roomData._id; 
+    fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist/${userName}`,{
+      method: 'POST', // Set the HTTP method
+      headers: {
+        'Content-Type': 'application/json' // Specify the content type
+      },
+      body: JSON.stringify({ id:productId })
+    })
+    }
+    
 
+  }
 
   return (
     
@@ -109,7 +106,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
     
   );
 }
-}
+
 const mapStateToProps = (state) => {
   return {
     userName:state.userName.userName,
