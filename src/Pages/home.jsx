@@ -7,9 +7,9 @@ import setRooms from '../Redux/Actions/setRooms'
 import '../styles/CommonTransition.css'
 import '../App.css'
 import Card from '../components/Card'
-import setWishlist from '../Redux/Actions/setWishlist.JS'
+import setAllWishList from '../Redux/Actions/setAllWishList'
 
-const Home = ({userName,rooms,setRooms,setWishlist,allWishList}) => {
+const Home = ({userName,rooms,setRooms,setAllWishList,allWishList}) => {
   const [active,setActive]=useState("Amazing-View")
   
   const [isLoading, setIsLoading] = useState(true);
@@ -39,10 +39,10 @@ const Home = ({userName,rooms,setRooms,setWishlist,allWishList}) => {
   }, [setRooms]); // Pass an empty array as the second argument
 
   useEffect(()=>{
-    fetch(`https://airbnbcloneshantanu.onrender.com/getWishlist/${userName}`).
-    then((response)=>response.json()).
-    then((data)=>setWishlist(data))
-  })
+    fetch(`https://airbnbcloneshantanu.onrender.com/getWishlist/${userName}`)
+    .then((response)=>response.json())
+    .then((data)=>setAllWishList(data))
+  },[setAllWishList,userName])
   
  
   
@@ -75,7 +75,7 @@ const Home = ({userName,rooms,setRooms,setWishlist,allWishList}) => {
         <Filters active={active} currentSelected={currentSelected} />
         <div className="roomImages">
          {rooms.map((room,index)=>(
-            <Card image={room.photos[0]} location={room.location} price={room.price} id={room._id} roomData={room} wishlist={allWishList} />
+            <Card key={room._id}  image={room.photos[0]} location={room.location} price={room.price} id={room._id} roomData={room} allWishList={allWishList} />
          ))} 
            
          
@@ -95,7 +95,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   setRooms,
-  setWishlist
+  setAllWishList
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
