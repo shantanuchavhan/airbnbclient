@@ -109,7 +109,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
     
   );
 }
-
+}
 const mapStateToProps = (state) => {
   return {
     userName:state.userName.userName,
