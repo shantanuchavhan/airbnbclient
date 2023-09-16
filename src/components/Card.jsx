@@ -3,15 +3,14 @@ import { useEffect,useState } from 'react';
 import '../styles/HostingPage.css';
 import '../styles/Card.css';
 import '../styles/CommonTransition.css'
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
 
 
-const Card = ({ image, location, price, currentProduct, setCurrentProduct,  roomData }) => {
+const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate()
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -20,22 +19,18 @@ const Card = ({ image, location, price, currentProduct, setCurrentProduct,  room
   // image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
   const setProduct = () => {
-    console.log("hii")
     const productId = roomData._id; // Replace with the actual product ID
     Cookies.set('productIdCookie', productId.toString());
     setCurrentProduct(roomData);
-    console.log(roomData,currentProduct)
-    navigate('/Product')
-    
   };
 
   return (
-    
-      <div onClick={setProduct}  className={`Card fade-in ${isLoading ? 'loading' : ''}`}>
+    <Link to="/Product">
+      <div onClick={setProduct}  className={`fade-in ${isLoading ? 'loading' : ''}`}>
         <div className='Image-Detail'>
           <img src={image} alt="" />
           <div className="details">
-            <h2 className="details__location">{location}</h2>
+            <h3 className="details__location">{location}</h3>
             {Array.from({ length: 5 }, (_, index) => (
               <svg
               key={index}
@@ -57,15 +52,10 @@ const Card = ({ image, location, price, currentProduct, setCurrentProduct,  room
             
             ))}
             <h4>{price} night</h4>
-            <div className="wishlistIcon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-              </svg>
-            </div>
           </div>
         </div>
       </div>
-    
+    </Link>
   );
 }
 
