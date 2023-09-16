@@ -64,3 +64,8 @@ a {
   background-color: rgba(15, 15, 15, 0.326);
   border-radius: 200%;
 }
+
+.pinkWishListColor{
+  background-color: rgba(250, 147, 147, 0.742);
+  color:rgb(250, 84, 112);
+}

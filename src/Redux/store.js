@@ -11,7 +11,7 @@ import ListSetupReducer from './Reducers/ListSetupReducer';
 import currentUserListingsReducer from './Reducers/currentUserListingsReducer';
 import AllRoomsDetailsReducer from './Reducers/AllRoomsDetailsReducer';
 import isBookingReducer from './Reducers/isBookingReducer';
-
+import AllWishListReducer from './Reducers/AllWishListReducer';
 const rootReducer = combineReducers({
     guestToggle: GuestToggleReducer,
     CurrentProductReducer:CurrentProductReducer,
@@ -22,7 +22,9 @@ const rootReducer = combineReducers({
     ListingReducer:ListingReducer,
     ListSetupReducer:ListSetupReducer,
     AllRoomsDetailsReducer:AllRoomsDetailsReducer,
-    isBookingReducer:isBookingReducer
+    isBookingReducer:isBookingReducer,
+    AllWishListReducer:AllWishListReducer
+
     
     // Add other reducers if needed
   });

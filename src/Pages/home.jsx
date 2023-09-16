@@ -7,7 +7,9 @@ import setRooms from '../Redux/Actions/setRooms'
 import '../styles/CommonTransition.css'
 import '../App.css'
 import Card from '../components/Card'
-const Home = ({rooms,setRooms}) => {
+import setWishlist from '../Redux/Actions/setwishlist.JS'
+import { response } from 'express'
+const Home = ({userName,rooms,setRooms,setWishlist,allWishList}) => {
   const [active,setActive]=useState("Amazing-View")
   
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +37,12 @@ const Home = ({rooms,setRooms}) => {
       console.error('Error fetching data:', error);
     });
   }, [setRooms]); // Pass an empty array as the second argument
+
+  useEffect(()=>{
+    fetch(`https://airbnbcloneshantanu.onrender.com/getWishlist/${userName}`).
+    then((response)=>response.json()).
+    then((data)=>setWishlist(data))
+  })
   
  
   
@@ -67,7 +75,7 @@ const Home = ({rooms,setRooms}) => {
         <Filters active={active} currentSelected={currentSelected} />
         <div className="roomImages">
          {rooms.map((room,index)=>(
-            <Card image={room.photos[0]} location={room.location} price={room.price} id={room._id} roomData={room} />
+            <Card image={room.photos[0]} location={room.location} price={room.price} id={room._id} roomData={room} wishlist={allWishList} />
          ))} 
            
          
@@ -78,13 +86,16 @@ const Home = ({rooms,setRooms}) => {
 }
 const mapStateToProps = (state) => {
   return {
-    rooms: state.AllRoomsDetailsReducer.rooms
+    rooms: state.AllRoomsDetailsReducer.rooms,
+    userName:state.userName.userName,
+    allWishList:state.AllWishListReducer.allWishList
     
   };
 };
 
 const mapDispatchToProps = {
-  setRooms
+  setRooms,
+  setWishlist
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
