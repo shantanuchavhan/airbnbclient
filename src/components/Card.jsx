@@ -20,53 +20,40 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   }, []);
   // image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
-  const setProduct = () => {
-   
-    // if(navigateToLogin===true){
-      
-    //   navigate('/Login')
-
-
-    // }else{
-      const productId = roomData._id; // Replace with the actual product ID
-      Cookies.set('productIdCookie', productId.toString());
-      setCurrentProduct(roomData);
-      navigate('/Product')
-
-    
-    
-  };
-  
   const addToWishList = () => {
     if (userName === "") {
-      // If the user is not logged in (userName is an empty string), navigate to the login page.
       navigate('/Login');
     } else {
-      // If the user is logged in, proceed to add the product to the wishlist.
-      const productId = roomData._id; // Get the ID of the current product
+      const productId = roomData._id;
       fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist/${userName}`, {
-        method: 'POST', // Set the HTTP method to POST
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json' // Specify the content type as JSON
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ id: productId }) // Send the product ID as JSON in the request body
+        body: JSON.stringify({ id: productId })
       })
         .then(response => {
           if (response.ok) {
-            // Handle a successful response (product added to the wishlist)
-            // You can add additional logic here if needed.
             console.log('Product added to wishlist.');
+            // Once the wishlist update is successful, you can execute setProduct.
+            setProduct();
           } else {
-            // Handle errors if the request fails.
             console.error('Failed to add product to wishlist.');
           }
         })
         .catch(error => {
-          // Handle any network or other errors that might occur.
           console.error('Error:', error);
         });
     }
-  }
+  };
+  
+  const setProduct = () => {
+    const productId = roomData._id; // Replace with the actual product ID
+    Cookies.set('productIdCookie', productId.toString());
+    setCurrentProduct(roomData);
+    navigate('/Product');
+  };
+  
   
   
 
