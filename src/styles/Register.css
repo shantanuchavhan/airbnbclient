@@ -35,9 +35,9 @@
     flex-direction: column;
     gap: 24px;
     justify-content: center;
-    margin: -48px 0;
+    margin:  0;
     min-height: 50vh;
-    padding: 0 32px;
+    padding: 32px 32px;
   }
   
   /* Medium screens (551px to 743px) */
@@ -50,7 +50,7 @@
       flex-direction: column;
       gap: 24px;
       justify-content: center;
-      margin: -52px 0;
+      margin: -48px 0;
       min-height: 50vh;
       padding: 0 32px;
     }
