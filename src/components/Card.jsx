@@ -9,7 +9,7 @@ import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
 
 
-const Card = ({ key,userName, roomData,allWishList }) => {
+const Card = ({ key,userName,currentProduct, roomData,allWishList }) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
@@ -23,8 +23,9 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   const setProduct = () => {    
         const productId = roomData._id; // Replace with the actual product ID
         Cookies.set('productIdCookie', productId.toString());
-        co
+        console.log(roomData,"roomData")
         setCurrentProduct(roomData);
+        console.log(currentProduct,"currentProduct")
         navigate('/Product')   
   };
   
