@@ -7,7 +7,7 @@ import setRooms from '../Redux/Actions/setRooms'
 import '../styles/CommonTransition.css'
 import '../App.css'
 import Card from '../components/Card'
-import setWishlist from '../Redux/Actions/setwishlist.JS'
+import setWishlist from '../Redux/Actions/setWishlist.JS'
 
 const Home = ({userName,rooms,setRooms,setWishlist,allWishList}) => {
   const [active,setActive]=useState("Amazing-View")
