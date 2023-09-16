@@ -21,7 +21,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   // image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
   const setProduct = () => {
-    setTimeout(() => {
+   
       console.log(navigateToLogin)
       if(navigateToLogin===1){
       
@@ -35,16 +35,16 @@ const Card = ({ key,userName, roomData,allWishList }) => {
         navigate('/Product')
   
       }
-    }, 1000);
+  
     
     
   };
   
   const addToWishList = () => {
+    event.stopPropagation();
     console.log(userName,"addtowishlist")
     if(userName===""){
-      console.log("Login")
-      setNavigateToLogin(1)
+    
       navigate('/Login')
     }else{
       const productId = roomData._id; 
