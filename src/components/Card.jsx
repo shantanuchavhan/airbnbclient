@@ -9,7 +9,7 @@ import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
 
 
-const Card = ({ key,userName, image, location, price,  setCurrentProduct,  roomData,allWishList }) => {
+const Card = ({ key,userName, roomData,allWishList }) => {
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
   useEffect(() => {
@@ -44,9 +44,9 @@ const Card = ({ key,userName, image, location, price,  setCurrentProduct,  roomD
     <Link to="/Product">
       <div onClick={setProduct}  className={`card ${isLoading ? 'loading' : ''}`}>
         <div className='Image-Detail'>
-          <img src={image} alt="" />
+          <img src={roomData.photos[0]} alt="" />
           <div className="details">
-            <h3 className="details__location">{location}</h3>
+            <h3 className="details__location">{roomData.location}</h3>
             {Array.from({ length: 5 }, (_, index) => (
               <svg
               key={index}
@@ -67,11 +67,11 @@ const Card = ({ key,userName, image, location, price,  setCurrentProduct,  roomD
             </svg>
             
             ))}
-            <h4>{price} night</h4>
+            <h4>{roomData.price} night</h4>
             
           </div>
           <div onClick={addToWishList} className="wishlistIcon">
-              <svg className={allWishList.include(key)? 'pinkWishListColor':''} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <svg className={allWishList.include(key)? 'pinkWishListColor':''} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
               </svg>
             </div>

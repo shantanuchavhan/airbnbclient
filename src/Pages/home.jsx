@@ -74,8 +74,9 @@ const Home = ({userName,rooms,setRooms,setAllWishList,allWishList}) => {
     <main className={`mainComponentHome fade-in ${isLoading ? 'loading' : ''}`}>
         <Filters active={active} currentSelected={currentSelected} />
         <div className="roomImages">
-         {rooms.map((room,index)=>(
-            <Card key={room._id}  image={room.photos[0]} location={room.location} price={room.price}  roomData={room} allWishList={allWishList} />
+         {rooms.map((room)=>(
+            <Card key={room._id} roomData={room} allWishList={allWishList} />
+            
          ))} 
            
          
