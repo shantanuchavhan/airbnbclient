@@ -20,6 +20,7 @@ const Card = ({ image, location, price, currentProduct, setCurrentProduct,  room
   // image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
   const setProduct = () => {
+    console.log("hii")
     const productId = roomData._id; // Replace with the actual product ID
     Cookies.set('productIdCookie', productId.toString());
     setCurrentProduct(roomData);
