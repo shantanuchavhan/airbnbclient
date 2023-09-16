@@ -10,7 +10,7 @@ import Cookies from 'js-cookie';
 
 
 const Card = ({ key,userName, roomData,allWishList }) => {
-  const []
+  
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
   useEffect(() => {
