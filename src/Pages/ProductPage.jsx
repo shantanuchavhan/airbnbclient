@@ -241,7 +241,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
   return (
     <main className='ProductMain' ref={headerRef}>
         <div className="details-1">
-            <h1>{currentProduct.title}</h1>
+            <h1>{currentProduct?.title}</h1>
             <div className="details1-link">
                 <div>
                 <h4 onClick={handleViewReviewsClick} className='Rating ReservationBox__section1__averageRating' >{currentProduct && currentProduct.averageRating !== undefined ? currentProduct.averageRating.toFixed(1) : 0}
