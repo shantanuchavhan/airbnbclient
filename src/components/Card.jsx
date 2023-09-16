@@ -26,7 +26,7 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
 
   return (
     <Link to="/Product">
-      <div onClick={setProduct}  className={`fade-in Card ${isLoading ? 'loading' : ''}`}>
+      <div onClick={setProduct}  className={`fade-in card ${isLoading ? 'loading' : ''}`}>
         <div className='Image-Detail'>
           <img src={image} alt="" />
           <div className="details">
