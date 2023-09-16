@@ -35,7 +35,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
       navigate('/Login')
     }
     const productId = roomData._id; 
-    fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist`,{
+    fetch('https://airbnbcloneshantanu.onrender.com/addToWishlist',{
       method: 'POST', // Set the HTTP method
       headers: {
         'Content-Type': 'application/json' // Specify the content type
