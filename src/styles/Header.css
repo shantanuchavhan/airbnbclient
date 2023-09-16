@@ -108,7 +108,8 @@ header{
     align-items: center;
     justify-content: space-around;
     gap: 16px;
-    padding: 0 24px;    
+    padding: 0 24px;   
+    z-index: 10; 
   }
 
   .flexAj{
