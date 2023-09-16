@@ -1,3 +1,7 @@
+.Card{
+  position: relative;
+}
+
 a {
   text-decoration: none;
 }
@@ -45,3 +49,9 @@ a {
     
   }
  
+
+.wishlistIcon{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
