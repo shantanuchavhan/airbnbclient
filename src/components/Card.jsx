@@ -24,8 +24,8 @@ const Card = ({ key,userName,currentProduct, roomData,allWishList }) => {
         const productId = roomData._id; // Replace with the actual product ID
         Cookies.set('productIdCookie', productId.toString());
         console.log(roomData,"roomData")
-        setCurrentProduct(roomData);
-        console.log(currentProduct,"currentProduct")
+        setCurrentProduct((currentProduct)=>roomData);
+        console.log(currentProduct,"roomData")
         navigate('/Product')   
   };
   
@@ -51,7 +51,7 @@ const Card = ({ key,userName,currentProduct, roomData,allWishList }) => {
 
   return (
     
-      <div onClick={setProduct}  className={` ${isLoading ? 'loading' : ''}`}>
+      <div onClick={setProduct}  className={`card ${isLoading ? 'loading' : ''}`}>
         <div className='Image-Detail'>
           <img src={roomData.photos[0]} alt="" />
           <div className="details">
