@@ -3,14 +3,15 @@ import { useEffect,useState } from 'react';
 import '../styles/HostingPage.css';
 import '../styles/Card.css';
 import '../styles/CommonTransition.css'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
 
 
-const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
+const Card = ({ image, location, price, currentProduct, setCurrentProduct,  roomData }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate()
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -22,11 +23,13 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
     const productId = roomData._id; // Replace with the actual product ID
     Cookies.set('productIdCookie', productId.toString());
     setCurrentProduct(roomData);
-    console.log(roomData,"roomdata")
+    console.log(roomData,currentProduct)
+    navigate('/Product')
+    
   };
 
   return (
-    <Link to="/Product">
+    
       <div onClick={setProduct}  className={`Card fade-in ${isLoading ? 'loading' : ''}`}>
         <div className='Image-Detail'>
           <img src={image} alt="" />
@@ -61,7 +64,7 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
           </div>
         </div>
       </div>
-    </Link>
+    
   );
 }
 
