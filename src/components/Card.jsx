@@ -10,6 +10,7 @@ import Cookies from 'js-cookie';
 
 
 const Card = ({ key,userName, roomData,allWishList }) => {
+  const []
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
   useEffect(() => {
@@ -30,6 +31,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   const addToWishList = () => {
     console.log("addtowishlist")
     if(userName.userName===""){
+      console.log("Login")
       navigate('/Login')
     }
     const productId = roomData._id; 
