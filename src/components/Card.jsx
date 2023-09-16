@@ -10,7 +10,7 @@ import Cookies from 'js-cookie';
 
 
 const Card = ({ key,userName, roomData,allWishList }) => {
-  const [navigateToLogin, setNavigateToLogin] = useState(0);
+
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
   useEffect(() => {
@@ -20,24 +20,11 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   }, []);
   // image = "https://airbnbcloneshantanu.onrender.com/" + image;
 
-  const setProduct = () => {
-   
-      console.log(navigateToLogin)
-      if(navigateToLogin===1){
-      
-        navigate('/Login')
-  
-  
-      }else{
+  const setProduct = () => {    
         const productId = roomData._id; // Replace with the actual product ID
         Cookies.set('productIdCookie', productId.toString());
         setCurrentProduct(roomData);
-        navigate('/Product')
-  
-      }
-  
-    
-    
+        navigate('/Product')   
   };
   
   const addToWishList = (event) => {
