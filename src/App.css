@@ -115,7 +115,7 @@ svg{
   .roomImages {
     display:flex;
     flex-direction: column;
-    padding-top: 96px;
+   
     align-items: center;
     justify-content: center;
     gap: 32px;
@@ -145,7 +145,6 @@ svg{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    padding-top: 96px;
   }
   .largerHeader{
     display: none;
