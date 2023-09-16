@@ -75,7 +75,7 @@ const Home = ({userName,rooms,setRooms,setAllWishList,allWishList}) => {
         <Filters active={active} currentSelected={currentSelected} />
         <div className="roomImages">
          {rooms.map((room,index)=>(
-            <Card key={room._id}  image={room.photos[0]} location={room.location} price={room.price} id={room._id} roomData={room} allWishList={allWishList} />
+            <Card key={room._id}  image={room.photos[0]} location={room.location} price={room.price}  roomData={room} allWishList={allWishList} />
          ))} 
            
          
