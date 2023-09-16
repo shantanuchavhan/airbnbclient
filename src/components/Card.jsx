@@ -10,7 +10,7 @@ import Cookies from 'js-cookie';
 
 
 const Card = ({ key,userName, roomData,allWishList }) => {
-  // const [navigateToLogin, setNavigateToLogin] = useState(false);
+  const [navigateToLogin, setNavigateToLogin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
   useEffect(() => {
@@ -22,6 +22,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
 
   const addToWishList = () => {
     if (userName === "") {
+      setNavigateToLogin(true)
       navigate('/Login');
     } else {
       const productId = roomData._id;
@@ -48,14 +49,18 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   };
   
   const setProduct = () => {
-    const productId = roomData._id; // Replace with the actual product ID
-    Cookies.set('productIdCookie', productId.toString());
-    setCurrentProduct(roomData);
-    navigate('/Product');
-  };
-  
-  
-  
+    setTimeout(() => {
+      if(navigateToLogin){
+          return
+      }else{
+        const productId = roomData._id; // Replace with the actual product ID
+      Cookies.set('productIdCookie', productId.toString());
+      setCurrentProduct(roomData);
+      navigate('/Product');
+      }
+      
+    }, 1000);
+
 
   return (
     
