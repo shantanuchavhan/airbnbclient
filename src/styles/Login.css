@@ -1,21 +1,4 @@
-.Login-container{    
-    background-color: rgba(255, 255, 255, 0.58);
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0px;
-    border: 1px solid rgb(81, 77, 77);
-    padding: 80px 32px;
-    margin: 0px 400px;
-    padding-top: 40px;  
-}
+
 
 
 
@@ -41,7 +24,7 @@
 /* Small screens (up to 550px) */
 @media screen and (max-width: 550px) {
   .Login-container{    
-    background-color: rgba(255, 255, 255, 0.58);
+    background-color: rgba(226, 179, 179, 0.58);
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -63,9 +46,46 @@
   
   /* Large screens (744px and above) */
   @media screen and (min-width: 744px) and (max-width: 990px) {
+    .Login-container{    
+      background-color: rgba(167, 98, 98, 0.58);
+      
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0px;
+      border: 1px solid rgb(81, 77, 77);
+      padding: 80px 32px;
+      margin: 0px 400px;
+      padding-top: 40px;  
+  }
     
   }
   @media screen and (min-width: 991px)  {
+    .Login-container{    
+      background-color: rgba(255, 255, 255, 0.58);
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0px;
+      border: 1px solid rgb(81, 77, 77);
+      padding: 80px 32px;
+      margin: 0px 400px;
+      padding-top: 40px;  
+  }
     
   }
   @media screen and (max-width: 744px)  {
