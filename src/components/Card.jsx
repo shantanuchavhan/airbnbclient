@@ -38,24 +38,36 @@ const Card = ({ key,userName, roomData,allWishList }) => {
   };
   
   const addToWishList = () => {
-    console.log(userName,"addtowishlist")
-    if(userName===""){
-      console.log("Login")
-      setNavigateToLogin(true)
-      console.log(navigateToLogin)
-      navigate('/Login')
-    }else{
-      const productId = roomData._id; 
-    fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist/${userName}`,{
-      method: 'POST', // Set the HTTP method
-      headers: {
-        'Content-Type': 'application/json' // Specify the content type
-      },
-      body: JSON.stringify({ id:productId })
-    })
+    if (userName === "") {
+      // If the user is not logged in (userName is an empty string), navigate to the login page.
+      navigate('/Login');
+    } else {
+      // If the user is logged in, proceed to add the product to the wishlist.
+      const productId = roomData._id; // Get the ID of the current product
+      fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist/${userName}`, {
+        method: 'POST', // Set the HTTP method to POST
+        headers: {
+          'Content-Type': 'application/json' // Specify the content type as JSON
+        },
+        body: JSON.stringify({ id: productId }) // Send the product ID as JSON in the request body
+      })
+        .then(response => {
+          if (response.ok) {
+            // Handle a successful response (product added to the wishlist)
+            // You can add additional logic here if needed.
+            console.log('Product added to wishlist.');
+          } else {
+            // Handle errors if the request fails.
+            console.error('Failed to add product to wishlist.');
+          }
+        })
+        .catch(error => {
+          // Handle any network or other errors that might occur.
+          console.error('Error:', error);
+        });
     }
-    
-
+  }
+  
   }
 
   return (
