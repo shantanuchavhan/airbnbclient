@@ -3,14 +3,15 @@ import { useEffect,useState } from 'react';
 import '../styles/HostingPage.css';
 import '../styles/Card.css';
 import '../styles/CommonTransition.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
 
 
-const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
+const Card = ({ userName, image, location, price,  setCurrentProduct,  roomData }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const navigate=useNavigate()
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -23,6 +24,21 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
     Cookies.set('productIdCookie', productId.toString());
     setCurrentProduct(roomData);
   };
+  
+  const addToWishList = () => {
+    if(userName.userName===""){
+      navigate('/Login')
+    }
+    const productId = roomData._id; 
+    fetch(`https://airbnbcloneshantanu.onrender.com/addToWishlist/${userName}`,{
+      method: 'POST', // Set the HTTP method
+      headers: {
+        'Content-Type': 'application/json' // Specify the content type
+      },
+      body: JSON.stringify({ id:productId })
+    })
+
+  }
 
   return (
     <Link to="/Product">
@@ -54,7 +70,7 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
             <h4>{price} night</h4>
             
           </div>
-          <div className="wishlistIcon">
+          <div onClick={addToWishList} className="wishlistIcon">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
               </svg>
@@ -67,6 +83,7 @@ const Card = ({ image, location, price,  setCurrentProduct,  roomData }) => {
 
 const mapStateToProps = (state) => {
   return {
+    userName:state.userName.userName,
     currentProduct: state.CurrentProductReducer.currentProduct
   };
 };
