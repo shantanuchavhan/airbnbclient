@@ -66,7 +66,7 @@
       min-height: 50vh;
       padding: 0 32px;
     }
-  
+  }
   /* Large screens (744px and above) */
   @media screen and (min-width: 744px) and (max-width: 990px) {
     .roomImages {
