@@ -40,7 +40,7 @@ const Card = ({ key,userName, roomData,allWishList }) => {
     
   };
   
-  const addToWishList = () => {
+  const addToWishList = (event) => {
     event.stopPropagation();
     console.log(userName,"addtowishlist")
     if(userName===""){
