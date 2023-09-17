@@ -12,6 +12,18 @@ const FooterMobile = ({ userName }) => {
     } else if (section === "Explore") {
       navigate('/');
     }
+     else if (section === "Wishlists") {
+      navigate('/Wishlist');
+    }
+     else if (section === "Trips") {
+      navigate('/Trips');
+    }
+     else if (section === "Profile") {
+      navigate('/Profile');
+    }
+     else if (section === "Message") {
+      navigate('/Message');
+    }
   };
 
   const logoutSections = [

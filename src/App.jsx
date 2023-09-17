@@ -25,6 +25,9 @@ import TripsPage from './Pages/TripsPage';
 import PublishCelebration from './Pages/BecomeAHostPages/PublishCelebration';
 import Structure from './Pages/BecomeAHostPages/Structure';
 import OverView from './Pages/BecomeAHostPages/OverView';
+import MessagePage from './Pages/MessagePage';
+import WishListPage from './Pages/WishListPage';
+import ProfilePage from './Pages/ProfilePage';
 
 function App() {
   return (
@@ -37,6 +40,9 @@ function App() {
           <Route path='/Register' element={<RegisterPage />} />
           <Route path='/Hosting' element={<HostingPage />} />
           <Route path='/Trips' element={<TripsPage />} />
+          <Route path='/Message' element={<MessagePage />} />
+          <Route path='/Wishlist' element={<WishListPage />} />
+          <Route path='/Profile' element={<ProfilePage />} />
         </Route>
 
         <Route path='/host/home' element={<HostHome />} />
