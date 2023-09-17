@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
 import Card from '../components/Card';
 import { connect } from 'react-redux';
 
 const WishListPage = ({userName,allWishList}) => {
-  const [wishListRooms,setWishListRooms] =
+  const [wishListRooms,setWishListRooms] = useState([])
   useEffect(() => {
     fetch(`https://airbnbcloneshantanu.onrender.com/getWishlist/${userName}`)
       .then((response) => {
