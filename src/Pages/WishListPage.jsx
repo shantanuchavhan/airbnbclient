@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 const WishListPage = ({userName,allWishList}) => {
   const [wishListRooms,setWishListRooms] = useState([])
   useEffect(() => {
+    console.log("hii")
     fetch(`https://airbnbcloneshantanu.onrender.com/getWishlist/${userName}`)
       .then((response) => {
         if (!response.ok) {
