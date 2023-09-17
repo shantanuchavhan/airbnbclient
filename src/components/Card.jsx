@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
+import setAllWishList from '../Redux/Actions/setAllWishList';
 
 
 const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData,allWishList }) => {
@@ -43,7 +44,8 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData,allWishL
         'Content-Type': 'application/json' // Specify the content type
       },
       body: JSON.stringify({ id:productId ,username:userName})
-    })
+    }).then((response)=>response.json())
+    .then((data)=>setAllWishList(data.wishlist))
     
     
 
@@ -105,7 +107,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  setCurrentProduct
+  setCurrentProduct,
+  setAllWishList
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
