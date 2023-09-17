@@ -1,7 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react';
 import Card from '../components/Card';
-const WishListPage = ({userName}) => {
+import { connect } from 'react-redux';
+
+const WishListPage = ({userName,allWishList}) => {
   const [wishListRooms,setWishListRooms] =
   useEffect(() => {
     fetch(`https://airbnbcloneshantanu.onrender.com/getWishlist/${userName}`)
@@ -36,6 +38,8 @@ const WishListPage = ({userName}) => {
 const mapStateToProps = (state) => {
   return {
     userName: state.userName.userName, 
+    allWishList:state.AllWishListReducer.allWishList
+    
    
   };
 };
