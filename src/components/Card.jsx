@@ -7,11 +7,11 @@ import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
-import setAllWishList from '../Redux/Actions/setAllWishList';
 
 
-const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData,allWishList }) => {
 
+const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
+  const [allWishList,setAllWishList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
   useEffect(() => {
@@ -108,7 +108,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   setCurrentProduct,
-  setAllWishList
+  
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
