@@ -14,7 +14,7 @@ const WishListPage = ({userName}) => {
       .then((data) => {
         // Handle the data received from the API
         console.log(data);
-        setWishListRooms(data)
+        setWishListRooms(data.wishlistItems)
       })
       .catch((error) => {
         // Handle errors
