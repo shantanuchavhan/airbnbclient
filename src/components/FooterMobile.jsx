@@ -8,20 +8,26 @@ const FooterMobile = ({ userName }) => {
 
   const navigateTo = (section) => {
     if (section === "Login") {
+      console.log('Login')
       navigate('/Login');
     } else if (section === "Explore") {
+      console.log('Explore')
       navigate('/');
     }
      else if (section === "Wishlists") {
+      console.log('Wishlist')
       navigate('/Wishlist');
     }
      else if (section === "Trips") {
+      console.log('Trips')
       navigate('/Trips');
     }
      else if (section === "Profile") {
+      console.log('Profile')
       navigate('/Profile');
     }
      else if (section === "Message") {
+      console.log('Message')
       navigate('/Message');
     }
   };
