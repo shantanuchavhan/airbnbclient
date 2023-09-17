@@ -24,7 +24,7 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData,allWishL
         const productId = roomData._id; // Replace with the actual product ID
         Cookies.set('productIdCookie', productId.toString());
         console.log(roomData,"roomData")
-        setCurrentProduct((currentProduct)=>roomData);
+        setCurrentProduct(roomData);
         console.log(currentProduct,"roomData")
         navigate('/Product')   
   };
