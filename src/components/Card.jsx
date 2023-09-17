@@ -9,7 +9,7 @@ import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
 import Cookies from 'js-cookie';
 
 
-const Card = ({ key,userName,currentProduct, roomData,allWishList }) => {
+const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData,allWishList }) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
