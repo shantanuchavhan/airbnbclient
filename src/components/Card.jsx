@@ -53,7 +53,7 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
     
 
   }
-  console.log(allWishList,key)
+  console.log(allWishList,key,"listkeyofwish")
   return (
     
       <div onClick={setProduct}  className={`card ${isLoading ? 'loading' : ''}`}>
