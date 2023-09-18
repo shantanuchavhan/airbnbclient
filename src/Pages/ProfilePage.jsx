@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import HomSetupimg from '../Images/finish-setup.png'
 import Button from '../components/Button'
-
-const ProfilePage = () => {
+import { ChangeUsername } from '../Redux/Actions/ChangeUserName'
+import { connect } from 'react-redux'
+const ProfilePage = ({ChangeUsername,userName }) => {
   function logout() {
     // Call the logout API
     fetch('https://airbnbcloneshantanu.onrender.com/logout', {
@@ -15,7 +16,7 @@ const ProfilePage = () => {
         // Handle the successful logout response
         console.log(data.message);
         ChangeUsername("")
-        setRedirect(true)
+        
     
     })
     .catch((error) => {
@@ -85,4 +86,18 @@ const ProfilePage = () => {
   )
 }
 
-export default ProfilePage
+const mapStateToProps = (state) => {
+  return {
+    userName: state.userName, 
+    // Access the isToggled state from the Redux store
+  };
+};
+
+const mapDispatchToProps = {
+  ChangeUsername,
+// Add the toggle action creator to props
+};
+
+export default connect( mapStateToProps , mapDispatchToProps)(ProfilePage);
+
+
