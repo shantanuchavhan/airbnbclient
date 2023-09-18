@@ -36,6 +36,16 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
   
   const addToWishList = (event) => {
     event.stopPropagation();
+    if (allWishList.includes(roomData._id)) {
+      // Remove the item from the wishlist
+      const updatedWishList = allWishList.filter((wishId) => wishId !== roomData._id);
+      setAllWishList(updatedWishList);
+    } else {
+      // Add the item to the wishlist
+      const updatedWishList = [...allWishList, roomData._id];
+      setAllWishList(updatedWishList);
+    }
+    
     console.log(userName,"addtowishlist")
     if(userName===""){
     
