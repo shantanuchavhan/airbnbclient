@@ -123,7 +123,7 @@ const mapStateToProps = (state) => {
   return {
     userName:state.userName.userName,
     currentProduct: state.CurrentProductReducer.currentProduct,
-    wishlist:state.UserProfileReduxer.userData.wishlist
+    wishlist:state.UserProfileReduxer.userData.wishlist||[]
   };
 };
 
