@@ -15,6 +15,7 @@ const Card = ({ wishlist,userName,currentProduct,setCurrentProduct, roomData}) =
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
  useEffect(()=>{
+  console.log(wishlist)
   setAllWishList(wishlist||[])
  },[wishlist])
   
