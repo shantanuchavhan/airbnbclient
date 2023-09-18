@@ -11,7 +11,7 @@ import { Link} from 'react-router-dom';
 import setUserProfileData from '../Redux/Actions/setUserProfileData';
 import { useNavigate } from 'react-router-dom';
 
-const Header = ({GuestToggle,isGuestToggled,setUserProfileData, ChangeUsername,userName}) => {
+const Header = ({userData,GuestToggle,isGuestToggled,setUserProfileData, ChangeUsername,userName}) => {
  
   
   const navigate = useNavigate();
