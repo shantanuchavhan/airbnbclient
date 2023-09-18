@@ -45,13 +45,13 @@ const WishListPage = ({userName,allWishList}) => {
             
          )):<div>
           <h2>no wishlist </h2>
-          <PinkButton BtnName="Explore" LinkTo="/" width="30%"/>
+          <PinkButton BtnName="Explore" link="/" width="30%"/>
           </div>}     
       </div>  :
       <div>
         <h2>Log in to view your wishlists</h2>
         <h3>You can create, view, or edit wishlists once you’ve logged in.</h3>
-        <PinkButton BtnName="login" LinkTo="/Login" width="30%"/>
+        <PinkButton BtnName="login" link="/Login" width="30%"/>
       </div>
 
       }
