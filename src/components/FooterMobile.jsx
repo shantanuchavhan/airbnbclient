@@ -26,10 +26,11 @@ const FooterMobile = ({ userName }) => {
       console.log('Profile')
       navigate('/Profile');
     }
-     else if (section === "Message") {
+     else if (section === "Inbox") {
       console.log('Message')
       navigate('/Message');
     }
+     
   };
 
   const logoutSections = [
