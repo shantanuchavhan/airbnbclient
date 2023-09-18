@@ -53,6 +53,9 @@ const Card = ({ userName,currentProduct,setCurrentProduct, roomData}) => {
       // Remove the item from the wishlist
       const updatedWishList = allWishList.filter((wishId) => wishId !== roomData._id);
       setAllWishList(updatedWishList);
+      if(wishlistRoomsFilter){
+        wishlistRoomsFilter(roomData._id)
+      }
     } else {
       // Add the item to the wishlist
       const updatedWishList = [...allWishList, roomData._id];
@@ -76,9 +79,6 @@ const Card = ({ userName,currentProduct,setCurrentProduct, roomData}) => {
       setAllWishList(data.wishlist)
       console.log(allWishList,"allWishList")
     })
-    
-    
-
   }
   console.log(allWishList,roomData._id,"listkeyofwish")
   return (

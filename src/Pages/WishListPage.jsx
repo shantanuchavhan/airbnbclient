@@ -24,11 +24,19 @@ const WishListPage = ({userName,allWishList}) => {
         console.error('Fetch error:', error);
       });
   }, [userName]);
+
+  function wishlistRoomsFilter(id){
+    setWishListRooms((WishListRooms)=>
+      WishListRooms.filter((WishListRoom)=>WishListRoom._id!==id)
+    )
+    
+
+  }
   return (
     <div>
       <div className="roomImages">
          {wishListRooms.map((room)=>(
-            <Card key={room._id} roomData={room} allWishList={allWishList} />
+            <Card key={room._id} roomData={room} allWishList={allWishList} wishlistRoomsFilter={wishlistRoomsFilter}/>
             
          ))}     
         </div>
