@@ -44,7 +44,7 @@ const WishListPage = ({userName,allWishList}) => {
             <Card key={room._id} roomData={room} allWishList={allWishList} wishlistRoomsFilter={wishlistRoomsFilter}/>
             
          )):<div>
-          <h2>no wishlist </h2>
+          <h2 className="gray">no wishlist </h2>
           <PinkButton BtnName="Explore" link="/" width="100%"/>
           </div>}     
       </div>  :
