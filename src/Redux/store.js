@@ -12,11 +12,14 @@ import currentUserListingsReducer from './Reducers/currentUserListingsReducer';
 import AllRoomsDetailsReducer from './Reducers/AllRoomsDetailsReducer';
 import isBookingReducer from './Reducers/isBookingReducer';
 import AllWishListReducer from './Reducers/AllWishListReducer';
+import UserProfileReduxer from './Reducers/UserProfileReduxer';
+
+
 const rootReducer = combineReducers({
     guestToggle: GuestToggleReducer,
     CurrentProductReducer:CurrentProductReducer,
     currentUserListingsReducer:currentUserListingsReducer,
-    
+    UserProfileReduxer:UserProfileReduxer,
     // SearchSectionToggle:SearchSectionToggleReducer,
     userName:UserNameReducer,
     ListingReducer:ListingReducer,

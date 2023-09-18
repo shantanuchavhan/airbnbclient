@@ -10,15 +10,14 @@ import Cookies from 'js-cookie';
 
 
 
-const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
+const Card = ({ wishlist,userName,currentProduct,setCurrentProduct, roomData}) => {
   const [allWishList,setAllWishList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
-  useEffect(() => {
-    setAllWishList(roomData.wishlist||[])
-  }, [roomData.wishlist])
+ 
   
   useEffect(() => {
+    setAllWishList(wishlist||[])
     setTimeout(() => {
       setIsLoading(false);
     }, 200);
@@ -123,7 +122,8 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
 const mapStateToProps = (state) => {
   return {
     userName:state.userName.userName,
-    currentProduct: state.CurrentProductReducer.currentProduct
+    currentProduct: state.CurrentProductReducer.currentProduct,
+    wishlist:state.UserProfileReduxer.userData.wishlist
   };
 };
 

@@ -8,10 +8,10 @@ import { GuestToggle } from '../Redux/Actions/GuestToggleAction'
 import { connect } from 'react-redux';
 import { ChangeUsername } from '../Redux/Actions/ChangeUserName';
 import { Link} from 'react-router-dom';
-
+import setUserProfileData from '../Redux/Actions/setUserProfileData';
 import { useNavigate } from 'react-router-dom';
 
-const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
+const Header = ({GuestToggle,isGuestToggled,setUserProfileData, ChangeUsername,userName}) => {
  
   
   const navigate = useNavigate();
@@ -22,8 +22,9 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.username,"data")
-        ChangeUsername(data.username)
+        console.log(data.user,"data")
+        ChangeUsername(data.user.username)
+        setUserProfileData(data.user)
   
       })
       .catch((error) => {
@@ -69,7 +70,7 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
   const [isWhoActive,setIsWhoActive]=useState(false)
 
   
-  function accountBarTogglefunction({userName}){
+  function accountBarTogglefunction(){
     setAccountBarToggle(!accountBarToggle)
     GuestToggle(false)
     setSearchToggle(false) 
@@ -206,12 +207,14 @@ const Header = ({GuestToggle,isGuestToggled, ChangeUsername,userName,}) => {
 const mapStateToProps = (state) => {
   return {
     userName: state.userName, 
-    isGuestToggled: state.isGuestToggled // Access the isToggled state from the Redux store
+    isGuestToggled: state.isGuestToggled ,
+    userData:state.UserProfileReduxer.userData
   };
 };
 
 const mapDispatchToProps = {
   ChangeUsername,
-  GuestToggle // Add the toggle action creator to props
+  GuestToggle, // Add the toggle action creator to props
+  setUserProfileData
 };
 export default connect( mapStateToProps,mapDispatchToProps)(Header);
