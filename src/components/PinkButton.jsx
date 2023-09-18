@@ -1,7 +1,7 @@
 import React from 'react'
 import {  useNavigate } from 'react-router-dom'
 import '../App.css'
-const PinkButton = ({BtnName,link, action}) => {
+const PinkButton = ({BtnName,link,width, action}) => {
    const navigate=useNavigate()
    function BtnAction(){
     if(link){
@@ -12,7 +12,7 @@ const PinkButton = ({BtnName,link, action}) => {
    }
   return (
     <div className="pinkBtn" onClick={BtnAction}>
-        <h3 >{BtnName}</h3>
+        <h3 style={{width:width}} >{BtnName}</h3>
     </div>
   )
 }
