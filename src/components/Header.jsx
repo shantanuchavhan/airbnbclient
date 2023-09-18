@@ -6,34 +6,17 @@ import Logo from './Logo';
 import AcountBar from './AcountBar'
 import { GuestToggle } from '../Redux/Actions/GuestToggleAction'
 import { connect } from 'react-redux';
-import { ChangeUsername } from '../Redux/Actions/ChangeUserName';
+
 import { Link} from 'react-router-dom';
-import setUserProfileData from '../Redux/Actions/setUserProfileData';
+
 import { useNavigate } from 'react-router-dom';
 
-const Header = ({userData,GuestToggle,isGuestToggled,setUserProfileData, ChangeUsername,userName}) => {
+const Header = ({GuestToggle,isGuestToggled,userName}) => {
  
   
   const navigate = useNavigate();
   
-  useEffect(() => {
-    fetch('https://airbnbcloneshantanu.onrender.com/profile/:userName', {
-      credentials: 'include',
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data.user,"data")
-        ChangeUsername(data.user.username)
-        setUserProfileData(data.user)
   
-      })
-      .catch((error) => {
-        console.error('Error fetching profile:', error);
-      });
-  }, [ChangeUsername,setUserProfileData]);
-
-  console.log(userName,"username")
-  console.log(userData,"data")
     
  
   
@@ -214,8 +197,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  ChangeUsername,
+  
   GuestToggle, // Add the toggle action creator to props
-  setUserProfileData
+ 
 };
 export default connect( mapStateToProps,mapDispatchToProps)(Header);
