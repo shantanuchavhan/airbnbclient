@@ -35,7 +35,7 @@ const WishListPage = ({userName,allWishList}) => {
 
   }
   return (
-    <div style={{paddingLeft:"30px",minHeight:"80vh"}}>
+    <div style={{paddingLeft:"30px",minHeight:"100vh"}}>
       <h1 style={{marginBottom:"32px"}}>Wishlists</h1>
       {
         userName ?
@@ -45,7 +45,7 @@ const WishListPage = ({userName,allWishList}) => {
             
          )):<div>
           <h2>no wishlist </h2>
-          <PinkButton BtnName="Explore" link="/" width="30%"/>
+          <PinkButton BtnName="Explore" link="/" width="50%"/>
           </div>}     
       </div>  :
       <div>
