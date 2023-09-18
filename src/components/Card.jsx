@@ -10,15 +10,26 @@ import Cookies from 'js-cookie';
 
 
 
-const Card = ({ wishlist,userName,currentProduct,setCurrentProduct, roomData}) => {
+const Card = ({ userName,currentProduct,setCurrentProduct, roomData}) => {
   const [allWishList,setAllWishList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
- useEffect(()=>{
-  console.log(wishlist)
-  setAllWishList(wishlist||[])
- },[wishlist])
-  
+ 
+ useEffect(() => {
+  fetch('https://airbnbcloneshantanu.onrender.com/profile', {
+    credentials: 'include',
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      
+      setAllWishList(data.userwishlist)
+
+    })
+    .catch((error) => {
+      console.error('Error fetching profile:', error);
+    });
+}, [setUserProfileData]);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -125,12 +136,13 @@ const mapStateToProps = (state) => {
   return {
     userName:state.userName.userName,
     currentProduct: state.CurrentProductReducer.currentProduct,
-    wishlist:state.UserProfileReduxer.userData.wishlist||[]
+    
   };
 };
 
 const mapDispatchToProps = {
   setCurrentProduct,
+  
   
 };
 
