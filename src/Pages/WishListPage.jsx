@@ -39,10 +39,10 @@ const WishListPage = ({userName,allWishList}) => {
       {
         userName ?
         <div className="roomImages">
-         {wishListRooms.map((room)=>(
+         {wishListRooms?wishListRooms.map((room)=>(
             <Card key={room._id} roomData={room} allWishList={allWishList} wishlistRoomsFilter={wishlistRoomsFilter}/>
             
-         ))}     
+         )):<h2>no wishlist</h2>}     
       </div>  :
       <div>
         <h2>Log in to view your wishlists</h2>
