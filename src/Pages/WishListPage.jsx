@@ -45,7 +45,7 @@ const WishListPage = ({userName,allWishList}) => {
             
          )):<div>
           <h2 className="gray">No wishlist </h2>
-          <PinkButton BtnName="Explore" link="/" width="100%"/>
+          <PinkButton BtnName="Explore" link="/" width="0%"/>
           </div>}     
       </div>  :
       <div>
