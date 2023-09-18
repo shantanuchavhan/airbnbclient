@@ -15,6 +15,7 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
   const [isLoading, setIsLoading] = useState(true);
   const navigate=useNavigate()
   useEffect(() => {
+    setAllWishList(roomData.wishlist)
     setTimeout(() => {
       setIsLoading(false);
     }, 200);
