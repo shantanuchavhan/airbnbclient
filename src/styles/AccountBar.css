@@ -1,6 +1,6 @@
 
 .AccountBar{
-    height: 400px;
+    max-height: 400px;
     width: 200px;
     position: fixed;
     margin-top: -32px;
