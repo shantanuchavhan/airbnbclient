@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Card from '../components/Card';
 import { connect } from 'react-redux';
 import PinkButton from '../components/PinkButton';
+
 const WishListPage = ({userName,allWishList}) => {
 
   const [wishListRooms,setWishListRooms] = useState([])
@@ -39,10 +40,13 @@ const WishListPage = ({userName,allWishList}) => {
       {
         userName ?
         <div className="roomImages">
-         {wishListRooms?wishListRooms.map((room)=>(
+         {wishListRooms.length > 0?wishListRooms.map((room)=>(
             <Card key={room._id} roomData={room} allWishList={allWishList} wishlistRoomsFilter={wishlistRoomsFilter}/>
             
-         )):<h2>no wishlist</h2>}     
+         )):<div>
+          <h2>no wishlist </h2>
+          <PinkButton BtnName="Explore" LinkTo="/" width="30%"/>
+          </div>}     
       </div>  :
       <div>
         <h2>Log in to view your wishlists</h2>
