@@ -28,7 +28,7 @@ const Card = ({ userName,currentProduct,setCurrentProduct, roomData}) => {
     .catch((error) => {
       console.error('Error fetching profile:', error);
     });
-}, []);
+}, [userName]);
 
   useEffect(() => {
     setTimeout(() => {
