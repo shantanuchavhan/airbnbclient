@@ -45,7 +45,10 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
       },
       body: JSON.stringify({ id:productId ,username:userName})
     }).then((response)=>response.json())
-    .then((data)=>setAllWishList(data.wishlist))
+    .then((data)=>{
+      setAllWishList(data.wishlist)
+      console.log(allWishList)
+    })
     
     
 
