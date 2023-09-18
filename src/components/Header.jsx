@@ -30,7 +30,7 @@ const Header = ({GuestToggle,isGuestToggled,setUserProfileData, ChangeUsername,u
       .catch((error) => {
         console.error('Error fetching profile:', error);
       });
-  }, [ChangeUsername]);
+  }, [ChangeUsername,setUserProfileData]);
 
   console.log(userName,"username")
     
@@ -137,7 +137,7 @@ const Header = ({GuestToggle,isGuestToggled,setUserProfileData, ChangeUsername,u
       navigate('/Host/Home')
       
     }
-
+ 
   }
   
  
