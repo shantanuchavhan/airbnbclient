@@ -16,6 +16,7 @@ const Card = ({ userName,currentProduct,setCurrentProduct, roomData}) => {
   const navigate=useNavigate()
  
  useEffect(() => {
+  console.log(userName,"user")
   fetch(`https://airbnbcloneshantanu.onrender.com/profile/${userName}`, {
     credentials: 'include',
   })
