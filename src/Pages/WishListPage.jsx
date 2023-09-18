@@ -34,7 +34,7 @@ const WishListPage = ({userName,allWishList}) => {
 
   }
   return (
-    <div>
+    <div style={{paddingLeft:"30px"}}>
       <h1>Wishlists</h1>
       {
         userName ?

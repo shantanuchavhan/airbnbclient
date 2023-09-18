@@ -11,8 +11,8 @@ const PinkButton = ({BtnName,link,width, action}) => {
     }
    }
   return (
-    <div className="pinkBtn" onClick={BtnAction}>
-        <h3 style={{width:width}} >{BtnName}</h3>
+    <div style={{width:width}} className="pinkBtn" onClick={BtnAction}>
+        <h3  >{BtnName}</h3>
     </div>
   )
 }
