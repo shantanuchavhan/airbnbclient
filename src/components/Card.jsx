@@ -47,7 +47,7 @@ const Card = ({ key,userName,currentProduct,setCurrentProduct, roomData}) => {
     }).then((response)=>response.json())
     .then((data)=>{
       setAllWishList(data.wishlist)
-      console.log(allWishList)
+      console.log(allWishList,"allWishList")
     })
     
     
