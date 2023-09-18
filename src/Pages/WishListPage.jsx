@@ -39,12 +39,12 @@ const WishListPage = ({userName,allWishList}) => {
       <h1 style={{marginBottom:"32px"}}>Wishlists</h1>
       {
         userName ?
-        <div className="roomImages">
+        <div >
          {wishListRooms.length > 0?wishListRooms.map((room)=>(
             <Card key={room._id} roomData={room} allWishList={allWishList} wishlistRoomsFilter={wishlistRoomsFilter}/>
             
          )):<div>
-          <h2 className="gray">no wishlist </h2>
+          <h2 className="gray">No wishlist </h2>
           <PinkButton BtnName="Explore" link="/" width="100%"/>
           </div>}     
       </div>  :
