@@ -33,7 +33,7 @@ const Header = ({GuestToggle,isGuestToggled,setUserProfileData, ChangeUsername,u
   }, [ChangeUsername,setUserProfileData]);
 
   console.log(userName,"username")
-  console.log(data.user,"data")
+  console.log(userData,"data")
     
  
   
