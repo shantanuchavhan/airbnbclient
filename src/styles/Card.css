@@ -61,11 +61,11 @@ a {
 }
 .wishlistIcon svg{
   color: white;
-  background-color: rgba(15, 15, 15, 0.326);
+  fill: rgba(15, 15, 15, 0.326);
   border-radius: 200%;
 }
 
 .pinkWishListColor svg{
-  background-color: rgba(250, 147, 147, 0.742);
+  fill: rgba(250, 147, 147, 0.742);
   color:rgb(250, 84, 112);
 }
