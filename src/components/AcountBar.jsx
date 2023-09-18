@@ -38,6 +38,14 @@ const AcountBar = ({toggle,setToggle,userName,ChangeUsername}) => {
       
       <div className='AccountBar'>
       
+      
+      <Link to="/Message" onClick={toggleIt}><div><h4>Inbox</h4></div></Link>
+      <Link to="/Trips" onClick={toggleIt}><div><h4>Trips</h4></div></Link>
+      <Link to="/Register"onClick={toggleIt} > <div ><h4 >SignUp</h4></div></Link>
+      <Link to="/Profile"onClick={toggleIt} > <div ><h4 >Profile</h4></div></Link>
+      
+      <Link to="/Hosting" onClick={toggleIt}> <div ><h4 >AirBnb Your Home</h4></div></Link>
+      <Link to="/" onClick={toggleIt}> <div ><h4 >Help</h4></div></Link>
       { userName.userName ? (
           <Link to="/" onClick={logout}>
             <div><h4>LogOut</h4></div>
@@ -47,11 +55,6 @@ const AcountBar = ({toggle,setToggle,userName,ChangeUsername}) => {
             <div><h4>LogIn</h4></div>
           </Link>
       )}
-      
-      <Link to="/Register"onClick={toggleIt} > <div ><h4 >SignUp</h4></div></Link>
-      <Link to="/Trips" onClick={toggleIt}><div><h4>Trips</h4></div></Link>
-      <Link to="/Hosting" onClick={toggleIt}> <div ><h4 >AirBnb Your Home</h4></div></Link>
-      <Link to="/" onClick={toggleIt}> <div ><h4 >Help</h4></div></Link>
       </div>
 
     
