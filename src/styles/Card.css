@@ -65,7 +65,7 @@ a {
   border-radius: 200%;
 }
 
-.pinkWishListColor{
+.pinkWishListColor svg{
   background-color: rgba(250, 147, 147, 0.742);
   color:rgb(250, 84, 112);
 }
