@@ -22,7 +22,7 @@ const HostHome = ({userName,SetListSetup,isListSetupActive}) => {
 
   return (
     <div>
-          <header>
+          <header className="HostHomeHeader">
             <Link to="/"><img className="Airbnblogo" src={logo} alt="" /></Link>
             <div>
               <h3>Ready to airbnb it?</h3>
