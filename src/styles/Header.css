@@ -178,6 +178,7 @@
 
 /* Small screens (up to 550px) */
 @media screen and (max-width: 550px) {
+
   .div-1{
     display: none;
    
@@ -192,6 +193,7 @@
 
 /* Medium screens (551px to 743px) */
 @media screen and (min-width: 551px) and (max-width: 743px) {
+  
   .div-1{
     display: none;
    
@@ -208,6 +210,9 @@
 
 /* Large screens (744px and above) */
 @media screen and (min-width: 744px) and (max-width: 990px) {
+  .App-header{
+    gap: 60px;
+  }
   .div-1{
     flex: 0.2;
     padding-left: 16px;
