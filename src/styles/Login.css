@@ -38,9 +38,39 @@
   }
   
 
+  @media screen and (min-width: 551px) and (max-width: 743px) {
+    .Login-container{    
+      align-items: center;
+      background-color: #fff;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin:0;
+      min-height: 50vh;
+      padding: 0 64px;
+     
+  }
+  }
+
+  @media screen and (min-width: 744px) and (max-width:990px) {
+    .Login-container{    
+      align-items: center;
+      background-color: #fff;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin:0;
+      min-height: 50vh;
+      padding: 0 64px;
+     
+  }
+  }
+
+
+
  
-    
-  
   @media screen and (min-width: 991px)  {
     .Login-container{    
       background-color: rgba(255, 255, 255, 0.58);
