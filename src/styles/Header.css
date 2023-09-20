@@ -8,30 +8,42 @@
     position:fixed;
     top: 0%;
     z-index:1000;
-    padding:0 32px;
+   padding: 0 16px;
+   margin: 0 16px;
     width: 100%;
+    gap: 120px;
   }
  
+  .HEADER{
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+
+    
+  
+  }
+
   header div{
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 0 16px;
+
+    
     color: rgba(84, 84, 84, 0.902);
     cursor: pointer;
   }
   
   .div-1{
-    flex: 0.6;
+    flex: 0.2;
     align-items: start;
-    width: 80%;
+    width: 50%;
+    padding-left: 32px;
     
    
   }
   .div-2{
-    flex: 2;
+    flex: 0.4;
     justify-content: space-around;
-    padding: 8px 32px;
+    padding: 8px 16px;
     margin: 0 54px;
 
     border: 2px solid rgb(240, 237, 237);
@@ -42,8 +54,9 @@
   }
   
   .div-3{
-    flex: 1.8;
+    flex: 0.4;
     justify-content: space-between;
+    padding-right: 32px;
     
   }
   
@@ -197,7 +210,7 @@
 @media screen and (min-width: 744px) and (max-width: 990px) {
   .div-1{
     flex: 0.2;
-    padding-left: 0px;
+    padding-left: 16px;
     
    
   }
@@ -213,6 +226,7 @@
   .div-3{
     flex: 2;
     justify-content: space-around;
+    padding-right: 16px;
     
   }
 
