@@ -50,6 +50,11 @@ a {
       border-radius: 16px;
       background-color: antiquewhite;
     }
+    .wishlistIcon{
+      position: absolute;
+      top: 3.5%;
+      right: 4%;
+    }
     
   }
  
@@ -57,7 +62,7 @@ a {
 .wishlistIcon{
   position: absolute;
   top: 3.5%;
-  right: 4%;
+  right: 8%;
 }
 .wishlistIcon svg{
   color: white;
