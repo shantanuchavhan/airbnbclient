@@ -125,7 +125,7 @@
 }
 
 
-@media screen and (min-width: 551px) and (max-width: 743px) {
+@media screen and (min-width: 744px) and (max-width: 990px){
   .Search-section{
     position: absolute;
     background-color: white;
@@ -147,7 +147,7 @@
     align-items: center;
     gap: 16px;
     padding:8px 16px;
-    padding-left: 48px;
+    padding-left: 32px;
   
     
   }
