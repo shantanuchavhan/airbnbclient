@@ -9,6 +9,7 @@ const ProfilePage = ({ChangeUsername,userName }) => {
     // Call the logout API
     fetch('https://airbnbcloneshantanu.onrender.com/logout', {
     method: 'POST',
+    body:userName,
     credentials: 'include', // Send cookies along with the request
     })
     .then((response) => response.json())
