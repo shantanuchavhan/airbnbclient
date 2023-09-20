@@ -22,10 +22,7 @@
     border-radius: 50%;
   
     border-radius: 42px;
-    padding: 0;
-   
-    
-    
+    padding: 0;  
   }
 
   .Search-section form label{
@@ -132,7 +129,7 @@
   .Search-section{
     position: absolute;
     background-color: white;
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,5 +140,15 @@
     z-index: 1000;
     text-align: center;
     position: fixed;
+  }
+
+  .Search-section form label{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding:8px 24px;
+    padding-left: 48px;
+  
+    
   }
 }
