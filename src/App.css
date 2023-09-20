@@ -167,7 +167,8 @@ svg{
     align-items: center;
     justify-content: center;
     gap: 32px;
-    text-align: center;    
+    text-align: center; 
+    padding-left: 0;   
   }
   .largerHeader{
     display: none;
