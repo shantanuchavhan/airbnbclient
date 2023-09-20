@@ -7,6 +7,14 @@
 }
 .section5__right{
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 1rem;
+}
+.section5__left{
+    flex: 1;
+}
+.section5__left img{
+    width: 100%;
+
 }
