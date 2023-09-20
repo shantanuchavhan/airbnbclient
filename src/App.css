@@ -199,6 +199,8 @@ svg{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
+    column-gap: 16px;
+    row-gap: 16px;
     padding-top: 64px;
     padding-left: 32px;
   }
