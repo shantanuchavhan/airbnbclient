@@ -220,7 +220,7 @@ svg{
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
-    padding-top: 112px;       
+    padding-top: 120px;       
   }
   .largerHeader{
     display: block;

@@ -157,6 +157,19 @@
 
 /* Large screens (744px and above) */
 @media screen and (min-width: 744px) and (max-width: 990px) {
+  .filters-container{
+    overflow: hidden;
+    padding: 16px 48px;
+    padding-top: 32px;
+    height: 100px;
+    margin-top: -60px;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+  
+  
+  
+  }
   
 }@media screen and (min-width: 991px)  {
   
