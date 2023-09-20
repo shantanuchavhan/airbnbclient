@@ -27,7 +27,7 @@ a {
   
   .Image-Detail img{
     height: 260px;
-    min-width:200px ;
+    width:260px ;
     border-radius: 16px;
     background-color: antiquewhite;
   }
