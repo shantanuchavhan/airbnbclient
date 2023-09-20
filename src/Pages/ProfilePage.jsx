@@ -88,10 +88,10 @@ const ProfilePage = ({ChangeUsername,userName }) => {
 
 const mapStateToProps = (state) => {
   return {
-    userName: state.userName, 
-    // Access the isToggled state from the Redux store
+    userName: state.userName.userName, // Access the userName state from the Redux store
   };
 };
+
 
 const mapDispatchToProps = {
   ChangeUsername,

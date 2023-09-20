@@ -12,14 +12,8 @@ import { Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const Header = ({GuestToggle,isGuestToggled,userName}) => {
- 
   
-  const navigate = useNavigate();
-  
-  
-    
- 
-  
+  const navigate = useNavigate();  
   const headerRef = useRef(null);
   const [searchToggle,setSearchToggle]=useState(false)
 
