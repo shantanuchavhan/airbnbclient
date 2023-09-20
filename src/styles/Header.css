@@ -194,7 +194,30 @@ header{
 
 /* Large screens (744px and above) */
 @media screen and (min-width: 744px) and (max-width: 990px) {
+  .div-1{
+    flex: 0.2;
+   
+    
+   
+  }
+  .div-2{
+    flex: 2.4;
+    padding: 4px 16px; 
+    margin: 0 8px;  
+  }
+  .div-2 h4{
+    font-size: 14px;
+  }
   
-}@media screen and (min-width: 991px)  {
+  .div-3{
+    flex: 2;
+    justify-content: space-around;
+    
+  }
+
+  
+}
+
+@media screen and (min-width: 991px)  {
   
 }
