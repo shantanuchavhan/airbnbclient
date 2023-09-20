@@ -28,7 +28,7 @@ header{
     position: fixed;
     top: 0;
     display: flex;
-    width: 98%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 0 12px;
