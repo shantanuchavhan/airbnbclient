@@ -49,7 +49,7 @@ svg{
   grid-template-columns: repeat(4,1fr);
   align-items: center;
   justify-content: center;
-  padding-top: 72px;
+  padding-top: 80px;
 }
 
 
@@ -192,6 +192,7 @@ svg{
     align-items: center;
     justify-content: center;
     padding-top: 64px;
+    padding-left: 32px;
   }
   .largerHeader{
     display: none;
@@ -214,10 +215,11 @@ svg{
 @media screen and (min-width: 744px) and (max-width: 990px) {
   .roomImages {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
-    padding-top: 96px;
+    padding-top: 80px;
+   
     
   }
   .largerHeader{
