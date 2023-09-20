@@ -24,8 +24,9 @@
 .filters-container{
   overflow: hidden;
   padding: 16px 48px;
+  padding-top: 32px;
   height: 100px;
-  margin-top: -24px;
+  margin-top: -38px;
   position: fixed;
   background-color: white;
   z-index: 10;
