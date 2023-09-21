@@ -156,6 +156,7 @@
 @media screen and (max-width: 774px){
   .Search-section{
     flex-direction: column;
+    height: 100vh;
   }
 
 }
