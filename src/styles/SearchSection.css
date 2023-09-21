@@ -128,17 +128,20 @@
   width: 100%;
   height: 100vh;
   background-color: white;
-
-
   position: fixed;
   top: 0;
   z-index: 4000;
-
 }
 
 .SearchSectionMoileContainer{
   padding:64px 64px;
 }
+
+
+
+
+
+
 
 @media screen and (min-width: 744px) and (max-width: 990px){
   .Search-section{
