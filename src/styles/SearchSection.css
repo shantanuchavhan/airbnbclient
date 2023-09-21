@@ -128,6 +128,10 @@
   width: 100%;
   height: 100vh;
   background-color: white;
+  z-index: 4000;
+  position: fixed;
+  top: 0;
+
 }
 
 @media screen and (min-width: 744px) and (max-width: 990px){
