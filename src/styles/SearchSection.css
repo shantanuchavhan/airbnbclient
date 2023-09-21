@@ -158,5 +158,8 @@
     flex-direction: column;
     height: 100vh;
   }
+  .Search-section form{
+    flex-direction: column;
+  }
 
 }
