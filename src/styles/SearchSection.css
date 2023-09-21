@@ -157,6 +157,7 @@
   .Search-section{
     flex-direction: column;
     height: 100vh;
+    background-color: white;
   }
   .Search-section form{
     flex-direction: column;
