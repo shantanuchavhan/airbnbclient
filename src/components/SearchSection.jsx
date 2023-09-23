@@ -58,7 +58,8 @@ const SearchSection = ({GuestToggle, isAddDateActive, isCheckinActive, isCheckou
     
    
   return (
-    <div className='Search-section'>
+    <div>
+      <div className='Search-section'>
          <form  action="" onSubmit={SearchIt}>
           <label htmlFor=""  onClick={AddLocationActive} className={`section-1 ${isAddDateActive ? "Active" : ""}`}>
             <div className='border-right'>
@@ -99,13 +100,10 @@ const SearchSection = ({GuestToggle, isAddDateActive, isCheckinActive, isCheckou
 
         {
         isGuestToggled ? <GuestBar totalCount={totalGuestCount} setTotalCount={setTotalGuestCount} AdultCount={AdultCount} ChildCount={ChildCount} InfantCount={InfantCount} PetCount={PetCount} setAdultCount={setAdultCount} setChildCount={setChildCount} setInfantCount={setInfantCount} setPetCount={setPetCount} marginTopinPx="450px"/>:""
-        }
-
-        
-        
+        }        
+    </div>  
+    
     </div>
-   
-   
   )
 }
 

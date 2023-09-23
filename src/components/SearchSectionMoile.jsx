@@ -1,15 +1,14 @@
 import React from 'react'
-import GuestBar from './GuestBar'
+
 import { useState } from 'react'
 import '../styles/SearchSection.css'
 import PinkButton from './PinkButton'
+import GuestBar from './GuestBar'
 
 const SearchSectionMoile = ({SwitchSearchSection}) => {
     const [isGuestBar,setIsGuestBar]=useState(false)
-    
     function AddGuest(params) {
-        setIsGuestBar(!isGuestBar)
-        
+        setIsGuestBar(!isGuestBar)    
     }
 
   return (
@@ -45,11 +44,11 @@ const SearchSectionMoile = ({SwitchSearchSection}) => {
         <div className="SearchSectionMoile-Box">
             <div className="Box displayFlex justifycontainBtn" onClick={AddGuest}>
                 <h3 className="gray">Who</h3>
-                <h3>Add Gusest</h3>
+                <h3 onClick={AddGuest}>Add Gusest</h3>
             </div> 
             { 
                 isGuestBar?
-                <GuestBar/>
+                <GuestBar />
                 :""
             }
             </div>
