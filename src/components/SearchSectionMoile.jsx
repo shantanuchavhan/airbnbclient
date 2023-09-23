@@ -4,11 +4,12 @@ import { useState } from 'react'
 import '../styles/SearchSection.css'
 import PinkButton from './PinkButton'
 import setRooms from '../Redux/Actions/setRooms'
-
+import { useNavigate } from 'react-router-dom'
 const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
     const [location,setLocation]=useState("")
     const [checkInDate,setCheckInDate]=useState("")
     const [checkOutDate,setCheckOutDate]=useState("")
+    const navigate = useNavigate() 
     function SearchIt() {
        
         
@@ -29,7 +30,7 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
         .then(response => response.json())
         .then(data => {
           setRooms(data);
-          SwitchSearchSection()
+          navigate('/')
 
         })
         .catch(error => {
