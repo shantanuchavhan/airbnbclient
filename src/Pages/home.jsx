@@ -94,7 +94,7 @@ const Home = ({userName,rooms,setRooms,setAllWishList,allWishList}) => {
     </main>
     )
   }  
-}
+
 const mapStateToProps = (state) => {
   return {
     rooms: state.AllRoomsDetailsReducer.rooms,
