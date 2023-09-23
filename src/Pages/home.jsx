@@ -76,11 +76,11 @@ const Home = ({userName,rooms,setRooms,setAllWishList,allWishList}) => {
       <Filters active={active} currentSelected={currentSelected} />
       {isLoadingtext ? (
         <main className="center">
-          <h1>Loading...</h1>
+          <h1 className="gray">Loading...</h1>
         </main>
       ) : isError ? (
         <main className="center">
-          <h1>Sorry, failed to load...</h1>
+          <h1 className="gray">Sorry, failed to load...</h1>
         </main>
       ) : (
         <div className="roomImagesWrapper">
