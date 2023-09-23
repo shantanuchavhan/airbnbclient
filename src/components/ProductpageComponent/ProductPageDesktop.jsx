@@ -1,232 +1,21 @@
-import React  from 'react'
-import { useState } from 'react'
+import React from 'react'
 
-import GuestBar from '../components/GuestBar'
-import RatingReview from '../components/ProductpageComponent/RatingReview'
-
-import { connect } from 'react-redux'
-import setCurrentProduct from '../Redux/Actions/setCurrentProduct'
-import { useRef,useEffect } from 'react'
-import ValidityMessge from '../components/ValidityMessge'
-import ViewPhotos from '../components/ProductpageComponent/ViewPhotos'
-import SetIsBooking from '../Redux/Actions/SetIsBooking'
-import '../styles/ProductPage.css'
-
-import ViewReviews from '../components/ProductpageComponent/ViewReviews'
-
-
-
-
-const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
-    const [isGuestBarActive,setIsGuestBarActive]=useState(false)
-    const [isScrollDown,setIsScrollDown]=useState(false)
-    
-    const [AdultCount,setAdultCount]=useState(0)
-    const [ChildCount,setChildCount]=useState(0)
-    const [InfantCount,setInfantCount]=useState(0)
-    const [PetCount,setPetCount]=useState(0)
-
-    const [isFixed, setIsFixed] = useState(false);
-    const [isAvailable,setIsAvailable]=useState(null)
-
-  
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-  const handleScroll = () => {
-    const scrollThreshold = 580; // Adjust this value as needed
-    console.log(window.scrollY,scrollThreshold)
-    if (window.scrollY > scrollThreshold) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
-    }
-  };
-
-    // const today = new Date();
-    // const defaultStartDate = today.toISOString().substr(0, 10); // Format as YYYY-MM-DD
-
-    // const tomorrow = new Date(today);
-    // tomorrow.setDate(tomorrow.getDate() + 1);
-    // const defaultEndDate = tomorrow.toISOString().substr(0, 10); // Tomorrow's date
-
-
-    const [startDate, setStartDate] = useState(false);
-    const [endDate, setEndDate] = useState(false);
-
-    const [totalGuestCount,setTotalGuestCount]=useState(0)
-    const [totalReservationAmount,setTotalReservationAmount]=useState(0)
-
-    const [isLoginRequired,setIsLoginRequired]=useState(false)
-
-    const [isViewPhotos,setIsViewPhotos]=useState(false)
-    const [isViewReview,setIsViewReview]=useState(false)
-
-
-    const headerRef = useRef(null);
-     useEffect(() => {
-        const handleClickOutside = (event) => {
-          if (headerRef.current && !headerRef.current.contains(event.target)) {
-            setIsGuestBarActive(false);
-          }
-        };
-    
-        document.addEventListener('click', handleClickOutside);
-    
-        return () => {
-          document.removeEventListener('click', handleClickOutside);
-        };
-      }, []);
-
-
-   let updatedStartDate=0
-   let updatedEndDate=0
-  console.log(currentProduct,'currentttt')
-
-  
-
-  function getTotalReservationAmount(data,datename) {
-    if(datename==="updatedStartDate"){
-        console.log(data,endDate,"datehhjhj")
-        setStartDate(data);
-        if (data && endDate) {
-            
-            const start = new Date(data);
-            const end = new Date(updatedEndDate);
-            const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
-    
-            const totalDays = Math.round(Math.abs((end - start) / oneDay)) + 1;
-            console.log(totalDays,"Total Days")
-            const totalAmount = totalDays * currentProduct.price;
-    
-            setTotalReservationAmount(totalAmount); // Update the state with the calculated total amount
-        } else {
-            setTotalReservationAmount(0); // Set total amount to 0 if dates are not selected
-        }
-
-    }
-    else{
-        setEndDate(data);
-
-        if (startDate && data) {
-            
-            const start = new Date(startDate);
-            const end = new Date(data);
-            const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
-    
-            const totalDays = Math.round(Math.abs((end - start) / oneDay)) + 1;
-            console.log(totalDays,"Total Days")
-            const totalAmount = totalDays * currentProduct.price;
-    
-            setTotalReservationAmount(totalAmount); // Update the state with the calculated total amount
-            checkAvailability()
-           
-        } else {
-            setTotalReservationAmount(0); // Set total amount to 0 if dates are not selected
-            checkAvailability()
-        }
-
-    }
-    console.log(startDate,endDate,"dates")
-    
-}
-  
-  
-
-    function getGuestBar(){
-        setIsGuestBarActive(!isGuestBarActive)
-        setIsScrollDown(!isScrollDown)
-
-    }
-
-  
-    function Reserve() {
-        if(userName===""){
-            setIsLoginRequired(true)
-        }else{
-            const data = {
-                user: userName,
-                owner: currentProduct.ownerName,
-                listing:currentProduct.title,
-                listingId:currentProduct._id,
-                startDate: startDate,
-                endDate: endDate,
-                guestCount: totalGuestCount,
-                ReservationAmount:totalReservationAmount
-            };
-            fetch('https://airbnbcloneshantanu.onrender.com/Reserve', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Handle successful response
-                    return response.json(); // If the server sends a JSON response
-                } else {
-                    throw new Error(response.error);
-                }
-            })
-            .then(data => {
-                alert("Reserve Succesfull"); // Display the success response data
-                setStartDate(null)
-                setEndDate(null)
-                setTotalGuestCount(0)
-            })
-            .catch(error => {
-                alert(error); // Display errors and network issues
-            });
-        }    
-    }
-
-    
-        
-   
-          
-
-    function checkAvailability() {
-        for (const booking of currentProduct.bookingDates) {
-          const existingStartDate = new Date(booking.startDate);
-          const existingEndDate = new Date(booking.endDate);
-          const proposedStartDate = new Date(startDate);
-          const proposedEndDate = new Date(endDate);
-          console.log(existingStartDate,existingEndDate,proposedStartDate,proposedEndDate,"proposedEndDate","existingStartDate","existingEndDate","proposedStartDate")
-      
-          // Check for overlap
-          if (
-            (proposedStartDate >= existingStartDate && proposedStartDate < existingEndDate) ||
-            (proposedEndDate > existingStartDate && proposedEndDate <= existingEndDate)
-          ) {
-            console.log(false)
-            setIsAvailable(false)
-            // There is an overlap, so the proposed booking is not available
-            return false;
-          }
-        }
-        console.log(true)
-        setIsAvailable(true)
-      
-        // No overlap found, so the proposed booking is available
-        return true;
-      }
-      const handleViewPhotosClick = () => {
-       setIsViewPhotos(true);
-      };
-      const handleViewReviewsClick = () => {
-        setIsViewReview(!isViewReview); // Toggle the state value
-      };
-
-
-    
-    
-    
-
+const ProductPageDesktop = () => {
+  const [isGuestBarActive, setIsGuestBarActive] = useState(false);
+  const [isScrollDown, setIsScrollDown] = useState(false);
+  const [AdultCount, setAdultCount] = useState(0);
+  const [ChildCount, setChildCount] = useState(0);
+  const [InfantCount, setInfantCount] = useState(0);
+  const [PetCount, setPetCount] = useState(0);
+  const [isFixed, setIsFixed] = useState(false);
+  const [isAvailable, setIsAvailable] = useState(null);
+  const [startDate, setStartDate] = useState(false);
+  const [endDate, setEndDate] = useState(false);
+  const [totalGuestCount, setTotalGuestCount] = useState(0);
+  const [totalReservationAmount, setTotalReservationAmount] = useState(0);
+  const [isLoginRequired, setIsLoginRequired] = useState(false);
+  const [isViewPhotos, setIsViewPhotos] = useState(false);
+  const [isViewReview, setIsViewReview] = useState(false);
   return (
     <main className='ProductMain' ref={headerRef}>
         <div className="details-1">
@@ -324,10 +113,10 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                     <h3>Rs.{currentProduct.price} </h3><span style={{color:'gray'}}>ninght</span>
                     <div className='Rating'>
                         <h4 onClick={handleViewReviewsClick}  className='ReservationBox__section1__averageRating' >{currentProduct && currentProduct.averageRating !== undefined ? currentProduct.averageRating.toFixed(1) : 0}
- <svg      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" className='fillRatingSvg' d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-</svg>
-</h4>
+                        <svg      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" className='fillRatingSvg' d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
+                        </h4>
                         <h4 onClick={handleViewReviewsClick}  >{currentProduct.reviews.length} Reviews</h4>
                     </div>
                 </div>
@@ -351,7 +140,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
             </div>
             <div className="descroptions description-3">
                 <p>{currentProduct.description}</p>
-<span href="">Show more left arrow</span >
+                <span href="">Show more left arrow</span >
             </div>
 
             <div className="descroptions description-4">
@@ -368,12 +157,8 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                         <div>
                             <h4>{amenity}</h4>
                         </div>
-                    )
-
-                    )}
-                    
-                </div>
-               
+                    ))}   
+                </div>  
             </div>
             {/* <div className="descroptions descroption-6">
                 <h2>Select Check-in date</h2>
@@ -389,14 +174,11 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                         <h1>Rs {currentProduct.price} <span style={{color:'#9b9696'}}>night</span></h1>
                         <div>
                             <h4 className='ReservationBox__section1__averageRating' >  
-                                <span  onClick={handleViewReviewsClick} >{currentProduct && currentProduct.averageRating !== undefined ? currentProduct.averageRating.toFixed(1) : 0}
-</span>
+                                <span  onClick={handleViewReviewsClick} >{currentProduct && currentProduct.averageRating !== undefined ? currentProduct.averageRating.toFixed(1) : 0}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" className='fillRatingSvg' d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                                </svg>
-                                
-                            </h4>
-                           
+                                </svg>               
+                            </h4>                          
                             <div onClick={handleViewReviewsClick}  ><h4>{currentProduct.reviews.length} reviews</h4></div>
                         </div>
                     </div>
@@ -417,7 +199,6 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                     
                         <div className="border-left">
                         <input
-                        
                         type="date"
                         value={endDate} // Set the value to the state value
                         className="Inputs-Layout__Input"
@@ -426,17 +207,9 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                             console.log(updatedEndDate)
                             getTotalReservationAmount(updatedEndDate,"updatedEndDate");
                         }}
-                        
                         />
-
-                        </div>
-
-                       
-
-
-                        
-                            
-                        <div className="GuestCountWrapper" onClick={getGuestBar}>
+                      </div>                          
+                      <div className="GuestCountWrapper" onClick={getGuestBar}>
                             <h5 style={{color:"gray"}}>Total Guests {totalGuestCount}</h5>
                             {isScrollDown ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -445,12 +218,9 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                             </svg>
                             }
-                        </div>
-                        
+                      </div>                     
                     </div>
-                    <h4>Total Amount:{totalReservationAmount}</h4>
-                    
-                        
+                    <h4>Total Amount:{totalReservationAmount}</h4>                                      
                     {isAvailable === null ? (
                         <button onClick={checkAvailability}>Check Availability</button>
                         ) : isAvailable === true ? (
@@ -459,9 +229,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                         <button>Not Available</button>
                     )}
 
-                    {isLoginRequired ? <div onClick={()=>SetIsBooking(true)}><ValidityMessge  link="/Login" message="Login Required!!:Log in" /></div> : ""}
-
-                        
+                    {isLoginRequired ? <div onClick={()=>SetIsBooking(true)}><ValidityMessge  link="/Login" message="Login Required!!:Log in" /></div> : ""}       
                 </div>
             </div>
             <div className={` ${isFixed ? 'GuestBardivfixed' : 'GuestBardiv'}`}>
@@ -474,16 +242,4 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
   )
 }
 
-const mapStateToProps = (state) => {
-    return {
-      currentProduct: state.CurrentProductReducer.currentProduct,
-      userName:state.userName.userName
-    };
-  };
-  
-  const mapDispatchToProps = {
-    setCurrentProduct,
-    SetIsBooking
-  };
-  
-  export default connect(mapStateToProps, mapDispatchToProps)(ProductPage); please create Productpagedesktop
+export default ProductPageDesktop
