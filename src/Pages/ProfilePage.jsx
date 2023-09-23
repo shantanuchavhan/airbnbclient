@@ -4,6 +4,7 @@ import HomSetupimg from '../Images/finish-setup.png'
 import Button from '../components/Button'
 import { ChangeUsername } from '../Redux/Actions/ChangeUserName'
 import { connect } from 'react-redux'
+import '../styles/Profile.css'
 const ProfilePage = ({ChangeUsername,userName }) => {
   function logout() {
     // Call the logout API
