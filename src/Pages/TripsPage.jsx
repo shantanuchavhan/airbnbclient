@@ -36,6 +36,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
         return response.json();
       })
       .then(data => {
+        console.log(data,"data")
         if(data.message=="No bookings found for this owner."){
             setIsError(true)
         }else{
