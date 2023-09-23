@@ -30,11 +30,12 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
         .then(response => response.json())
         .then(data => {
           setRooms(data);
+          SwitchSearchSection()
           navigate('/')
 
         })
         .catch(error => {
-          console.error('Error while searching:', error);
+          console.error('Error while searching:', error);   
           // Handle the error if needed
         });
       }
