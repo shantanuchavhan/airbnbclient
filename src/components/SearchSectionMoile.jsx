@@ -19,7 +19,7 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
          
         };
       
-        fetch("http://localhost:5000/search", {
+        fetch("https://airbnbcloneshantanu.onrender.com/search", {
           method: "POST", 
           headers: {
             'Content-Type': 'application/json'
