@@ -36,7 +36,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
         return response.json();
       })
       .then(data => {
-        if(data.message){
+        if(data.message=="No bookings found for this owner."){
             setIsError(true)
         }else{
             setIsLoadingText(false);
