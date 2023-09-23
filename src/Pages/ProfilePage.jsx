@@ -29,7 +29,7 @@ const ProfilePage = ({ChangeUsername,userName }) => {
       <h1>Profile</h1>
       <div className="displayFlex alignItemsCenter justifycontainBtn border-bottom">  
         <div className="displayFlex alignItemsCenter">
-        <img src={HomSetupimg} alt="" />
+        <img className="profileImage" src={HomSetupimg} alt="" />
         <div>
           <h3>{userName}</h3>
           <h4 className="gray">show profile</h4>
