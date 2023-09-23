@@ -22,6 +22,7 @@ const SearchSectionMoile = ({SwitchSearchSection}) => {
         
 
         <div className='SearchSectionMoileContainer'>
+        <div className="displayFlexCol justifycontainBtn">
         <div className="SearchSectionMoile-Destination">
             <h2>Where to?</h2>
         <div className="displayFlex SearchSectionMoile-Destination-searchInput">
@@ -51,6 +52,7 @@ const SearchSectionMoile = ({SwitchSearchSection}) => {
                 <GuestBar/>
                 :""
             }
+            </div>
         </div>
         <div className="displayFlex justifycontainBtn alignItemsCenter">
                 <h3 className="underline" onClick={SwitchSearchSection}>Clear All</h3>

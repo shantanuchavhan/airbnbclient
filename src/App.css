@@ -120,6 +120,11 @@ svg{
   
 }
 
+.displayFlexCol{
+  display: flex;
+  flex-direction: column;
+}
+
 .alignItemsCenter{
   align-items: center;
 }
