@@ -9,6 +9,7 @@ import DeleteBox from '../components/DeleteBox';
 const TripsPage = ({ userName, setCurrentProduct }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingText, setIsLoadingText] = useState(true);
+  const[isError,setIsError ] = useState(false);
   const [trips, setTrips] = useState([]);
   const [isDeleteBox, setIsDeleteBox] = useState(null);
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
         setTrips(data);
       })
       .catch(error => {
+        setIsError(true)
         console.error("Error fetching trip data:", error);
         // Handle the error, show an error message to the user, etc.
       });
@@ -73,7 +75,11 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
           <main className="center">
             <h1 className="gray">Loading...</h1>
           </main>
-        ) : trips.length > 0 ? (
+        ) : isError ? (
+            <main className="center">
+              <h1 className="gray">Sorry, failed to load...</h1>
+            </main>
+          ) : trips.length > 0 ? (
           trips.map((trip, index) => (
             <div key={index} className="Trip">
               {trip.listing.photos && (
