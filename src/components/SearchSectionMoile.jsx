@@ -87,12 +87,17 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
 }
 
 
-  
+const mapStateToProps = (state) => {
+    return {
+      
+      rooms:state.AllRoomsDetailsReducer.rooms
+    };
+  };
   const mapDispatchToProps = {
     
     setRooms
   };
   
-  export default connect( mapDispatchToProps)(SearchSectionMoile);
+  export default connect(mapStateToProps, mapDispatchToProps)(SearchSectionMoile);
 
 
