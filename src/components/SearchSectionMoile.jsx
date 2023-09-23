@@ -48,7 +48,7 @@ const SearchSectionMoile = ({SwitchSearchSection}) => {
             </div> 
             { 
                 isGuestBar?
-                <GuestBar />
+                <GuestBar marginTopinPx={"100px"}/>
                 :""
             }
             </div>
