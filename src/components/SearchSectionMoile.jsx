@@ -9,8 +9,8 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
     const [location,setLocation]=useState("")
     const [checkInDate,setCheckInDate]=useState("")
     const [checkOutDate,setCheckOutDate]=useState("")
-    function SearchIt(e) {
-        e.preventDefault();
+    function SearchIt() {
+       
         
         const SearchQuery = {
           location: location.toLowerCase(),
