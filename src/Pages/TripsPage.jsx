@@ -36,12 +36,18 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
         return response.json();
       })
       .then(data => {
-        setIsLoadingText(false);
+        if(data.message){
+            setIsError(true)
+        }else{
+            setIsLoadingText(false);
         // Update the trips state with the fetched data
-        setTrips(data);
+            setTrips(data);
+
+        }
+        
       })
       .catch(error => {
-        setIsError(true)
+        
         console.error("Error fetching trip data:", error);
         // Handle the error, show an error message to the user, etc.
       });
