@@ -31,7 +31,7 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
         .then(data => {
           setRooms(data);
           SwitchSearchSection()
-          navigate('/')
+         
 
         })
         .catch(error => {
