@@ -29,8 +29,8 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
         .then(response => response.json())
         .then(data => {
           setRooms(data);
-          GuestToggle();
-          setSearchToggle(false);
+          SwitchSearchSection()
+
         })
         .catch(error => {
           console.error('Error while searching:', error);
