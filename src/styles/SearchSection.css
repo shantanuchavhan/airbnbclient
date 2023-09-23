@@ -12,6 +12,7 @@
     z-index: 1000;
     text-align: center;
     position: fixed;
+    left: 0;
   }
 
   .Search-section form{
