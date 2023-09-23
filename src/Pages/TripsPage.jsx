@@ -13,7 +13,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
   const [trips, setTrips] = useState([]);
   const [isDeleteBox, setIsDeleteBox] = useState(null);
   const navigate = useNavigate();
-
+  const [errorMessage,setErrorMessage] =  useState("");
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -30,10 +30,17 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
       body: JSON.stringify({ user: userName.userName }),
     })
       .then(response => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch trip data");
-        }
-        return response.json();
+        if (response.status === 404) {
+            // Handle the 404 status here
+            return response.json().then(data => {
+              console.error("No bookings found:", data.message);
+              // You can set a state variable to store the error message and display it in your component
+              setIsError(true);
+              setErrorMessage(data.message);
+            });
+          } else {
+            throw new Error("Failed to fetch trip data");
+          }
       })
       .then(data => {
         console.log(data,"data")
@@ -84,7 +91,8 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
           </main>
         ) : isError ? (
             <main className="center">
-              <h1 className="gray">Sorry, failed to load...</h1>
+            {errorMessage?<h1 className="gray">{errorMessage}</h1>:<h1 className="gray">Sorry, failed to load...</h1>}
+              
             </main>
           ) : trips.length > 0 ? (
           trips.map((trip, index) => (
