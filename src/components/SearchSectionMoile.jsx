@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { connect } from 'react-redux'
 import { useState } from 'react'
 import '../styles/SearchSection.css'
 import PinkButton from './PinkButton'
