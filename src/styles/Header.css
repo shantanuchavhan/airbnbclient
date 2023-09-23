@@ -165,7 +165,9 @@
     margin-top: -10px;
   } 
   
- 
+ .searchSectionMob{
+  z-index: 12;
+ }
 
 
   /* Small screens (up to 550px) */

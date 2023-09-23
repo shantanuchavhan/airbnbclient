@@ -132,6 +132,10 @@ svg{
   justify-content: center;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
 
 .gap16{
   gap:16px

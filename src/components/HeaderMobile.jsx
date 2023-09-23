@@ -5,6 +5,7 @@ import SearchSectionMoile from './SearchSectionMoile'
 const HeaderMobile = () => {
     const [searchSection,setSearchSection]= useState(false)
     function SwitchSearchSection(params) {
+        
         setSearchSection(!searchSection)
         
     }
@@ -27,7 +28,7 @@ const HeaderMobile = () => {
             </svg>
         </div>
         {
-            searchSection?  <SearchSectionMoile/> : ""
+            searchSection?  <SearchSectionMoile SwitchSearchSection={SwitchSearchSection}/> : ""
         }
     </div>
   )

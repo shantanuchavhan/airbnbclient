@@ -127,22 +127,75 @@
 .SearchSectionMoile{
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   z-index: 4000;
 }
 
 .SearchSectionMoileContainer{
-  padding:64px 64px;
+  padding:32px 24px;
+  padding-bottom: 32px;
+
 }
 
 .SearchSectionMoile-Destination{
-  padding:16px 48px;
+  padding:24px 36px;
+  padding-top: 28px;
+  padding-left: 24px;
+  padding-bottom: 48px;
+  border: 0.2px solid rgb(222, 218, 218);
+  margin-top: 32px;
+  border-radius: 32px;
+  box-shadow:12px 2px 20px #ddd9d9;
+  margin-bottom: 24px;
+
+
+
+}
+.SearchSectionMoile-Destination h2{
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
+.SearchSectionMoile-Destination-searchInput{
+  border:1px solid gray;
+  padding:0 8px;
+  padding-right:0px ;
+  width: 100%;
+  border-radius: 8px;
+}
 
+.SearchSectionMoile-Destination input{
+  border: none;
+  width: 100%;
+  border-radius: 8px;  
+}
 
+.SearchSectionMoile-Box{
+  padding: 12px 32px;
+  border-radius: 16px;
+  border:0.2px solid rgb(225, 224, 224);
+  padding-left: 24px;
+  margin-bottom: 16px;
+  box-shadow:5px 3px 10px #d7d6d6;
+  
+}
+
+.SearchSectionMoile-Box input{
+  border:none;
+
+}
+
+.searchSectionMob{
+  
+}
+
+.crossSvg{
+  position: fixed;
+  top: 4%; 
+  left: 4%;
+}
 
 
 @media screen and (min-width: 744px) and (max-width: 990px){
