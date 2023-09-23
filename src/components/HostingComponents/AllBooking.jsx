@@ -62,7 +62,7 @@ const AllBooking = ({ userName,currentProduct,setCurrentProduct }) => {
     {bookings.length > 0 ? (
       bookings.map((booking, index) => (
         <div key={index} className="Trip">
-          {booking.listing.photos && <img onClick={()=>ViewListing(booking.listing)} className="Trip__image" src={booking.listing.photos[0]} alt="" />}
+          {booking?.listing.photos && <img onClick={()=>ViewListing(booking.listing)} className="Trip__image" src={booking.listing.photos[0]} alt="" />}
             <h3 onClick={()=>ViewListing(booking.listing)} className=" Trip__Title">{booking.listing.title}</h3>
             <h4  className="Trip__division">{new Date(booking.startDate).toISOString().split('T')[0]}</h4>
             <h4  className="Trip__division">{new Date(booking.endDate).toISOString().split('T')[0]}</h4>
