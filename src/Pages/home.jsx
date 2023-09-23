@@ -75,11 +75,11 @@ const Home = ({userName,rooms,setRooms,setAllWishList,allWishList}) => {
       <main className={`mainComponentHome fade-in ${isLoading ? 'loading' : ''}`}>
       <Filters active={active} currentSelected={currentSelected} />
       {isLoadingtext ? (
-        <main>
+        <main className="center">
           <h1>Loading...</h1>
         </main>
       ) : isError ? (
-        <main>
+        <main className="center">
           <h1>Sorry, failed to load...</h1>
         </main>
       ) : (
