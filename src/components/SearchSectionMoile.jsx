@@ -3,13 +3,50 @@ import React from 'react'
 import { useState } from 'react'
 import '../styles/SearchSection.css'
 import PinkButton from './PinkButton'
-import GuestBar from './GuestBar'
+
 
 const SearchSectionMoile = ({SwitchSearchSection}) => {
-    const [isGuestBar,setIsGuestBar]=useState(false)
-    function AddGuest(params) {
-        setIsGuestBar(!isGuestBar)    
-    }
+    function SearchIt(e) {
+        e.preventDefault();
+        
+        const SearchQuery = {
+          location: location.toLowerCase(),
+          checkInDate: checkInDate,
+          checkOutDate: checkOutDate,
+          totalGuestCount: totalGuestCount
+        };
+      
+        fetch("http://localhost:5000/search", {
+          method: "POST", 
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(SearchQuery)
+        })
+        .then(response => response.json())
+        .then(data => {
+          setRooms(data);
+          GuestToggle();
+          setSearchToggle(false);
+        })
+        .catch(error => {
+          console.error('Error while searching:', error);
+          // Handle the error if needed
+        });
+      }
+      
+    
+        function WhoSection(){
+          GuestToggle()
+          WhoActive()
+    
+        }
+    
+        const [location,setLocation]=useState("")
+        const [checkInDate,setCheckInDate]=useState("")
+        const [checkOutDate,setCheckOutDate]=useState("")
+    
+        
 
   return (
     <div className='SearchSectionMoile'>
@@ -45,7 +82,7 @@ const SearchSectionMoile = ({SwitchSearchSection}) => {
         </div>
         <div className="displayFlex justifycontainBtn alignItemsCenter">
                 <h3 className="underline" onClick={SwitchSearchSection}>Clear All</h3>
-                <PinkButton BtnName="Search" link={'/'} width="20%" />
+                <PinkButton BtnName="Search" link={'/'} width="20%" action={SearchIt}/>
         </div>
         
             
