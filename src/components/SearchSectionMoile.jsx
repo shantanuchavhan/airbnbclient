@@ -77,7 +77,7 @@ const SearchSectionMoile = ({SwitchSearchSection , setRooms}) => {
         </div>
         <div className="displayFlex justifycontainBtn alignItemsCenter">
                 <h3 className="underline" onClick={SwitchSearchSection}>Clear All</h3>
-                <PinkButton BtnName="Search" link={'/'} width="20%" action={SearchIt}/>
+                <PinkButton BtnName="Search"  width="20%" action={SearchIt}/>
         </div>
         
             
