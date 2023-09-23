@@ -223,3 +223,11 @@
     
   }
 }
+
+@media screen and (min-width: 774px)  {
+  .Login-container{    
+    
+    display: none;
+}
+  
+}
