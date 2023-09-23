@@ -41,17 +41,7 @@ const SearchSectionMoile = ({SwitchSearchSection}) => {
             <input type="date" />
          
         </div>
-        <div className="SearchSectionMoile-Box">
-            <div className="Box displayFlex justifycontainBtn" onClick={AddGuest}>
-                <h3 className="gray">Who</h3>
-                <h3 onClick={AddGuest}>Add Gusest</h3>
-            </div> 
-            { 
-                isGuestBar?
-                <GuestBar marginTopinPx={"100px"}/>
-                :""
-            }
-            </div>
+       
         </div>
         <div className="displayFlex justifycontainBtn alignItemsCenter">
                 <h3 className="underline" onClick={SwitchSearchSection}>Clear All</h3>
