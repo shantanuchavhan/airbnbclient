@@ -21,7 +21,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
 
   useEffect(() => {
     // Fetch trip data from the server
-    fetch("https://airbnbcloneshantanu.onrender.com/api/Trips", {
+    fetch("https://airbnbcloneshantanu.onrender.com/Trips", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
 
   function deleteit(id) {
     console.log(id, "trip");
-    fetch("https://airbnbcloneshantanu.onrender.com/api/delete", {
+    fetch("https://airbnbcloneshantanu.onrender.com/delete", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
