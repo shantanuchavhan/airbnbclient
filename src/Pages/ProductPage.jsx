@@ -32,17 +32,18 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
 
     useEffect(() => {
         const handleResize = () => {
-          console.log(window.innerWidth,"window.innerWidth")
-          setWindowWidth(window.innerWidth);
-        };
-    
+            console.log("Window resized");
+            setWindowWidth(window.innerWidth);
+          };
+          
+      
         window.addEventListener('resize', handleResize);
-    
-        // Clean up the event listener on unmount
+      
         return () => {
           window.removeEventListener('resize', handleResize);
         };
-      }, []);
+      }, []); // <-- Remove this empty dependency array or add dependencies as needed
+      
 
   
 
