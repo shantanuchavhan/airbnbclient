@@ -1,5 +1,11 @@
 .profileImage{
-    height: 40px;
-    width: 40px;
-    border-radius: 16px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+
+.setupImage{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
 }

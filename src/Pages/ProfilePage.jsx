@@ -47,7 +47,7 @@ const ProfilePage = ({ChangeUsername,userName }) => {
           <p>Its simple to get setup and start earning.</p>
         </div>
         <div>
-          <img src={HomSetupimg} alt="" />
+          <img className="setupImage" src={HomSetupimg} alt="" />
         </div>
       </div>
       </Link>

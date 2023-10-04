@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import GuestBar from '../components/GuestBar'
 import RatingReview from '../components/ProductpageComponent/RatingReview'
-
+import ProductPageMobile from './ProductPageMoile'
 import { connect } from 'react-redux'
 import setCurrentProduct from '../Redux/Actions/setCurrentProduct'
 import { useRef,useEffect } from 'react'
@@ -20,7 +20,7 @@ import ViewReviews from '../components/ProductpageComponent/ViewReviews'
 const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
     const [isGuestBarActive,setIsGuestBarActive]=useState(false)
     const [isScrollDown,setIsScrollDown]=useState(false)
-    
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [AdultCount,setAdultCount]=useState(0)
     const [ChildCount,setChildCount]=useState(0)
     const [InfantCount,setInfantCount]=useState(0)
@@ -28,6 +28,19 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
 
     const [isFixed, setIsFixed] = useState(false);
     const [isAvailable,setIsAvailable]=useState(null)
+
+
+    useEffect(() => {
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
 
   
 
@@ -229,7 +242,12 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
 
   return (
     <main className='ProductMain' ref={headerRef}>
-        <div className="details-1">
+        {windowWidth <= 768 ? (
+        <ProductPageMobile currentProduct={currentProduct} userName={userName} SetIsBooking={SetIsBooking} />
+      ) : (
+        // Your existing ProductPage content here for larger screens
+        <div>
+          <div className="details-1">
             <h1>{currentProduct?.title||""}</h1>
             <div className="details1-link">
                 <div>
@@ -470,6 +488,9 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
             
             <RatingReview listingId={currentProduct._id} listingOwner={currentProduct.ownerName} bookedUsers={currentProduct.bookedUsers}/>
         </article>
+        </div>
+      )}
+        
     </main>
   )
 }

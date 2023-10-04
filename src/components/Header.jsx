@@ -125,6 +125,7 @@ const Header = ({GuestToggle,isGuestToggled,userName}) => {
         <header className="App-header">
         <div className='div-1'>
         <Link to="/"> <Logo/></Link>
+        
            </div>
         
        

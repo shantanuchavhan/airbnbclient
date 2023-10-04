@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect} from 'react-redux'
+  import { connect} from 'react-redux'
 import Header from '../components/BookingComponent/Header'
 import BookingOverviewCard from '../components/BookingComponent/BookingOverviewCard'
 import Footer from '../components/Footer'
