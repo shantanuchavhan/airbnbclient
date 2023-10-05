@@ -444,7 +444,9 @@ text-decoration: underline;
 }
 
 .ProductPageMobile_MiddleSection{
-    padding:8px 24px;
+    padding:0px 32px;
+    padding-bottom: 32px;
+    margin: -16px;
 }
 
 .ProductPageMobile--details{
