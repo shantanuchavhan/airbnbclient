@@ -100,7 +100,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         </div>
 
 
-        <div className="ProductPageMobile--details displayFlex alignItemsCenter justifycontainBtn ">
+        <div className="ProductPageMobile--details  ">
             <div>
             <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
             <div className='displayFlex alignItemsCenter'>
@@ -114,7 +114,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
                 <div><h1> </h1></div>
             </div>
             </div>
-            <img src={"https://airbnbcloneshantanu.onrender.com/"+ currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
+            <img src={currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
         </div>
 
         <div className="ProductPageMobile--details HosterFeatures">

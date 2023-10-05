@@ -454,7 +454,13 @@ text-decoration: underline;
     border-bottom:1px solid gray;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
+}
+
+.Ownerimg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
 }
 
 .ProductPageMobile--details .HosterFeatures{
