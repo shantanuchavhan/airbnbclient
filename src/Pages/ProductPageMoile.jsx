@@ -183,6 +183,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
       </div>
       <div className="ProductPageMobile--details">
         <RatingReview listingId={currentProduct._id} listingOwner={currentProduct.ownerName} bookedUsers={currentProduct.bookedUsers}/>
+        
       </div>
       </div>
 

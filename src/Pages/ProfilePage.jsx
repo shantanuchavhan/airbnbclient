@@ -41,7 +41,7 @@ const ProfilePage = ({ChangeUsername,userName }) => {
         </svg>
       </div>
       <Link to="/Become-a-Host/overview">
-      <div className="displayFlex alignItemsCenter justifycontainCenter gap16 border shadow">
+      <div className="setUpSextion-Box">
         <div>
           <h3>AirBnb Your Place</h3>
           <p>Its simple to get setup and start earning.</p>
