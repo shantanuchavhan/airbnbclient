@@ -28,6 +28,16 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
     setShowAllAmenities(!showAllAmenities);
   };
 
+  const getDescriptionPreview = () => {
+    const maxLines = 5;
+    const lines = currentProduct.description.split('\n');
+    if (lines.length <= maxLines || showFullDescription) {
+      return currentProduct.description;
+    } else {
+      return lines.slice(0, maxLines).join('\n');
+    }
+  };
+
   return (
     <div className="ProductPageMobile">
       <div className="ProductPageMobile__header">
@@ -131,9 +141,18 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           </div>      
         </div>
 
-        <div className="">
-          <p>{currentProduct.description}</p>
-          <span href="">Show more left arrow</span >
+        <div className="description-section">
+        <p>{getDescriptionPreview()}</p>
+        {currentProduct.description.split('\n').length > 5 && (
+          <span className="show-more" onClick={toggleDescription}>
+            {showFullDescription ? 'Show less' : 'Show more'}
+            {showFullDescription ? (
+              <i className="fas fa-arrow-up"></i>
+            ) : (
+              <i className="fas fa-arrow-down"></i>
+            )}
+          </span>
+        )}
       </div>
 
       <div className="amenities-section">
