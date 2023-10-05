@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import '../styles/ProductPage.css'
 
@@ -10,9 +10,13 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter'
 
+const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter,isFooterHeader}) => {
+  useEffect(()=>{
+    SetHeaderFooter(false)
+    console.log(isFooterHeader,"isFooterHeader")
 
-const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter}) => {
-  SetHeaderFooter(false)
+  },[])
+  
   console.log(currentProduct,"currentProduct")
   const images = currentProduct.photos.map((photoUrl) => ({
     src: photoUrl, // Use the 'photoUrl' variable as the source URL
@@ -62,7 +66,8 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter
 const mapStateToProps = (state) => {
   return {
     currentProduct: state.CurrentProductReducer.currentProduct,
-    userName:state.userName.userName
+    userName:state.userName.userName,
+    isFooterHeader: state.FooterHeaderNoneReducer.isFooterHeader
   };
 };
 
