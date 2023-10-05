@@ -5,7 +5,10 @@
 
 .ProfilePage-Section{
     padding:24px 0px;
-    border-bottom: 0.6px solid gray;
+    border-bottom: 0.6px solid rgb(162, 162, 162);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .profileImage{
@@ -22,7 +25,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    box-shadow:-1px 6px 6px 4px rgb(199, 198, 198);
+    box-shadow:-1px 3px 3px 4px rgb(231, 231, 231);
     padding-bottom: 32px;
 }
 
