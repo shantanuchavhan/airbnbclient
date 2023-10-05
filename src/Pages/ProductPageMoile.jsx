@@ -127,7 +127,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         </div>
       </div>
 
-      <div className="descroptions description-3">
+      <div className="">
           <p>{currentProduct.description}</p>
           <span href="">Show more left arrow</span >
       </div>
