@@ -61,7 +61,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
       <div className="details-1">
         <h1>{currentProduct?.title || ''}</h1>
         <div className="details1-link">
-          <div className="displayFlex alignItemsCenter">
+          <div className="">
             <h4 className="Rating ReservationBox__section1__averageRating">
               {currentProduct && currentProduct.averageRating !== undefined
                 ? currentProduct.averageRating.toFixed(1)
@@ -74,7 +74,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
               <h5>Superhost</h5>
             </div>
           </div>
-          <h3>{currentProduct.location}</h3>
+          <h2>{currentProduct.location}</h2>
         </div>
       </div>
 
