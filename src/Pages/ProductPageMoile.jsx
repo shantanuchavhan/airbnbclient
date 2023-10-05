@@ -54,7 +54,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter
       <div className="ProductPageMobile_footer">
         <div className="ProductPageMobile_footer__Charges">
           <h4>{currentProduct.price} night</h4>
-          <h4 className>Reserve Dates</h4>
+          <h4 className="h4_marginTopNegative">Reserve Dates</h4>
         </div>
 
         <PinkButton BtnName="Reserve" width="30%"/>
