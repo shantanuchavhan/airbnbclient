@@ -17,6 +17,7 @@
     justify-content: center;
     border-radius: 8px;
     box-shadow:-1px 6px 6px 4px rgb(199, 198, 198);
+    padding-bottom: 32px;
 }
 
 .setupImage{
