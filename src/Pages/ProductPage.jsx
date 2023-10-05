@@ -244,11 +244,11 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
     
 
   return (
-    <main className='ProductMain' ref={headerRef}>
-        {windowWidth <= 768 ? (
-        <ProductPageMobile currentProduct={currentProduct} userName={userName} SetIsBooking={SetIsBooking} />
-      ) : (
-        // Your existing ProductPage content here for larger screens
+    <div>
+    {windowWidth <= 768 ? (
+      <ProductPageMobile currentProduct={currentProduct} userName={userName} SetIsBooking={SetIsBooking} />
+    ) : (
+        <main className='ProductMain' ref={headerRef}>
         <div>
           <div className="details-1">
             <h1>{currentProduct?.title||""}</h1>
@@ -321,9 +321,6 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
    </div>
         :""
        }
-      
-      
-        
         <article>
             <div className='Description-1'>
                 <div>
@@ -446,17 +443,9 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                             updatedEndDate = event.target.value;
                             console.log(updatedEndDate)
                             getTotalReservationAmount(updatedEndDate,"updatedEndDate");
-                        }}
-                        
+                        }}                       
                         />
-
                         </div>
-
-                       
-
-
-                        
-                            
                         <div className="GuestCountWrapper" onClick={getGuestBar}>
                             <h5 style={{color:"gray"}}>Total Guests {totalGuestCount}</h5>
                             {isScrollDown ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -492,9 +481,10 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
             <RatingReview listingId={currentProduct._id} listingOwner={currentProduct.ownerName} bookedUsers={currentProduct.bookedUsers}/>
         </article>
         </div>
+        </main>
+            
       )}
-        
-    </main>
+      </div> 
   )
 }
 
