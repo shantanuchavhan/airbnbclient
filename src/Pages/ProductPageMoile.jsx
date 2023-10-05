@@ -101,7 +101,6 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
 
         <div className="ProductPageMobile--details  ">
-            <div className="displayFlex alignItemsCenter justifycontainBtn">
             <div>
               <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
               <div className='displayFlex alignItemsCenter'>
@@ -116,7 +115,6 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
               </div>
             </div>
             <img src={currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
-            </div>
         </div>
 
         <div className="ProductPageMobile--details HosterFeatures">
