@@ -15,7 +15,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter
     SetHeaderFooter(false)
     console.log(isFooterHeader,"isFooterHeader")
 
-  },[SetHeaderFooter])
+  },[SSetHeaderFooter,isFooterHeader])
   
   console.log(currentProduct,"currentProduct")
   const images = currentProduct.photos.map((photoUrl) => ({
