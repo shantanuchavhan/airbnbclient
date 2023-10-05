@@ -410,6 +410,11 @@ text-decoration: underline;
     height: 32px;
 }
 
+
+.ProductPageMobile{
+    height: 100%;
+}
+
 .ProductPageMobile_footer{
     display:flex;
     justify-content: space-between;
