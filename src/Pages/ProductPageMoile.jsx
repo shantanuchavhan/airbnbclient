@@ -15,6 +15,9 @@ import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter';
 const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFooter, isFooterHeader }) => {
   const navigate = useNavigate();
   const [showAllAmenities, setShowAllAmenities] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  
   useEffect(() => {
     SetHeaderFooter(false);
   }, [SetHeaderFooter, isFooterHeader]);
@@ -36,6 +39,10 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
     } else {
       return lines.slice(0, maxLines).join('\n');
     }
+  };
+
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
   };
 
   return (
