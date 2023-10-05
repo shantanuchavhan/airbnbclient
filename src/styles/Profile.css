@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    box-shadow: 6px 6px 60px 4px;
+    box-shadow: 6px 6px 60px 4px rgb(87, 87, 87);
 }
 
 .setupImage{
@@ -21,3 +21,10 @@
     border-radius: 100%;
 }
 
+.PersonalInfoSection-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 16px ;
+}
+displayFlex alignItemsCenter justifycontainBtn border-bottom
