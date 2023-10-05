@@ -13,7 +13,7 @@ import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter'
 const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter,isFooterHeader}) => {
   useEffect(()=>{
     SetHeaderFooter(false)
-    console.log(isFooterHeader,"isFooterHeader")
+    
 
   },[SetHeaderFooter,isFooterHeader])
   

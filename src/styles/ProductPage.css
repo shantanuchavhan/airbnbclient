@@ -410,6 +410,7 @@ text-decoration: underline;
     align-items: 'center';
     justify-content: space-between;
     height: 32px;
+    
 }
 
 
@@ -426,4 +427,5 @@ text-decoration: underline;
     bottom: 0;
     padding: 16px;
     z-index: 10;
+    width: 100%;
 }
