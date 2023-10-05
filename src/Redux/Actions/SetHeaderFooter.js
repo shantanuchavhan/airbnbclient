@@ -1,6 +1,6 @@
-const SetHeaderFooter=(value)=>({
-    type: 'SETHEADERFOOTER',
-    payload:value,
+const SetHeaderFooter=(ToggleValue)=>({
+    type: 'TOGGLEHEADERFOOTER',
+    payload:ToggleValue,
 })
 
 export default SetHeaderFooter;
