@@ -3,38 +3,34 @@ import '../styles/Footer.css';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-const FooterMobile = ({ userName, isFooterHeader }) => {
+const FooterMobile = ({ userName }) => {
   const navigate = useNavigate();
 
   const navigateTo = (section) => {
-    switch (section) {
-      case "Login":
-        console.log('Login');
-        navigate('/Login');
-        break;
-      case "Explore":
-        console.log('Explore');
-        navigate('/');
-        break;
-      case "Wishlists":
-        console.log('Wishlist');
-        navigate('/Wishlist');
-        break;
-      case "Trips":
-        console.log('Trips');
-        navigate('/Trips');
-        break;
-      case "Profile":
-        console.log('Profile');
-        navigate('/Profile');
-        break;
-      case "Inbox":
-        console.log('Message');
-        navigate('/Message');
-        break;
-      default:
-        break;
+    if (section === "Login") {
+      console.log('Login')
+      navigate('/Login');
+    } else if (section === "Explore") {
+      console.log('Explore')
+      navigate('/');
     }
+     else if (section === "Wishlists") {
+      console.log('Wishlist')
+      navigate('/Wishlist');
+    }
+     else if (section === "Trips") {
+      console.log('Trips')
+      navigate('/Trips');
+    }
+     else if (section === "Profile") {
+      console.log('Profile')
+      navigate('/Profile');
+    }
+     else if (section === "Inbox") {
+      console.log('Message')
+      navigate('/Message');
+    }
+     
   };
 
   const logoutSections = [
@@ -106,36 +102,33 @@ const FooterMobile = ({ userName, isFooterHeader }) => {
   ];
 
   return (
-    isFooterHeader ? (
-      <div className="FooterMobile">
-    {userName.userName !== "" ? (
-      loginSections.map((value) => (
-        <div className="FooterMobile__Section" key={value.name}>
-          <div onClick={() => navigateTo(value.name)} className={value.name === "Trips" ? "airbnblogo" : ""}>
-            {value.svg}
+    <div className="FooterMobile">
+      {userName.userName !== "" ? (
+        loginSections.map((value) => (
+          <div className="FooterMobile__Section" key={value.name}>
+            <div onClick={() => navigateTo(value.name)} className={value.name === "Trips" ? "airbnblogo" : ""}>
+              {value.svg}
+            </div>
+            <h3 onClick={() => navigateTo(value.name)}>{value.name}</h3>
           </div>
-          <h3 onClick={() => navigateTo(value.name)}>{value.name}</h3>
-        </div>
-      ))
-    ) : (
-      logoutSections.map((value) => (
-        <div className="FooterMobile__Section" key={value.name}>
-          <div onClick={() => navigateTo(value.name)} className={value.name === "Trips" ? "airbnblogo" : ""}>
-            {value.svg}
+        ))
+      ) : (
+        logoutSections.map((value) => (
+          <div className="FooterMobile__Section" key={value.name}>
+            <div onClick={() => navigateTo(value.name)} className={value.name === "Trips" ? "airbnblogo" : ""}>
+              {value.svg}
+            </div>
+            <h3 onClick={() => navigateTo(value.name)}>{value.name}</h3>
           </div>
-          <h3 onClick={() => navigateTo(value.name)}>{value.name}</h3>
-        </div>
-      ))
-    )}
-  </div>
-    ) : null
+        ))
+      )}
+    </div>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
     userName: state.userName,
-    isFooterHeader: state.FooterHeaderNoneReducer.isFooterHeader
   };
 };
 

@@ -9,7 +9,7 @@ import '../App.css'
 import HeaderMobile from './HeaderMobile';
 
 
-const Layout = ({children}) => { 
+const Layout = ({children,is}) => { 
 
   return (
     <div className='Layout'>
@@ -40,6 +40,7 @@ const mapStateToProps = (state) => {
   return {
     isSeacrhSection:state.isSeacrhSection,
     isGuestToggled: state.isGuestToggled, // Access the isToggled state from the Redux store
+    isFooterHeader:state.FooterHeaderNoneReducer.isFooterHeader
   };
 };
 
