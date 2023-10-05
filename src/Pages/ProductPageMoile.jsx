@@ -8,7 +8,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 
 const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
- 
+  console.log(currentProduct,"currentProduct")
   return (
     <div>
       <div className="ProductPageMobile__header">
