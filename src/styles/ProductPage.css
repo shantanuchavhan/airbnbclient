@@ -406,12 +406,11 @@ text-decoration: underline;
     height: 40%;
 }
 .ProductPageMobile__header{
-    
     display: flex;
+    align-items: center;
     height: 80px;
-    align-items: "center";
     justify-content: space-between;
-    margin-top: -88px;
+    margin-top: -120px;
 }
 
 .ProductPageMobile_photos .carousel .thumbs{
