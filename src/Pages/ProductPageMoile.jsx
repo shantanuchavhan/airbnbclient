@@ -51,10 +51,9 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
       <SimpleImageSlider
             width={500}
             height={250}
-            images={sliderImages}
+            images={currentProduct.photos}
             showNavs={true}
          />
-        
       </div> 
    </div>
   )
