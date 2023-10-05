@@ -126,10 +126,23 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           </div>      
         </div>
       </div>
-          
-          
 
-                
+      <div className="descroptions description-3">
+          <p>{currentProduct.description}</p>
+          <span href="">Show more left arrow</span >
+      </div>
+
+      <div className="descroptions description-5">
+                <h2>What this place offer</h2>
+                <div className="FeatureList">
+                    {currentProduct.amenities.map((amenity)=>(
+                        <div>
+                            <h4>{amenity}</h4>
+                        </div>
+                    )
+            )}    
+        </div>   
+      </div>          
 
       <div className="ProductPageMobile_footer">
         <div className="ProductPageMobile_footer__Charges">
