@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../styles/ProductPage.css';
@@ -152,7 +152,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
               ))}
         </div>
         {!showAllAmenities && currentProduct.amenities.length > 5 && (
-          <PinkButton BtnName={`Show all ${currentProduct.amenities.length - 5} amenities`} onClickAction={toggleAmenities} />
+          <Button BtnName={`Show all ${currentProduct.amenities.length - 5} amenities`} onClickAction={toggleAmenities}  />
         )}
       </div>
       </div>
