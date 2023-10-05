@@ -49,11 +49,11 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
       </div>
       <div className="ProductPageMobile">
       <SimpleImageSlider
-            width={500}
-            height={250}
-            images={currentProduct.photos}
-            showNavs={true}
-         />
+        width="max-content"
+        height={250}
+        images={currentProduct.photos}
+        showNavs={true}
+      />
       </div> 
    </div>
   )
