@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../styles/ProductPage.css';
-
+import RatingReview from '../components/ProductpageComponent/RatingReview';
 import SetIsBooking from '../Redux/Actions/SetIsBooking';
 
 import PinkButton from '../components/PinkButton';
@@ -173,6 +173,9 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         {!showAllAmenities && currentProduct.amenities.length > 5 && (
           <Button BtnName={`Show all ${currentProduct.amenities.length - 5} amenities`} onClickAction={toggleAmenities}  />
         )}
+      </div>
+      <div>
+        <RatingReview listingId={currentProduct._id} listingOwner={currentProduct.ownerName} bookedUsers={currentProduct.bookedUsers}/>
       </div>
       </div>
 
