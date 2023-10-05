@@ -410,6 +410,10 @@ text-decoration: underline;
     justify-content: space-between;
     margin-top: -120px;
 }
+.ProductPageMobile__header--RightSection{
+    display: flex;
+    gap: 24px;
+}
 
 .ProductPageMobile_photos .carousel .thumbs{
     display: none;
