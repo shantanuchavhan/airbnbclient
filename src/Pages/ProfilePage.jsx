@@ -26,7 +26,7 @@ const ProfilePage = ({ChangeUsername,userName }) => {
     });
 }
   return (
-    <div>
+    <div className="ProfilePage">
       <h1>Profile</h1>
       <div className="displayFlex alignItemsCenter justifycontainBtn border-bottom">  
         <div className="displayFlex alignItemsCenter">
