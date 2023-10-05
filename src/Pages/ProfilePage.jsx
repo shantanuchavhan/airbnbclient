@@ -41,17 +41,17 @@ const ProfilePage = ({ChangeUsername,userName }) => {
         </svg>
       </div>
       <Link to="/Become-a-Host/overview">
-      <div className="setUpSextion-Box">
-        <div>
-          <h3>AirBnb Your Place</h3>
-          <p>Its simple to get setup and start earning.</p>
+        <div className="setUpSextion-Box">
+          <div>
+            <h3>AirBnb Your Place</h3>
+            <p>Its simple to get setup and start earning.</p>
+          </div>
+          <div>
+            <img className="setupImage" src={HomSetupimg} alt="" />
+          </div>
         </div>
-        <div>
-          <img className="setupImage" src={HomSetupimg} alt="" />
-        </div>
-      </div>
       </Link>
-      <div className="displayFlex alignItemsCenter justifycontainBtn border-bottom">
+      <div className="PersonalInfoSection-link">
         <div className="displayFlex alignItemsCenter gap8">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
