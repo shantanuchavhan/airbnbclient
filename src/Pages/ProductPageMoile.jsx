@@ -51,7 +51,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter
       </div> 
       <div className="ProductPageMobile_footer">
         <div>
-          <h4>{} night</h4>
+          <h4>{currentProduct.price} night</h4>
           <h4>Reserve Dates</h4>
         </div>
 

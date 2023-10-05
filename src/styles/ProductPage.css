@@ -402,9 +402,7 @@ text-decoration: underline;
 }
 
 
-.ProductPageMobile_photos_Carousel{
-    height: 40%;
-}
+
 .ProductPageMobile__header{
     display: flex;
     align-items: center;
@@ -418,10 +416,6 @@ text-decoration: underline;
 }
 
 
-.ProductPageMobile{
-    height: 100%;
-}
-
 .ProductPageMobile_footer{
     display:flex;
     justify-content: space-between;
@@ -431,5 +425,9 @@ text-decoration: underline;
     bottom: 0;
     padding: 16px;
     z-index: 10;
-    width: 95%;
+    width: 96%;
+}
+
+.ProductPageMobile_footer__Charges{
+    height: 60%;
 }
