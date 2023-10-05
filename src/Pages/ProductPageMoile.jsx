@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import '../styles/ProductPage.css'
+
 import SetIsBooking from '../Redux/Actions/SetIsBooking'
 
 import SimpleImageSlider from "react-simple-image-slider";
