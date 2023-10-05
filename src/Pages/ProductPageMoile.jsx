@@ -14,6 +14,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
       url:photoUrl
     }
   })
+  console.log(images,"images")
   return (
     <div>
       <div className="ProductPageMobile__header">
