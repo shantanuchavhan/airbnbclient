@@ -446,3 +446,8 @@ text-decoration: underline;
 .ProductPageMobile_MiddleSection{
     padding:8px 24px;
 }
+
+.ProductPageMobile--details{
+    padding: 24px 0px;
+    border-bottom:1px solid gray;
+}
