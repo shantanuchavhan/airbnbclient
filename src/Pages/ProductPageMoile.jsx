@@ -4,6 +4,8 @@ import '../styles/ProductPage.css'
 
 import SetIsBooking from '../Redux/Actions/SetIsBooking'
 
+import PinkButton from '../components/PinkButton'
+
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 
@@ -33,15 +35,23 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
           </svg>
         </div>
       </div>
-      <div className="ProductPageMobile">
-      <Carousel>
-      {images.map((image, index) => (
-        <div key={index}>
-          <img src={image.src} alt={image.alt} />
-        </div>
-      ))}
-    </Carousel>
+      <div className="ProductPageMobile_photos">
+        <Carousel>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img src={image.src} alt={image.alt} />
+            </div>
+          ))}
+      </Carousel>
       </div> 
+      <div className="ProductPageMobile_footer">
+        <div>
+          <h4>{} night</h4>
+          <h4>Reserve Dates</h4>
+        </div>
+
+        <PinkButton BtnName="Reserve" width="20%"/>
+      </div>
    </div>
   )
 }
