@@ -81,7 +81,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
       </div>
 
       <div className="ProductPageMobile_MiddleSection">
-        <div className="ProductPageMobile--details">
+        <div className="ProductPageMobile--details ">
           <h1>{currentProduct?.title || ''}</h1>
           <div className="displayFlex alignItemsCenter justifycontainBtn">
             <div className="displayFlex alignItemsCenter">
@@ -100,7 +100,8 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         </div>
 
 
-        <div className="ProductPageMobile--details">
+        <div className="ProductPageMobile--details displayFlex alignItemsCenter justifycontainBtn ">
+            <div>
             <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
             <div className='displayFlex alignItemsCenter'>
                 <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h3>
@@ -111,6 +112,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
                 <div><h1> </h1></div>
                 <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.bathroomCount+1||currentProduct.floorplan.bathroom+1} Bathroom</h3>
                 <div><h1> </h1></div>
+            </div>
             </div>
             <img src={"https://airbnbcloneshantanu.onrender.com/"+ currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
         </div>
