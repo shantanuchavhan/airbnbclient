@@ -9,6 +9,11 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
   console.log(currentProduct,"currentProduct")
+  const images = currentProduct.photos.map((photoUrl)=>{
+    return {
+      url:photoUrl
+    }
+  })
   return (
     <div>
       <div className="ProductPageMobile__header">
@@ -29,7 +34,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
       <SimpleImageSlider
         width="max-content"
         height={250}
-        images={currentProduct.photos}
+        images={images}
         showNavs={true}
       />
       </div> 
