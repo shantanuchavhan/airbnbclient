@@ -413,6 +413,10 @@ text-decoration: underline;
     
 }
 
+.ProductPageMobile_photos .carousel .thumbs{
+    display: none;
+}
+
 
 .ProductPageMobile{
     height: 100%;
