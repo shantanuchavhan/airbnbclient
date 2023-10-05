@@ -462,3 +462,7 @@ position: relative !important;
 font-weight: 600 !important;
 text-decoration: underline !important;
 line-height: 1.25rem}
+
+.ProductPageMobile--details--roomDescribe--check{
+    font-weight: 200;
+}

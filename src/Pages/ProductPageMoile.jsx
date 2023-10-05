@@ -85,7 +85,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <h1>{currentProduct?.title || ''}</h1>
           <div className="">
             <div className="">
-              <h4 className="Rating ReservationBox__section1__averageRating">
+              <h4 className="ProductPageMobile--details--links"  >
                 {currentProduct && currentProduct.averageRating !== undefined
                   ? currentProduct.averageRating.toFixed(1)
                   : 0}
@@ -94,10 +94,10 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
                   </svg>
               </h4>
               <div>
-                <h5>Superhost</h5>
+                <h5 className="ProductPageMobile--details--links" >Superhost</h5>
               </div>
             </div>
-            <h2>{currentProduct.location}</h2>
+            <h2 className="ProductPageMobile--details--links" >{currentProduct.location}</h2>
           </div>
         </div>
 
@@ -105,13 +105,13 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         <div className="ProductPageMobile--details">
             <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
             <div className='displayFlex alignItemsCenter'>
-                <h4>{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h4>
+                <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h3>
                 <div><h1> </h1></div> 
-                <h4>{currentProduct.floorplan.bedCount||currentProduct.floorplan.bed} Bedroom</h4>
+                <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.bedCount||currentProduct.floorplan.bed} Bedroom</h3>
                 <div><h1> </h1></div>
-                <h4>{currentProduct.floorplan.bedCount+1||currentProduct.floorplan.bed+1} Bathroom</h4>
+                <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.bedCount+1||currentProduct.floorplan.bed+1} Bathroom</h3>
                 <div><h1> </h1></div>
-                <h4>{currentProduct.floorplan.bathroomCount+1||currentProduct.floorplan.bathroom+1} Bathroom</h4>
+                <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.bathroomCount+1||currentProduct.floorplan.bathroom+1} Bathroom</h3>
                 <div><h1> </h1></div>
             </div>
             <img src={"https://airbnbcloneshantanu.onrender.com/"+ currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
