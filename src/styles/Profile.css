@@ -1,9 +1,10 @@
 .ProfilePage{
     padding:0px 24px ;
+    padding-bottom: 36px;
 }
 
 .ProfilePage-Section{
-    padding:32px 0px;
+    padding:24px 0px;
     border-bottom: 0.6px solid gray;
 }
 
