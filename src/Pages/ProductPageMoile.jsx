@@ -4,16 +4,18 @@ import '../styles/ProductPage.css'
 
 import SetIsBooking from '../Redux/Actions/SetIsBooking'
 
-import SimpleImageSlider from "react-simple-image-slider";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+
 
 
 const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
   console.log(currentProduct,"currentProduct")
-  const images = currentProduct.photos.map((photoUrl)=>{
-    return {
-      url:photoUrl
-    }
-  })
+  const images = currentProduct.photos.map((photoUrl) => ({
+    src: photoUrl, // Use the 'photoUrl' variable as the source URL
+    alt: "Image Alt Text", // Provide an alt text for accessibility
+  }));
+  
   console.log(images,"images")
   return (
     <div>
@@ -32,12 +34,13 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
         </div>
       </div>
       <div className="ProductPageMobile">
-      <SimpleImageSlider
-        width="max-content"
-        height={250}
-        images={images}
-        showNavs={true}
-      />
+      <Carousel>
+      {images.map((image, index) => (
+        <div key={index}>
+          <img src={image.src} alt={image.alt} />
+        </div>
+      ))}
+    </Carousel>
       </div> 
    </div>
   )
