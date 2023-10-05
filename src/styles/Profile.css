@@ -2,6 +2,11 @@
     padding:0px 24px ;
 }
 
+.ProfilePage-Section{
+    padding:32px 0px;
+    border-bottom: 0.6px solid gray;
+}
+
 .profileImage{
     height: 60px;
     width: 60px;
@@ -37,7 +42,15 @@
 
 
 
-.ProfilePage-Section{
-    padding:32px 0px;
-    border-bottom: 0.6px solid gray;
+
+
+.ProfilePage-Section .HostingSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
 }
+
+.Hosting-link{
+    padding: 16px 0;
+} 
