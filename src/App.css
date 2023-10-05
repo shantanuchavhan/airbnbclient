@@ -182,6 +182,9 @@ svg{
 
 /* Small screens (up to 550px) */
 @media screen and (max-width: 550px) {
+  p{
+    font-size: 14px;
+  }
   .roomImages {
     display:flex;
     flex-direction: column;
