@@ -44,7 +44,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter
         <Carousel className='ProductPageMobile_photos_Carousel'>
           {images.map((image, index) => (
             <div key={index}>
-              <img src={image.src} alt={image.alt} />
+              <img style={{height:"400px"}} src={image.src} alt={image.alt} />
             </div>
           ))}
       </Carousel>
