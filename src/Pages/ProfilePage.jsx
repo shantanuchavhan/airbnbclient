@@ -30,17 +30,19 @@ const ProfilePage = ({ChangeUsername,userName }) => {
       
       <h1>Profile</h1>
       
-      <div className="ProfilePage-Section sectdisplayFlex alignItemsCenter justifycontainBtn border-bottom">  
-          <div className="displayFlex alignItemsCenter">
-          <img className="profileImage" src={HomSetupimg} alt="" />
-          <div>
-            <h3>{userName}</h3>
-            <h4 className="gray">show profile</h4>
+      <div className="ProfilePage-Section ">  
+          <div className="displayFlex alignItemsCenter justifycontainBtn">
+            <div className="displayFlex alignItemsCenter">
+            <img className="profileImage" src={HomSetupimg} alt="" />
+            <div>
+              <h3>{userName}</h3>
+              <h4 className="gray">show profile</h4>
+            </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
           </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
       </div>
 
       <div className="ProfilePage-Section">

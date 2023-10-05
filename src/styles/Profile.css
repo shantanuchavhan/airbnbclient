@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    box-shadow:-1px 6px 6px 4px rgb(87, 87, 87);
+    box-shadow:-1px 6px 6px 4px rgb(199, 198, 198);
 }
 
 .setupImage{
@@ -34,7 +34,9 @@
 }
 
 
+
+
 .ProfilePage-Section{
-    padding:0px 24px;
+    padding:32px 0px;
     border-bottom: 0.6px solid gray;
 }
