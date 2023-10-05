@@ -27,47 +27,55 @@ const ProfilePage = ({ChangeUsername,userName }) => {
 }
   return (
     <div className="ProfilePage">
+      
       <h1>Profile</h1>
-      <div className="displayFlex alignItemsCenter justifycontainBtn border-bottom">  
-        <div className="displayFlex alignItemsCenter">
-        <img className="profileImage" src={HomSetupimg} alt="" />
-        <div>
-          <h3>{userName}</h3>
-          <h4 className="gray">show profile</h4>
-        </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-        </svg>
-      </div>
-      <Link to="/Become-a-Host/overview">
-        <div className="setUpSextion-Box">
+      
+      <div className="ProfilePage-Section sectdisplayFlex alignItemsCenter justifycontainBtn border-bottom">  
+          <div className="displayFlex alignItemsCenter">
+          <img className="profileImage" src={HomSetupimg} alt="" />
           <div>
-            <h3>AirBnb Your Place</h3>
-            <p>Its simple to get setup and start earning.</p>
+            <h3>{userName}</h3>
+            <h4 className="gray">show profile</h4>
           </div>
-          <div>
-            <img className="setupImage" src={HomSetupimg} alt="" />
           </div>
-        </div>
-      </Link>
-      <div className="PersonalInfoSection-link">
-        <div className="displayFlex alignItemsCenter gap8">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        </div>
-        <h3>Personal Info</h3>
-        </div>
-       
-        <div>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
-        </div>
       </div>
-      <div>
+
+      <div className="ProfilePage-Section">
+          <Link to="/Become-a-Host/overview">
+            <div className="setUpSextion-Box">
+            <div>
+              <h3>AirBnb Your Place</h3>
+              <p>Its simple to get setup and start earning.</p>
+            </div>
+            <div>
+              <img className="setupImage" src={HomSetupimg} alt="" />
+            </div>
+          </div>
+        </Link>
+        <div className="PersonalInfoSection-link">
+          <div className="displayFlex alignItemsCenter gap8">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3>Personal Info</h3>
+          </div>
+        
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </div>
+      </div>
+
+
+      </div>
+      
+      <div className="ProfilePage-Section">
         <h2>Hosting</h2>
         <div className="displayFlex alignItemsCenter justifycontainBtn border-bottom" >
         <div className="displayFlex alignItemsCenter gap16">
