@@ -103,7 +103,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
 
         <div className="ProductPageMobile--details">
-            <h2>Entire Place Hosted By {currentProduct.ownerName}</h2>
+            <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
             <div className='displayFlex alignItemsCenter'>
                 <h4>{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h4>
                 <div><h1> </h1></div> 

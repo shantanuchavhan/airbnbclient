@@ -451,3 +451,14 @@ text-decoration: underline;
     padding: 24px 0px;
     border-bottom:1px solid gray;
 }
+
+
+.ProductPageMobile--details--links{
+-webkit-box-orient: vertical !important;
+color: rgb(34, 34, 34) !important;
+font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+font-size: 0.875rem !important;
+position: relative !important;
+font-weight: 600 !important;
+text-decoration: underline !important;
+line-height: 1.25rem}
