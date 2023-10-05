@@ -5,6 +5,7 @@ import SearchSectionMoile from './SearchSectionMoile'
 import { connect } from 'react-redux';
 
 const HeaderMobile = ({ isFooterHeader}) => {
+    console.log(isFooterHeader)
     const [searchSection,setSearchSection]= useState(false)
     function SwitchSearchSection(params) {
         
