@@ -6,6 +6,7 @@ import '../styles/ProductPage.css';
 import SetIsBooking from '../Redux/Actions/SetIsBooking';
 
 import PinkButton from '../components/PinkButton';
+import Button from '../components/Button';
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
@@ -131,17 +132,25 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <span href="">Show more left arrow</span >
       </div>
 
-      <div className="">
-                <h2>What this place offer</h2>
-                <div className="">
-                    {currentProduct.amenities.map((amenity)=>(
-                        <div>
-                            <h4>{amenity}</h4>
-                        </div>
-                    )
-            )}    
-        </div>   
-      </div> 
+      <div className="amenities-section">
+        <h2>What this place offers</h2>
+        <div className="amenities-list">
+          {showAllAmenities
+            ? currentProduct.amenities.map((amenity, index) => (
+                <div key={index}>
+                  <h4>{amenity}</h4>
+                </div>
+              ))
+            : currentProduct.amenities.slice(0, 5).map((amenity, index) => (
+                <div key={index}>
+                  <h4>{amenity}</h4>
+                </div>
+              ))}
+        </div>
+        {!showAllAmenities && currentProduct.amenities.length > 5 && (
+          <PinkButton BtnName={`Show all ${currentProduct.amenities.length - 5} amenities`} onClickAction={toggleAmenities} />
+        )}
+      </div>
       </div>
 
                
