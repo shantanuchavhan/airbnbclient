@@ -80,7 +80,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter
 
       <div className="ProductPageMobile_footer">
         <div className="ProductPageMobile_footer__Charges">
-          <h3><h2>{currentProduct.price}</h2> night</h3>
+          <h3 className="displayFlex gap8"><h2>{currentProduct.price}</h2> night</h3>
           <h3 className="h4_marginTopNegative">Reserve Dates</h3>
         </div>
 
