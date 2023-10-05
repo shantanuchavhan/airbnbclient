@@ -448,7 +448,7 @@ text-decoration: underline;
 }
 
 .ProductPageMobile--details{
-    padding: 24px 0px;
+    padding: 32px 0px;
     border-bottom:1px solid gray;
 }
 
@@ -467,7 +467,7 @@ line-height: 1.25rem}
     font-weight: 200;
 }
 
-.ProductPageMobile--details--roomDescribe{
+.ProductPageMobile--details--featuresDescribe{
     color: rgb(113, 113, 113) !important;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     font-weight: 400 !important;
