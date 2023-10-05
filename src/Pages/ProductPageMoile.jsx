@@ -50,7 +50,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
           <h4>Reserve Dates</h4>
         </div>
 
-        <PinkButton BtnName="Reserve" width="20%"/>
+        <PinkButton BtnName="Reserve" width="30%"/>
       </div>
    </div>
   )

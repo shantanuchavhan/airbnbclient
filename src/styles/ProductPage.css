@@ -409,3 +409,14 @@ text-decoration: underline;
     justify-content: space-between;
     height: 32px;
 }
+
+.ProductPageMobile_footer{
+    display:flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    padding: 16px;
+    z-index: 10;
+}
