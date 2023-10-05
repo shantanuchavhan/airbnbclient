@@ -125,9 +125,8 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
               </div>
           </div>      
         </div>
-      </div>
 
-      <div className="">
+        <div className="">
           <p>{currentProduct.description}</p>
           <span href="">Show more left arrow</span >
       </div>
@@ -142,7 +141,10 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
                     )
             )}    
         </div>   
-      </div>          
+      </div> 
+      </div>
+
+               
 
       <div className="ProductPageMobile_footer">
         <div className="ProductPageMobile_footer__Charges">
