@@ -404,7 +404,7 @@ text-decoration: underline;
     display: flex;
     align-items: center;
     height: 80px;
-    padding: 16px;
+    padding:0px 16px;
     justify-content: space-between;
     margin-top: -120px;
 }
@@ -436,4 +436,9 @@ text-decoration: underline;
 
 .ProductPageMobile_footer__Charges{
     height: 60%;
+}
+
+.ProductPageMobile svg{
+    height: 20px;
+    width: 20px;
 }
