@@ -454,6 +454,13 @@ text-decoration: underline;
     border-bottom:1px solid gray;
 }
 
+.ProductPageMobile--details .HosterFeatures{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
 
 .ProductPageMobile--details--links{
 -webkit-box-orient: vertical !important;
