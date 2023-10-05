@@ -442,3 +442,7 @@ text-decoration: underline;
     height: 20px;
     width: 20px;
 }
+
+.ProductPageMobile_MiddleSection{
+    padding:8px 24px;
+}
