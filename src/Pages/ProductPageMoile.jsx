@@ -131,9 +131,9 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <span href="">Show more left arrow</span >
       </div>
 
-      <div className="descroptions description-5">
+      <div className="">
                 <h2>What this place offer</h2>
-                <div className="FeatureList">
+                <div className="">
                     {currentProduct.amenities.map((amenity)=>(
                         <div>
                             <h4>{amenity}</h4>
