@@ -9,16 +9,20 @@ import '../App.css'
 import HeaderMobile from './HeaderMobile';
 
 
-const Layout = ({children,is}) => { 
+const Layout = ({children,isFooterHeader}) => { 
 
   return (
     <div className='Layout'>
       <div className="largerHeader">
         <Header></Header>
       </div>
-      <div className="smallHeader">
+      {
+        isFooterHeader?(
+          <div className="smallHeader">
       <HeaderMobile></HeaderMobile>
       </div>
+        ):null
+      }
       
       
       <div className="MainContent">
@@ -28,9 +32,14 @@ const Layout = ({children,is}) => {
       <div className="largeFooter">
         <Footer />
       </div>
-      <div className="smallFooter">
+      {
+        isFooterHeader?
+        (
+          <div className="smallFooter">
         <FooterMobile/>
       </div>
+        ):null
+      }
       
     </div>
   )
