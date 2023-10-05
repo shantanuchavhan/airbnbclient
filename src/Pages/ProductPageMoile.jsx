@@ -8,10 +8,11 @@ import PinkButton from '../components/PinkButton'
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter'
 
 
-
-const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
+const ProductPageMobile = ({currentProduct,userName,SetIsBooking,SetHeaderFooter}) => {
+  SetHeaderFooter(false)
   console.log(currentProduct,"currentProduct")
   const images = currentProduct.photos.map((photoUrl) => ({
     src: photoUrl, // Use the 'photoUrl' variable as the source URL
@@ -36,7 +37,7 @@ const ProductPageMobile = ({currentProduct,userName,SetIsBooking}) => {
         </div>
       </div>
       <div className="ProductPageMobile_photos">
-        <Carousel>
+        <Carousel className='ProductPageMobile_photos_Carousel'>
           {images.map((image, index) => (
             <div key={index}>
               <img src={image.src} alt={image.alt} />
@@ -66,7 +67,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  SetIsBooking
+  SetIsBooking,
+  SetHeaderFooter
+
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductPageMobile); 

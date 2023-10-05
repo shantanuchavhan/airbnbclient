@@ -13,7 +13,7 @@ const HeaderMobile = ({ isFooterHeader}) => {
     }
   return (
     
-        !isFooterHeader ?
+        isFooterHeader ?
         (<div  className="HeaderMobile">
         <div onClick={SwitchSearchSection} className="SearchSectionMobile flexA">
             <div className="flexA">

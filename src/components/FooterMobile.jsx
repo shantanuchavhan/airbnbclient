@@ -65,7 +65,7 @@ const FooterMobile = ({ userName, isFooterHeader }) => {
   ];
 
   return (
-    !isFooterHeader ? (
+    isFooterHeader ? (
       <div className="FooterMobile">
     {userName.userName !== "" ? (
       loginSections.map((value) => (

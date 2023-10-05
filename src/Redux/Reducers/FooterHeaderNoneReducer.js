@@ -1,12 +1,12 @@
 // src/someReducer.js
 const initialState = {
-    isFooterHeader: false,
+    isFooterHeader: true,
   };
   
   const FooterHeaderNoneReducer = (state = initialState, action) => {
     switch (action.type) {
       
-      case 'TOGGLE':
+      case 'TOGGLEHEADERFOOTER':
         return {
           ...state,
           isFooterHeader: action.payload, // Toggle the value
