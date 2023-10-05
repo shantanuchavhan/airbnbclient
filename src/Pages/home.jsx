@@ -15,12 +15,14 @@ const Home = ({userName,rooms,setRooms,setAllWishList,allWishList,SetHeaderFoote
   const[isError,setIsError ] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    SetHeaderFooter(true)
     setTimeout(() => {
-
       setIsLoading(false);
     }, 160);
   }, []);
+
+  useEffect(()=>{
+    SetHeaderFooter(true)
+  },[SetHeaderFooter])
   
   useEffect(() => {
     fetch('https://airbnbcloneshantanu.onrender.com/filter', {
