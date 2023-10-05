@@ -177,9 +177,9 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
                 </div>
               ))}
         </div>
-        {!showAllAmenities && currentProduct.amenities.length > 5 && (
+        {!showAllAmenities && currentProduct.amenities.length > 5 ? (
           <Button BtnName={`Show all ${currentProduct.amenities.length - 5} amenities`} onClickAction={toggleAmenities}  />
-        )}
+        ):(<Button BtnName={`Show less amenities`} onClickAction={toggleAmenities}  />)}
       </div>
       <div>
         <RatingReview listingId={currentProduct._id} listingOwner={currentProduct.ownerName} bookedUsers={currentProduct.bookedUsers}/>
