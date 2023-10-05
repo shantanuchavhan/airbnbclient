@@ -5,11 +5,13 @@
 }
 
 .setUpSextion-Box{
-    margin:24px;
-    border: 1px solid black;
+    border: 1px solid #000;
+    margin: 24px;
+    padding: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
 }
 
 .setupImage{
