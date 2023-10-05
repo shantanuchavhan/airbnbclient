@@ -402,7 +402,9 @@ text-decoration: underline;
 }
 
 
-
+.ProductPageMobile_photos_Carousel{
+    height: 40%;
+}
 .ProductPageMobile__header{
     display: flex;
     align-items: 'center';
