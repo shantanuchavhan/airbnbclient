@@ -466,3 +466,11 @@ line-height: 1.25rem}
 .ProductPageMobile--details--roomDescribe--check{
     font-weight: 200;
 }
+
+.ProductPageMobile--details--roomDescribe{
+    color: rgb(113, 113, 113) !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+}

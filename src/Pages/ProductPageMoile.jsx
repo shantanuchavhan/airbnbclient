@@ -83,7 +83,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
       <div className="ProductPageMobile_MiddleSection">
         <div className="ProductPageMobile--details">
           <h1>{currentProduct?.title || ''}</h1>
-          <div className="">
+          <div className="displayFlex alignItemsCenter">
             <div className="">
               <h4 className="ProductPageMobile--details--links"  >
                 {currentProduct && currentProduct.averageRating !== undefined
@@ -125,7 +125,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
               <div>
                 <h3>Self check-in</h3>
-                <h4>You can check in with the doorperson</h4>
+                <h4 className='ProductPageMobile--details--featuresDescribe'>You can check in with the doorperson</h4>
               </div>
           </div>
           <div className="displayFlex alignItemsCenter gap16">
@@ -135,7 +135,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
               </svg>
               <div>
                 <h3>Great check-in experiance</h3>
-                <h4>92% of recent guest in witrh the check in process a 5-star Rating</h4>
+                <h4 className='ProductPageMobile--details--featuresDescribe'>92% of recent guest in witrh the check in process a 5-star Rating</h4>
               </div>
           </div>
           <div className=" displayFlex alignItemsCenter gap16">
