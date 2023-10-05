@@ -211,6 +211,9 @@ svg{
 
 /* Medium screens (551px to 743px) */
 @media screen and (min-width: 551px) and (max-width: 743px) {
+  p{
+    font-size: 14px;
+  }
   .roomImages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
