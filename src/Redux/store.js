@@ -13,6 +13,7 @@ import AllRoomsDetailsReducer from './Reducers/AllRoomsDetailsReducer';
 import isBookingReducer from './Reducers/isBookingReducer';
 import AllWishListReducer from './Reducers/AllWishListReducer';
 import UserProfileReduxer from './Reducers/UserProfileReduxer';
+import FooterHeaderNoneReducer from './Reducers/FooterHeaderNoneReducer';
 
 
 const rootReducer = combineReducers({
@@ -20,16 +21,13 @@ const rootReducer = combineReducers({
     CurrentProductReducer:CurrentProductReducer,
     currentUserListingsReducer:currentUserListingsReducer,
     UserProfileReduxer:UserProfileReduxer,
-    // SearchSectionToggle:SearchSectionToggleReducer,
     userName:UserNameReducer,
     ListingReducer:ListingReducer,
     ListSetupReducer:ListSetupReducer,
     AllRoomsDetailsReducer:AllRoomsDetailsReducer,
     isBookingReducer:isBookingReducer,
-    AllWishListReducer:AllWishListReducer
-
-    
-    // Add other reducers if needed
+    AllWishListReducer:AllWishListReducer,
+    FooterHeaderNoneReducer:FooterHeaderNoneReducer    
   });
 
 
