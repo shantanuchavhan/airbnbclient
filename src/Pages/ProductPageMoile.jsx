@@ -81,14 +81,14 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
       <div>
           <h2>Entire Place Hosted By {currentProduct.ownerName}</h2>
-          <div className='Features'>
-              <h5>{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h5>
+          <div className='displayFlex alignItemsCenter'>
+              <h4>{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h4>
               <div><h1> </h1></div> 
-              <h5>{currentProduct.floorplan.bedCount||currentProduct.floorplan.bed} Bedroom</h5>
+              <h4>{currentProduct.floorplan.bedCount||currentProduct.floorplan.bed} Bedroom</h4>
               <div><h1> </h1></div>
-              <h5>{currentProduct.floorplan.bedCount+1||currentProduct.floorplan.bed+1} Bathroom</h5>
+              <h4>{currentProduct.floorplan.bedCount+1||currentProduct.floorplan.bed+1} Bathroom</h4>
               <div><h1> </h1></div>
-              <h5>{currentProduct.floorplan.bathroomCount+1||currentProduct.floorplan.bathroom+1} Bathroom</h5>
+              <h4>{currentProduct.floorplan.bathroomCount+1||currentProduct.floorplan.bathroom+1} Bathroom</h4>
               <div><h1> </h1></div>
           </div>
           
