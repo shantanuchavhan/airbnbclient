@@ -484,7 +484,12 @@ line-height: 1.25rem}
     line-height: 1.25rem !important;
 }
 
-
+.amenities-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+}
 .ammenity-name{
     color: #222222 !important;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
@@ -495,5 +500,5 @@ line-height: 1.25rem}
     --gp-section-compact-padding-condensed: 16px !important;
     --gp-section-standard-padding: 48px !important;
     --gp-section-standard-padding-condensed: 24px !important;
-    padding-bottom: 16px;
+    
 }
