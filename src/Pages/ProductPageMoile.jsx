@@ -14,7 +14,7 @@ import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter';
 
 const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFooter, isFooterHeader }) => {
   const navigate = useNavigate();
-
+  const [showAllAmenities, setShowAllAmenities] = useState(false);
   useEffect(() => {
     SetHeaderFooter(false);
   }, [SetHeaderFooter, isFooterHeader]);
@@ -23,6 +23,10 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
     src: photoUrl,
     alt: 'Image Alt Text',
   }));
+
+  const toggleAmenities = () => {
+    setShowAllAmenities(!showAllAmenities);
+  };
 
   return (
     <div className="ProductPageMobile">
