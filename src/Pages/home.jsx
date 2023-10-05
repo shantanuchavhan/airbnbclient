@@ -8,14 +8,16 @@ import '../styles/CommonTransition.css'
 import '../App.css'
 import Card from '../components/Card'
 import setAllWishList from '../Redux/Actions/setAllWishList'
-
-const Home = ({userName,rooms,setRooms,setAllWishList,allWishList}) => {
+import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter'
+const Home = ({userName,rooms,setRooms,setAllWishList,allWishList,SetHeaderFooter}) => {
   const [active,setActive]=useState("Amazing-View")
   const [isLoadingtext, setIsLoadingtext] = useState(true);
   const[isError,setIsError ] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    SetHeaderFooter(true)
     setTimeout(() => {
+
       setIsLoading(false);
     }, 160);
   }, []);
@@ -106,7 +108,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   setRooms,
-  setAllWishList
+  setAllWishList,
+  SetHeaderFooter
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
