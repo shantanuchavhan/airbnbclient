@@ -43,7 +43,7 @@ const HeaderMobile = ({ isFooterHeader}) => {
 const mapStateToProps = (state) => {
     return {
       userName: state.userName,
-      isFooterHeader: FooterHeaderNoneReducer.isFooterHeader
+      isFooterHeader: state.FooterHeaderNoneReducer.isFooterHeader
     };
   };
   
