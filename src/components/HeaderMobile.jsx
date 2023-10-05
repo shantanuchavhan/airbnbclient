@@ -2,7 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import '../styles/Header.css'
 import SearchSectionMoile from './SearchSectionMoile'
-const HeaderMobile = () => {
+import { connect } from 'react-redux';
+
+const HeaderMobile = ({ isFooterHeader}) => {
     const [searchSection,setSearchSection]= useState(false)
     function SwitchSearchSection(params) {
         
@@ -10,7 +12,9 @@ const HeaderMobile = () => {
         
     }
   return (
-    <div  className="HeaderMobile">
+    
+        !isFooterHeader ?
+        (<div  className="HeaderMobile">
         <div onClick={SwitchSearchSection} className="SearchSectionMobile flexA">
             <div className="flexA">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -30,8 +34,18 @@ const HeaderMobile = () => {
         {
             searchSection?  <SearchSectionMoile SwitchSearchSection={SwitchSearchSection}/> : ""
         }
-    </div>
+    </div>):null
+  
   )
 }
 
-export default HeaderMobile
+
+const mapStateToProps = (state) => {
+    return {
+      userName: state.userName,
+      isFooterHeader: FooterHeaderNoneReducer.isFooterHeader
+    };
+  };
+  
+export default connect(mapStateToProps)(HeaderMobile);
+
