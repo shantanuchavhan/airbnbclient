@@ -83,7 +83,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
       <div className="ProductPageMobile_MiddleSection">
         <div className="ProductPageMobile--details">
           <h1>{currentProduct?.title || ''}</h1>
-          <div className="displayFlex alignItemsCenter">
+          <div className="displayFlex alignItemsCenter justifycontainBtn">
             <div className="displayFlex alignItemsCenter">
               <h4 className="ProductPageMobile--details--links"  >
                 {currentProduct && currentProduct.averageRating !== undefined
@@ -163,7 +163,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
       </div>
 
       <div className="ProductPageMobile--details amenities-section">
-        <h2>What this place offers</h2>
+        <h1>What this place offers</h1>
         <div className="amenities-list">
           {showAllAmenities
             ? currentProduct.amenities.map((amenity, index) => (

@@ -488,7 +488,7 @@ line-height: 1.25rem}
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 16px 0;
+    padding: 32px 0;
 }
 .ammenity-name{
     color: #222222 !important;
