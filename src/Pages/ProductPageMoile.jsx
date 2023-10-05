@@ -100,7 +100,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         </div>
 
 
-        <div className="ProductPageMobile--details  ">
+        <div className="ProductPageMobile--details  displayFlex alignItemsCenter justifycontainBtn">
             <div>
             <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
             <div className='displayFlex alignItemsCenter'>
