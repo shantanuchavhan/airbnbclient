@@ -8,7 +8,7 @@ import SetIsBooking from '../Redux/Actions/SetIsBooking';
 import PinkButton from '../components/PinkButton';
 import Button from '../components/Button';
 
-import { DateRange } from 'react-date-range';
+import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // Add the styles for the date picker
 
 
@@ -24,7 +24,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
   const [dateRange, setDateRange] = useState([
     {
       startDate: new Date(),
-      endDate: null,
+      endDate: new Date(),
       key: 'selection',
     },
   ]);
