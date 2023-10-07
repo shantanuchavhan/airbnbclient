@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { connect } from 'react-redux'
 import AvaibilityCkeckMobile from '../components/BookingComponent/AvaibilityCkeckMobile'
 import Payment from '../components/BookingComponent/Payment'
 const BookingPageMobile = ({currentProduct}) => {
