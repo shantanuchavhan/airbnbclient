@@ -9,8 +9,9 @@ const BookingPageMobile = () => {
     
 
         {
-            payment?<AvaibilityCkeckMobile setPayment={setPayment}/>:
-            <Payment/>
+            payment?
+            <Payment/>:
+            <AvaibilityCkeckMobile setPayment={setPayment}/>
         }
       
     </div>
