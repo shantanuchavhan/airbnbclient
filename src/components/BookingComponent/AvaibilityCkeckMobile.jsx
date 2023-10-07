@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { DatePicker } from 'antd';
-
-const AvaibilityCkeckMobile = () => {
+import { connect } from 'react-redux';
+const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
     const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
 
@@ -12,7 +12,34 @@ const AvaibilityCkeckMobile = () => {
 
   const handleEndDateChange = (date) => {
     setEndDate(date);
+    checkAvailability()
   };
+
+  function checkAvailability() {
+    for (const booking of currentProduct.bookingDates) {
+      const existingStartDate = new Date(booking.startDate);
+      const existingEndDate = new Date(booking.endDate);
+      const proposedStartDate = new Date(startDate);
+      const proposedEndDate = new Date(endDate);
+      console.log(existingStartDate,existingEndDate,proposedStartDate,proposedEndDate,"proposedEndDate","existingStartDate","existingEndDate","proposedStartDate")
+  
+      // Check for overlap
+      if (
+        (proposedStartDate >= existingStartDate && proposedStartDate < existingEndDate) ||
+        (proposedEndDate > existingStartDate && proposedEndDate <= existingEndDate)
+      ) {
+        console.log(false)
+        setPayment(false)
+        // There is an overlap, so the proposed booking is not available
+        return false;
+      }
+    }
+    console.log(true)
+    setPayment(true)
+  
+    // No overlap found, so the proposed booking is available
+    return true;
+  }
     
   return (
     <div>
@@ -36,4 +63,16 @@ const AvaibilityCkeckMobile = () => {
   )
 }
 
-export default AvaibilityCkeckMobile
+
+const mapStateToProps = (state) => ({
+    currentProduct: state.CurrentProductReducer.currentProduct,
+    
+  });
+  
+  const mapDispatchToProps = {
+   
+   
+  };
+  
+export default connect(mapStateToProps, mapDispatchToProps)(AvaibilityCkeckMobile);
+
