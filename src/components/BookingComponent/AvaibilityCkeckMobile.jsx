@@ -79,7 +79,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
         />
       </div>
 
-      <h1>Total Amount: {totalAmount}</h1>
+      <h1>Total Amount: {totalAmount<0?0:totalAmount}</h1>
       {isAvailable === null ?
       (
         <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>

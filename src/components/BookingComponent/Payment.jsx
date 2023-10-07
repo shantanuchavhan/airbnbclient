@@ -9,9 +9,9 @@ const Payment = ({currentProduct}) => {
             </svg>
             <h2>Confirm and pay</h2>
         </div>
-        <div className="" >
-            <img src={currentProduct.photos[0]} alt="" />
-            <div>
+        <div className="Payment_Product"  >
+            <img className="Payment_Product_img" src={currentProduct.photos[0]} alt="" />
+            <div className="Payment_Product_details" >
                 <div>
                     <h3>{currentProduct.privacyType}</h3>
                     <h2>{currentProduct.title}</h2>
@@ -25,7 +25,7 @@ const Payment = ({currentProduct}) => {
                 </h4>
                 <div>
                     <h1>.</h1></div>
-                    <h5>Superhost</h5>  
+                    <h4>Superhost</h4>  
                 </div>
             </div>
             </div>
