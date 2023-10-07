@@ -8,15 +8,38 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
     const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [isAvailable,setIsAvailable]=useState(null)
+  const [totalAmount,setTotalAmount]=useState("")
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
   };
 
+
+
   const handleEndDateChange = (date) => {
     setEndDate(date);
+    if (startDate && endDate) {
+      // Convert the start and end dates to JavaScript Date objects
+      const startDateObj = new Date(startDate);
+      const endDateObj = new Date(endDate);
+  
+      // Calculate the time difference in milliseconds
+      const timeDifference = endDateObj.getTime() - startDateObj.getTime();
+  
+      // Calculate the difference in days
+      const daysDifference = timeDifference / (1000 * 3600 * 24);
+  
+      // Assuming you have the price available in your component state
+      const price = currentProduct.price; // Replace with the actual price
+  
+      // Calculate the total cost
+      
+     setTotalAmount(daysDifference * price)
+      
+    }
     checkAvailability()
   };
+  
 
   function checkAvailability() {
     for (const booking of currentProduct.bookingDates) {
@@ -61,11 +84,11 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
         />
       </div>
 
-      <h1>Total Amount:</h1>
+      <h1>Total Amount: {totalAmount}</h1>
       {isAvailable === null ? (
-                        <PinkButton BtnName="Proceed" onClick={checkAvailability}/>
+                        <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
                         ) : isAvailable === true ? (
-                            <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/> 
+                            <PinkButton BtnName="Proceed" onClick={checkAvailability}/> 
                         ) : (
                             <Button BtnName="not Availabilty"/>
                             
