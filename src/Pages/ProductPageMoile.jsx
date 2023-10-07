@@ -211,11 +211,11 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <h3 className="displayFlex gap8">
             <h2>{currentProduct.price}</h2> night
           </h3>
-          <h3 className="h4_marginTopNegative"><DateRangePicker
-        ranges={dateRange}
-        onChange={handleDateChange}
-        months={2} // Optional: Number of months to display in the calendar
-      /></h3>
+          <DateRangePicker
+            ranges={dateRange}
+            onChange={handleDateChange}
+            months={2} // Optional: Number of months to display in the calendar
+          />
         </div>
 
         <PinkButton BtnName="Reserve" width="30%" />
