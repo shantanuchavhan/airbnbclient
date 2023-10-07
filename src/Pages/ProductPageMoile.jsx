@@ -62,9 +62,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
     setShowFullDescription(!showFullDescription);
   };
 
-  const handleSelect = (ranges) => {
-    setDateRange([ranges.selection]);
-  };  
+  
 
   return (
     <div className="ProductPageMobile">
