@@ -9,7 +9,7 @@ const BookingPageMobile = () => {
     
 
         {
-            payment?<AvaibilityCkeckMobile/>:
+            payment?<AvaibilityCkeckMobile setPayment={setPayment}/>:
             <Payment/>
         }
       
