@@ -39,7 +39,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
               setErrorMessage(data.message);
             });
           } else {
-            throw new Error("Failed to fetch trip data");
+            return response.json()
           }
       })
       .then(data => {
