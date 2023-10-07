@@ -8,7 +8,8 @@ import SetIsBooking from '../Redux/Actions/SetIsBooking';
 import PinkButton from '../components/PinkButton';
 import Button from '../components/Button';
 
-import { DateRangePicker } from 'react-date-range';
+import { DatePicker } from 'antd';
+import 'antd/dist/antd.css';
 import 'react-date-range/dist/styles.css'; // Add the styles for the date picker
 
 
@@ -21,13 +22,16 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
   const [showAllAmenities, setShowAllAmenities] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
 
-  const [dateRange, setDateRange] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: 'selection',
-    },
-  ]);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+
+  const handleStartDateChange = (date) => {
+    setStartDate(date);
+  };
+
+  const handleEndDateChange = (date) => {
+    setEndDate(date);
+  };
 
   
 
@@ -61,7 +65,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
   const handleSelect = (ranges) => {
     setDateRange([ranges.selection]);
-  };
+  };  
 
   return (
     <div className="ProductPageMobile">
@@ -212,10 +216,23 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <h3 className="displayFlex gap8">
             <h2>{currentProduct.price}</h2> night
           </h3>
-          <DateRangePicker
-            ranges={dateRange}
-            onChange={handleSelect}
-          />
+          <div>
+      <h2>Select a Date Range:</h2>
+      <div className="date-input">
+        <label>Start Date:</label>
+        <DatePicker
+          selected={startDate}
+          onChange={handleStartDateChange}
+        />
+      </div>
+      <div className="date-input">
+        <label>End Date:</label>
+        <DatePicker
+          selected={endDate}
+          onChange={handleEndDateChange}
+        />
+      </div>
+    </div>
         </div>
 
         <PinkButton BtnName="Reserve" width="30%" />
