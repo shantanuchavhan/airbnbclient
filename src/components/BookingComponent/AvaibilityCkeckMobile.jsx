@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState } from 'react';
+import PinkButton from '../PinkButton';
 import { DatePicker } from 'antd';
 import { connect } from 'react-redux';
 const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
     const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
+  const [isAvailable,setIsAvailable]=useState(null)
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
@@ -58,7 +60,9 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
           onChange={handleEndDateChange}
         />
       </div>
-      
+
+      <h1>Total Amount:</h1>
+        {isAvailable ? <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/> : <PinkButton BtnName="Proceed" onClick={checkAvailability}/> }    
     </div>
   )
 }
