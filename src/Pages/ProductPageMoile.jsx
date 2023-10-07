@@ -212,11 +212,9 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <h3 className="displayFlex gap8">
             <h2>{currentProduct.price}</h2> night
           </h3>
-          <DateRange
-            editableDateInputs={true}
-            onChange={handleSelect}
-            moveRangeOnFirstSelection={false}
+          <DateRangePicker
             ranges={dateRange}
+            onChange={handleSelect}
           />
         </div>
 
