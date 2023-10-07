@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PinkButton from '../PinkButton'
 const Payment = ({currentProduct, tripData}) => {
   return (
     <div>
@@ -56,7 +56,11 @@ const Payment = ({currentProduct, tripData}) => {
 
         </div> 
         <div>
-            {tripData.currentUser}
+            {tripData.currentUser?(
+                <PinkButton btnname="Login Required" link="/Login" />
+            ):(
+                <div></div>
+            ) }
         </div> 
     </div>
   )
