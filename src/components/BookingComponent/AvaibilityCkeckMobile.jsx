@@ -16,7 +16,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment,tripData,setTripData})
 
   const handleEndDateChange = (date) => {
     setTripData(tripdata=>{return {...tripdata,endDate:date}});
-    if (startDate) {
+    if (tripData.startDate) {
       // Convert the start and end dates to JavaScript Date objects
       const startDateObj = new Date(tripData.startDate);
       const endDateObj = new Date(date);
