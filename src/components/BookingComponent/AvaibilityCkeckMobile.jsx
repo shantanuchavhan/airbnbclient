@@ -18,10 +18,10 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
 
   const handleEndDateChange = (date) => {
     setEndDate(date);
-    if (startDate && endDate) {
+    if (startDate) {
       // Convert the start and end dates to JavaScript Date objects
       const startDateObj = new Date(startDate);
-      const endDateObj = new Date(endDate);
+      const endDateObj = new Date(date);
       // Calculate the time difference in milliseconds
       const timeDifference = endDateObj.getTime() - startDateObj.getTime();
       // Calculate the difference in days
@@ -84,7 +84,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
       (
         <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
         ) : isAvailable === true ? (
-            <PinkButton BtnName="Proceed" onClick={,setPayment(true)}/> 
+            <PinkButton BtnName="Proceed" onClick={setPayment(true)}/> 
         ) : (
             <Button BtnName="not Availabilty"/>
     )}  
