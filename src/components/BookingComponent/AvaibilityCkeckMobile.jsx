@@ -3,6 +3,7 @@ import { useState } from 'react';
 import PinkButton from '../PinkButton';
 import { DatePicker } from 'antd';
 import { connect } from 'react-redux';
+import Button from '../Button';
 const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
     const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -30,8 +31,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
         (proposedStartDate >= existingStartDate && proposedStartDate < existingEndDate) ||
         (proposedEndDate > existingStartDate && proposedEndDate <= existingEndDate)
       ) {
-        console.log(false)
-        
+        setIsAvailable(false)
         // There is an overlap, so the proposed booking is not available
         return false;
       }
@@ -62,7 +62,14 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
       </div>
 
       <h1>Total Amount:</h1>
-        {isAvailable ? <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/> : <PinkButton BtnName="Proceed" onClick={checkAvailability}/> }    
+      {isAvailable === null ? (
+                        <PinkButton BtnName="Proceed" onClick={checkAvailability}/>
+                        ) : isAvailable === true ? (
+                            <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/> 
+                        ) : (
+                            <Button BtnName="not Availabilty"/>
+                            
+                    )}  
     </div>
   )
 }
