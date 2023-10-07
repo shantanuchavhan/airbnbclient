@@ -9,8 +9,7 @@ import PinkButton from '../components/PinkButton';
 import Button from '../components/Button';
 
 import { DatePicker } from 'antd';
-import 'antd/dist/antd.css';
-import 'react-date-range/dist/styles.css'; // Add the styles for the date picker
+
 
 
 import { Carousel } from 'react-responsive-carousel';
