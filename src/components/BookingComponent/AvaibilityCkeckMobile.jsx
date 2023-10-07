@@ -84,7 +84,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
       (
         <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
         ) : isAvailable === true ? (
-            <PinkButton BtnName="Proceed" onClick={setPayment(true)}/> 
+            <PinkButton BtnName="Proceed" onClick={()=>{setPayment(true)}}/> 
         ) : (
             <Button BtnName="not Availabilty"/>
     )}  
