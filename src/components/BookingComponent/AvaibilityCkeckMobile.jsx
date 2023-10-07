@@ -22,20 +22,15 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
       // Convert the start and end dates to JavaScript Date objects
       const startDateObj = new Date(startDate);
       const endDateObj = new Date(endDate);
-  
       // Calculate the time difference in milliseconds
       const timeDifference = endDateObj.getTime() - startDateObj.getTime();
-  
       // Calculate the difference in days
       const daysDifference = timeDifference / (1000 * 3600 * 24);
-  
+      console.log(daysDifference,"daysDifference")
       // Assuming you have the price available in your component state
       const price = currentProduct.price; // Replace with the actual price
-  
       // Calculate the total cost
-      
      setTotalAmount(daysDifference * price)
-      
     }
     checkAvailability()
   };
@@ -85,14 +80,14 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
       </div>
 
       <h1>Total Amount: {totalAmount}</h1>
-      {isAvailable === null ? (
-                        <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
-                        ) : isAvailable === true ? (
-                            <PinkButton BtnName="Proceed" onClick={checkAvailability}/> 
-                        ) : (
-                            <Button BtnName="not Availabilty"/>
-                            
-                    )}  
+      {isAvailable === null ?
+      (
+        <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
+        ) : isAvailable === true ? (
+            <PinkButton BtnName="Proceed" onClick={checkAvailability}/> 
+        ) : (
+            <Button BtnName="not Availabilty"/>
+    )}  
     </div>
   )
 }
