@@ -8,6 +8,9 @@ import SetIsBooking from '../Redux/Actions/SetIsBooking';
 import PinkButton from '../components/PinkButton';
 import Button from '../components/Button';
 
+import { DateRangePicker } from 'react-date-range';
+import { addDays } from 'date-fns';
+
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
 import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter';
@@ -16,6 +19,16 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
   const navigate = useNavigate();
   const [showAllAmenities, setShowAllAmenities] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
+
+  const [dateRange, setDateRange] = useState([
+    {
+      startDate: addDays(new Date(), 2), // Set the default start date to two days in the future
+      endDate: addDays(new Date(), 4),   // Set the default end date to four days in the future
+      key: 'selection',
+    },
+  ]);
+
+  
 
   
   useEffect(() => {
@@ -43,6 +56,10 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
+  };
+
+  const handleDateChange = (ranges) => {
+    setDateRange([ranges.selection]);
   };
 
   return (
@@ -194,7 +211,11 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <h3 className="displayFlex gap8">
             <h2>{currentProduct.price}</h2> night
           </h3>
-          <h3 className="h4_marginTopNegative">Reserve Dates</h3>
+          <h3 className="h4_marginTopNegative"><DateRangePicker
+        ranges={dateRange}
+        onChange={handleDateChange}
+        months={2} // Optional: Number of months to display in the calendar
+      /></h3>
         </div>
 
         <PinkButton BtnName="Reserve" width="30%" />
