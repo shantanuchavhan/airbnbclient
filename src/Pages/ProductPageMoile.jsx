@@ -8,8 +8,9 @@ import SetIsBooking from '../Redux/Actions/SetIsBooking';
 import PinkButton from '../components/PinkButton';
 import Button from '../components/Button';
 
-import { DateRangePicker } from 'react-date-range';
-import { addDays } from 'date-fns';
+import { DateRange } from 'react-date-range';
+import 'react-date-range/dist/styles.css'; // Add the styles for the date picker
+
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
@@ -22,8 +23,8 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
   const [dateRange, setDateRange] = useState([
     {
-      startDate: addDays(new Date(), 2), // Set the default start date to two days in the future
-      endDate: addDays(new Date(), 4),   // Set the default end date to four days in the future
+      startDate: new Date(),
+      endDate: null,
       key: 'selection',
     },
   ]);
@@ -58,7 +59,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
     setShowFullDescription(!showFullDescription);
   };
 
-  const handleDateChange = (ranges) => {
+  const handleSelect = (ranges) => {
     setDateRange([ranges.selection]);
   };
 
@@ -211,10 +212,11 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
           <h3 className="displayFlex gap8">
             <h2>{currentProduct.price}</h2> night
           </h3>
-          <DateRangePicker
+          <DateRange
+            editableDateInputs={true}
+            onChange={handleSelect}
+            moveRangeOnFirstSelection={false}
             ranges={dateRange}
-            onChange={handleDateChange}
-            months={2} // Optional: Number of months to display in the calendar
           />
         </div>
 
