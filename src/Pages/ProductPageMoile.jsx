@@ -214,9 +214,9 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
             <h2>{currentProduct.price}</h2> night
           </h3>
           <div>
-      <h2>Select a Date Range:</h2>
+     
       <div className="date-input">
-        <label>Start Date:</label>
+        
         <DatePicker
           selected={startDate}
           onChange={handleStartDateChange}
