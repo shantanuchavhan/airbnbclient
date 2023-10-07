@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import Header from '../components/BookingComponent/Header';
 import BookingOverviewCard from '../components/BookingComponent/BookingOverviewCard';
 import Footer from '../components/Footer';
-import setCurrentProduct from '../Redux/Actions/setCurrentProduct';
+
 import LoginPage from './LoginPage';
 import '../styles/Booking.css';
 import BookingPageMobile from './BookingPageMobile';
 
-const BookingPage = ({ currentProduct, userName }) => {
+const BookingPage = () => {
   const isMobile = window.innerWidth < 768; // Adjust the threshold as needed
 
   return (
@@ -34,15 +34,5 @@ const BookingPage = ({ currentProduct, userName }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    currentProduct: state.CurrentProductReducer.currentProduct,
-    userName: state.userName.userName,
-  };
-};
 
-const mapDispatchToProps = {
-  setCurrentProduct,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(BookingPage);
+export default BookingPage;

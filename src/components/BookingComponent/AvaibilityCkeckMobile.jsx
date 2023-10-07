@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import PinkButton from '../PinkButton';
 import { DatePicker } from 'antd';
-import { connect } from 'react-redux';
+
 import Button from '../Button';
 const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
     const [startDate, setStartDate] = useState(null);
@@ -93,15 +93,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
 }
 
 
-const mapStateToProps = (state) => ({
-    currentProduct: state.CurrentProductReducer.currentProduct,
-    
-  });
+
   
-  const mapDispatchToProps = {
-   
-   
-  };
-  
-export default connect(mapStateToProps, mapDispatchToProps)(AvaibilityCkeckMobile);
+export default AvaibilityCkeckMobile;
 

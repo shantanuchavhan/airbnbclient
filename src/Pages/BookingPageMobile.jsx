@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import AvaibilityCkeckMobile from '../components/BookingComponent/AvaibilityCkeckMobile'
 import Payment from '../components/BookingComponent/Payment'
-const BookingPageMobile = () => {
+const BookingPageMobile = ({currentProduct}) => {
     const [payment,setPayment]=useState(false)
   return (
     <div>
@@ -10,12 +10,23 @@ const BookingPageMobile = () => {
 
         {
             payment?
-            <Payment/>:
-            <AvaibilityCkeckMobile setPayment={setPayment}/>
+            <Payment currentProduct={currentProduct} />:
+            <AvaibilityCkeckMobile setPayment={setPayment} currentProduct={currentProduct}/>
         }
       
     </div>
   )
 }
 
-export default BookingPageMobile
+const mapStateToProps = (state) => ({
+    currentProduct: state.CurrentProductReducer.currentProduct,
+    
+  });
+  
+  const mapDispatchToProps = {
+   
+   
+  };
+  
+export default connect(mapStateToProps, mapDispatchToProps)(BookingPageMobile);
+
