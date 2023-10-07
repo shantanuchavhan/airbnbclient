@@ -31,13 +31,13 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
         (proposedEndDate > existingStartDate && proposedEndDate <= existingEndDate)
       ) {
         console.log(false)
-        setPayment(false)
+        
         // There is an overlap, so the proposed booking is not available
         return false;
       }
     }
     console.log(true)
-    setPayment(true)
+    setIsAvailable(true)
   
     // No overlap found, so the proposed booking is available
     return true;
