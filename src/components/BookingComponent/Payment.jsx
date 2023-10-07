@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Payment = ({currentProduct}) => {
+const Payment = ({currentProduct, tripData}) => {
   return (
     <div>
         <div>
@@ -9,9 +9,9 @@ const Payment = ({currentProduct}) => {
             </svg>
             <h2>Confirm and pay</h2>
         </div>
-        <div className="Payment_Product"  >
-            <img className="Payment_Product_img" src={currentProduct.photos[0]} alt="" />
-            <div className="Payment_Product_details" >
+        <div className="PaymentMobile_Product"  >
+            <img className="PaymentMobile_Product_img" src={currentProduct.photos[0]} alt="" />
+            <div className="PaymentMobile_Product_details" >
                 <div>
                     <h3>{currentProduct.privacyType}</h3>
                     <h2>{currentProduct.title}</h2>
@@ -29,7 +29,35 @@ const Payment = ({currentProduct}) => {
                 </div>
             </div>
             </div>
-        </div>    
+        </div> 
+        <div>
+            <h2>Your Trip</h2>
+            <div>
+                <div>
+                    <h3>Dates</h3>
+                    <h4>8-13</h4>
+                </div>
+                <span>Edit</span>
+            </div>
+            <div>
+                <div>
+                    <h3>Guests</h3>
+                    <h4>1 guest</h4>
+                </div>
+                <span>Edit</span>
+            </div>      
+        </div> 
+        <div>
+            <h2>Price details</h2>
+            <div>
+                <span>{currentProduct.price} X {tripData.totalDays}</span>
+                <span>{tripData.totalAmount}</span>
+            </div>
+
+        </div> 
+        <div>
+            {tripData.currentUser}
+        </div> 
     </div>
   )
 }

@@ -4,33 +4,32 @@ import PinkButton from '../PinkButton';
 import { DatePicker } from 'antd';
 
 import Button from '../Button';
-const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
-    const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+const AvaibilityCkeckMobile = ({currentProduct,setPayment,tripData,setTripData}) => {
   const [isAvailable,setIsAvailable]=useState(null)
-  const [totalAmount,setTotalAmount]=useState("")
+  
 
   const handleStartDateChange = (date) => {
-    setStartDate(date);
+    setTripData(tripdata=>{return {...tripdata,startDate:date}});
   };
 
 
 
   const handleEndDateChange = (date) => {
-    setEndDate(date);
+    setTripData(tripdata=>{return {...tripdata,endDate:date}});
     if (startDate) {
       // Convert the start and end dates to JavaScript Date objects
-      const startDateObj = new Date(startDate);
+      const startDateObj = new Date(tripData.startDate);
       const endDateObj = new Date(date);
       // Calculate the time difference in milliseconds
       const timeDifference = endDateObj.getTime() - startDateObj.getTime();
       // Calculate the difference in days
       const daysDifference = timeDifference / (1000 * 3600 * 24);
-      console.log(daysDifference,"daysDifference")
+      setTripData(tripdata=>{return {...tripdata,totalDays:daysDifference}});
       // Assuming you have the price available in your component state
       const price = currentProduct.price; // Replace with the actual price
       // Calculate the total cost
-     setTotalAmount(daysDifference * price)
+      setTripData(tripdata=>{return {...tripdata,totalAmount:daysDifference * price}});
+     
     }
     checkAvailability()
   };
@@ -40,8 +39,8 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
     for (const booking of currentProduct.bookingDates) {
       const existingStartDate = new Date(booking.startDate);
       const existingEndDate = new Date(booking.endDate);
-      const proposedStartDate = new Date(startDate);
-      const proposedEndDate = new Date(endDate);
+      const proposedStartDate = new Date(tripData.startDate);
+      const proposedEndDate = new Date(tripData.endDate);
       console.log(existingStartDate,existingEndDate,proposedStartDate,proposedEndDate,"proposedEndDate","existingStartDate","existingEndDate","proposedStartDate")
   
       // Check for overlap
@@ -79,7 +78,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment}) => {
         />
       </div>
 
-      <h1>Total Amount: {totalAmount<0?0:totalAmount}</h1>
+      <h1>Total Amount: {tripData.totalAmount<0?0:tripData.totalAmount}</h1>
       {isAvailable === null ?
       (
         <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
