@@ -68,7 +68,7 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment,tripData,setTripData})
             <DatePicker
               selected={tripData.startDate}
               onChange={handleStartDateChange}
-              dateFormat="dd/MM/yyyy"
+             
             />
         </div>
         <div className="date-input">
