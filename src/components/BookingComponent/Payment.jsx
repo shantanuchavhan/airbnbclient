@@ -6,6 +6,9 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
     const navigate=useNavigate()
     const startDateString = tripData.startDate;
     const startDate = new Date(startDateString);
+    const endDateString = tripData.startDate;
+    const endDate = new Date(endDateString);
+    
     console.log(startDate.getDate(),"startDate")
     
   return (
@@ -44,7 +47,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                     <h3>Dates</h3>
                     {tripData.startDate instanceof Date && tripData.endDate instanceof Date ? (
                         <h4>
-                        {tripData.startDate.getDate()}-{tripData.endDate.getDate()}
+                        {startDate.getDate()}-{endDate.getDate()}
                         </h4>
                         ) : (
                             <p>Invalid date format</p>
