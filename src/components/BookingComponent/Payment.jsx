@@ -1,11 +1,13 @@
 import React from 'react'
 import PinkButton from '../PinkButton'
 import { useNavigate } from 'react-router-dom'
+
 const Payment = ({currentProduct, tripData,setPayment}) => {
     const navigate=useNavigate()
     const startDateString = tripData.startDate;
     const startDate = new Date(startDateString);
     console.log(startDate,"startDate")
+    console.log(typeof startDate);
   return (
     <div>
         <div className="PaymentHeading" >
