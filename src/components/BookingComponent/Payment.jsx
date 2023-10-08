@@ -7,9 +7,9 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
     const startDateString = tripData.startDate;
     const startDate = new Date(startDateString).getDate();
     const endDateString = tripData.startDate;
-    const endDate = new Date(endDateString);
+    const endDate = new Date(endDateString).getDate();
     
-    console.log(startDate,"startDate")
+    console.log(startDate,endDate,"startDate")
     
   return (
     <div>
@@ -45,13 +45,9 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
             <div className="PaymentMobile_TripDetails_attributes">
                 <div>
                     <h3>Dates</h3>
-                    {tripData.startDate instanceof Date && tripData.endDate instanceof Date ? (
-                        <h4>
-                        {startDate.getDate()}-{endDate.getDate()}
-                        </h4>
-                        ) : (
-                            <p>Invalid date format</p>
-                        )}
+                    
+                    <h4>{startDate}-{endDate}</h4>
+                     
                 </div>
                 <span onClick={()=>setPayment(false)} >Edit</span>
             </div>
