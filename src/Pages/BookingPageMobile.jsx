@@ -17,7 +17,7 @@ const BookingPageMobile = ({currentProduct,userName}) => {
     <div>
         {
             payment?
-            <Payment currentProduct={currentProduct} tripData={tripData} setTripData={setTripData} />:
+            <Payment currentProduct={currentProduct} tripData={tripData} setTripData={setTripData} setPayment={setPayment} />:
             <AvaibilityCkeckMobile setPayment={setPayment} currentProduct={currentProduct} tripData={tripData} setTripData={setTripData} />
         }
       

@@ -1,11 +1,13 @@
 import React from 'react'
 import PinkButton from '../PinkButton'
-const Payment = ({currentProduct, tripData}) => {
-    console.log(tripData,"tripData")
+import { useNavigate } from 'react-router-dom'
+const Payment = ({currentProduct, tripData,setPayment}) => {
+    const navigate=useNavigate()
+    
   return (
     <div>
         <div className="PaymentHeading" >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <svg onClick={()=>navigate("/Product")} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
             <h2>Confirm and pay</h2>
@@ -36,16 +38,16 @@ const Payment = ({currentProduct, tripData}) => {
             <div className="PaymentMobile_TripDetails_attributes">
                 <div>
                     <h3>Dates</h3>
-                    <h4>8-13</h4>
+                    <h4>{tripData.startDate.getDate()}-{tripData.endDate.getDate()}</h4>
                 </div>
-                <span>Edit</span>
+                <span onClick={()=>setPayment(false)} >Edit</span>
             </div>
             <div className="PaymentMobile_TripDetails_attributes">
                 <div>
                     <h3>Guests</h3>
                     <h4>1 guest</h4>
                 </div>
-                <span>Edit</span>
+                <span onClick={()=>setPayment(false)}  >Edit</span>
             </div>      
         </div> 
         <div className="PaymentMobile_paymentdetails PaymentMobile_section" >
