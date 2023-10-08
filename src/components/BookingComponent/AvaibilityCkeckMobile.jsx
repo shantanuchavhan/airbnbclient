@@ -24,16 +24,16 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment,tripData,setTripData})
       const timeDifference = endDateObj.getTime() - startDateObj.getTime();
       // Calculate the difference in days
       const daysDifference = timeDifference / (1000 * 3600 * 24);
-      setTripData(tripdata=>{return {...tripdata,totalDays:daysDifference}});
+      setTripData(tripdata=>{return {...tripdata,totalDays:Math.round(daysDifference)}});
       // Assuming you have the price available in your component state
       const price = currentProduct.price; // Replace with the actual price
       // Calculate the total cost
-      setTripData(tripdata=>{return {...tripdata,totalAmount:daysDifference * price}});
+      setTripData(tripdata=>{return {...tripdata,totalAmount:Math.round(daysDifference * price)}});
      
     }
     checkAvailability()
   };
-  
+
 
   function checkAvailability() {
     for (const booking of currentProduct.bookingDates) {
