@@ -5,11 +5,11 @@ import { useNavigate } from 'react-router-dom'
 const Payment = ({currentProduct, tripData,setPayment}) => {
     const navigate=useNavigate()
     const startDateString = tripData.startDate;
-    const startDate = new Date(startDateString);
+    const startDate = new Date(startDateString).getDate();
     const endDateString = tripData.startDate;
     const endDate = new Date(endDateString);
     
-    console.log(startDate.getDate(),"startDate")
+    console.log(startDate,"startDate")
     
   return (
     <div>
