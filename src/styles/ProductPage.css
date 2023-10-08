@@ -468,10 +468,16 @@ text-decoration: underline;
     gap: 8px;
 }
 
+.ProductPageMobile--details_owner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .Ownerimg{
-    height: 80px;
-    width: 80px;
     border-radius: 50%;
+    height: 60px;
+    width: 60px;
 }
 
 .ProductPageMobile--details .HosterFeatures{
