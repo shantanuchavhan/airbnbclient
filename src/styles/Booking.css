@@ -84,6 +84,16 @@
 
 
 
+/* Availability check mobile css */
+.AvaibilityCkeckMobile{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+
+
 
 
 /* PaymentPage-Mobile css start */

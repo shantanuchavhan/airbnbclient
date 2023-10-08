@@ -61,32 +61,33 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment,tripData,setTripData})
   }
     
   return (
-    <div>
+    <div className="AvaibilityCkeckMobile">
         <h1>Step 1/2</h1>
-    <div className="date-input">
-        <label>Start Date:</label>
-        <DatePicker
-          selected={tripData.startDate}
-          onChange={handleStartDateChange}
-        />
-      </div>
-      <div className="date-input">
-        <label>End Date:</label>
-        <DatePicker
-          selected={tripData.endDate}
-          onChange={handleEndDateChange}
-        />
-      </div>
+        <div className="date-input">
+            <label>Start Date:</label>
+            <DatePicker
+              selected={tripData.startDate}
+              onChange={handleStartDateChange}
+            />
+        </div>
+        <div className="date-input">
+          <label>End Date:</label>
+          <DatePicker
+            selected={tripData.endDate}
+            onChange={handleEndDateChange}
+          />
+        </div>
 
-      <h1>Total Amount: {tripData.totalAmount<0?0:tripData.totalAmount}</h1>
-      {isAvailable === null ?
-      (
-        <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
-        ) : isAvailable === true ? (
-            <PinkButton BtnName="Proceed" action={()=>{setPayment(true)}}/> 
-        ) : (
-            <Button BtnName="not Availabilty"/>
-    )}  
+
+          <h1>Total Amount: {tripData.totalAmount<0?0:tripData.totalAmount}</h1>
+          {isAvailable === null ?
+          (
+            <PinkButton BtnName="Check Availabilty" onClick={checkAvailability}/>
+            ) : isAvailable === true ? (
+                <PinkButton BtnName="Proceed" action={()=>{setPayment(true)}}/> 
+            ) : (
+                <Button BtnName="not Availabilty"/>
+        )}  
     </div>
   )
 }
