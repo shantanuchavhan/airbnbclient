@@ -50,7 +50,11 @@ const Payment = ({currentProduct, tripData}) => {
         <div className="PaymentMobile_paymentdetails PaymentMobile_section" >
             <h2>Price details</h2>
             <div>
-                <span>{currentProduct.price} X {tripData.totalDays}</span>
+                <span>{currentProduct.price} Price X {tripData.totalDays} nights </span>
+                <span>{tripData.totalAmount}</span>
+            </div>
+            <div>
+                <h4>Total (INR)</h4>
                 <span>{tripData.totalAmount}</span>
             </div>
 
