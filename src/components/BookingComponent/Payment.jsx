@@ -50,13 +50,13 @@ const Payment = ({currentProduct, tripData}) => {
         </div> 
         <div className="PaymentMobile_paymentdetails PaymentMobile_section" >
             <h2>Price details</h2>
-            <div className="displayFlex justifycontainBtn">
-                <span>{currentProduct.price} Price X {tripData.totalDays} nights </span>
-                <span>{tripData.totalAmount}</span>
+            <div className="displayFlex justifycontainBtn border-bot">
+                <span>{currentProduct.price}Rs Price X {tripData.totalDays} nights </span>
+                <span>{tripData.totalAmount}Rs</span>
             </div>
             <div className="displayFlex justifycontainBtn" >
-                <h4>Total (INR):- </h4>
-                <span>{tripData.totalAmount}</span>
+                <h3>Total (INR):- </h3>
+                <h3>{tripData.totalAmount}</h3>
             </div>
 
         </div> 

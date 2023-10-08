@@ -90,7 +90,8 @@
 
 .PaymentHeading{
     display: flex;
-    gap: 80px;
+    gap: 100px;
+    padding: 24px 16px;
 }
 
 .PaymentMobile_section{
