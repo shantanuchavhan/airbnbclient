@@ -56,7 +56,7 @@ const Payment = ({currentProduct, tripData}) => {
             </div>
             <div className="displayFlex justifycontainBtn" >
                 <h3>Total (INR):- </h3>
-                <h3>{tripData.totalAmount}</h3>
+                <h3>{tripData.totalAmount}Rs</h3>
             </div>
 
         </div> 
