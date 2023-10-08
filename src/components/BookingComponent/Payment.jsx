@@ -73,7 +73,9 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
         </div> 
         
             {tripData.currentUser===""?(
-                <PinkButton BtnName="Login Required" link="/Login" />
+                <div>
+                    <PinkButton BtnName="Login Required" link="/Login" />
+                </div>
             ):(
                 <div>
 
