@@ -203,9 +203,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
       <div className="ProductPageMobile_footer">
         <div className="ProductPageMobile_footer__Charges">
-          <h3 className="displayFlex gap8">
-            <h2>{currentProduct.price}</h2> night
-          </h3>
+          <h2>{currentProduct.price} night</h2> 
         </div>
 
         <PinkButton BtnName="Reserve" width="30%" link="/Booking" />
