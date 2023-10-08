@@ -1,6 +1,7 @@
 import React from 'react'
 import PinkButton from '../PinkButton'
 const Payment = ({currentProduct, tripData}) => {
+    console.log(tripData,"tripData")
   return (
     <div>
         <div className="PaymentHeading" >
