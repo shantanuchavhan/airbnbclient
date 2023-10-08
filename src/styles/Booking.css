@@ -83,3 +83,21 @@
 }
 
 
+
+
+
+/* PaymentPage-Mobile css start */
+
+.PaymentHeading{
+    display: flex;
+    gap: 80px;
+}
+
+.PaymentMobile_Product{
+    display: flex;
+}
+
+.PaymentMobile_Product_img{
+    height: 40px;
+    width: 40px;
+}
