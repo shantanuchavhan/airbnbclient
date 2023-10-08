@@ -52,11 +52,11 @@ const Payment = ({currentProduct, tripData}) => {
             <h2>Price details</h2>
             <div className="displayFlex justifycontainBtn border-bot">
                 <span>{currentProduct.price}Rs Price X {tripData.totalDays} nights </span>
-                <span>{tripData.totalAmount}Rs</span>
+                <span>{tripData.totalAmount}. Rs</span>
             </div>
             <div className="displayFlex justifycontainBtn" >
                 <h3>Total (INR):- </h3>
-                <h3>{tripData.totalAmount}Rs</h3>
+                <h3>{tripData.totalAmount}. Rs</h3>
             </div>
 
         </div> 
