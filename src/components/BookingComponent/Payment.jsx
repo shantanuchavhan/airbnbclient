@@ -6,10 +6,16 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
     const navigate=useNavigate()
     const startDateString = tripData.startDate;
     const startDate = new Date(startDateString).getDate();
-    const endDateString = tripData.startDate;
+    const endDateString = tripData.endDate;
     const endDate = new Date(endDateString).getDate();
+    let monthShortNames = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+
+    let monthName = monthShortNames[endDate.getMonth()]
+      
     
-    console.log(startDate,endDate,"startDate")
     
   return (
     <div>
@@ -46,7 +52,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                 <div>
                     <h3>Dates</h3>
                     
-                    <h4>{startDate}-{endDate}</h4>
+                    <h4>{startDate}-{endDate} {monthName}</h4>
                      
                 </div>
                 <span onClick={()=>setPayment(false)} >Edit</span>
