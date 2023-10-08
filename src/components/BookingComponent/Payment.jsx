@@ -3,7 +3,7 @@ import PinkButton from '../PinkButton'
 import { useNavigate } from 'react-router-dom'
 const Payment = ({currentProduct, tripData,setPayment}) => {
     const navigate=useNavigate()
-    
+    console.log(tripData,"tripData")
   return (
     <div>
         <div className="PaymentHeading" >
