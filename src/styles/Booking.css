@@ -91,9 +91,15 @@
     gap: 16px;
     padding: 24px;
     align-items: center;
-    justify-content: center;
+    
     
 }
+.date-input{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 

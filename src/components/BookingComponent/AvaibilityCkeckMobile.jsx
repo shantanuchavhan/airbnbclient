@@ -64,14 +64,15 @@ const AvaibilityCkeckMobile = ({currentProduct,setPayment,tripData,setTripData})
     <div className="AvaibilityCkeckMobile">
         <h1>Step 1/2</h1>
         <div className="date-input">
-            <label>Start Date:</label>
+            <label>Start Date:{tripData.startDate}</label>
             <DatePicker
               selected={tripData.startDate}
               onChange={handleStartDateChange}
+              dateFormat="dd/MM/yyyy"
             />
         </div>
         <div className="date-input">
-          <label>End Date:</label>
+          <label>End Date:{tripData.endDate}</label>
           <DatePicker
             selected={tripData.endDate}
             onChange={handleEndDateChange}
