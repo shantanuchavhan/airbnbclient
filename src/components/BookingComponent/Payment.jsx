@@ -9,7 +9,7 @@ const Payment = ({currentProduct, tripData}) => {
             </svg>
             <h2>Confirm and pay</h2>
         </div>
-        <div className="PaymentMobile_Product"  >
+        <div className="PaymentMobile_Product PaymentMobile_section"  >
             <img className="PaymentMobile_Product_img" src={currentProduct.photos[0]} alt="" />
             <div className="PaymentMobile_Product_details" >
                 <div>
@@ -30,16 +30,16 @@ const Payment = ({currentProduct, tripData}) => {
             </div>
             </div>
         </div> 
-        <div className="PaymentMobile_TripDetails">
+        <div className="PaymentMobile_TripDetails PaymentMobile_section">
             <h2>Your Trip</h2>
-            <div>
+            <div className="PaymentMobile_TripDetails_attributes">
                 <div>
                     <h3>Dates</h3>
                     <h4>8-13</h4>
                 </div>
                 <span>Edit</span>
             </div>
-            <div>
+            <div className="PaymentMobile_TripDetails_attributes">
                 <div>
                     <h3>Guests</h3>
                     <h4>1 guest</h4>
@@ -47,7 +47,7 @@ const Payment = ({currentProduct, tripData}) => {
                 <span>Edit</span>
             </div>      
         </div> 
-        <div>
+        <div className="PaymentMobile_paymentdetails PaymentMobile_section" >
             <h2>Price details</h2>
             <div>
                 <span>{currentProduct.price} X {tripData.totalDays}</span>

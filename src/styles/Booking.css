@@ -93,6 +93,10 @@
     gap: 80px;
 }
 
+.PaymentMobile_section{
+    border-bottom: 4px solid rgb(184, 183, 183);
+}
+
 .PaymentMobile_Product{
     display: flex;
 }
