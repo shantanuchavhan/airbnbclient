@@ -94,7 +94,7 @@
 }
 
 .PaymentMobile_section{
-    border-bottom: 8px solid rgb(213, 211, 211);
+    border-bottom: 8px solid rgb(231, 229, 229);
     padding: 24px;
 }
 
@@ -103,9 +103,8 @@
 }
 
 .PaymentMobile_Product_img{
-    height: 200px;
-
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 10px;
 }
 
