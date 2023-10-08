@@ -38,7 +38,13 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
             <div className="PaymentMobile_TripDetails_attributes">
                 <div>
                     <h3>Dates</h3>
-                    <h4>{tripData.startDate.getDate()}-{tripData.endDate.getDate()}</h4>
+                    {tripData.startDate instanceof Date && tripData.endDate instanceof Date ? (
+                        <h4>
+                        {tripData.startDate.getDate()}-{tripData.endDate.getDate()}
+                        </h4>
+                        ) : (
+                            <p>Invalid date format</p>
+                        )}
                 </div>
                 <span onClick={()=>setPayment(false)} >Edit</span>
             </div>
