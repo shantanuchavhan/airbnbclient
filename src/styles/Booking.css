@@ -106,6 +106,12 @@
     width: 400px;
 }
 
+.PaymentMobile_Product_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .PaymentMobile_TripDetails{
     display: flex;
     flex-direction: column;
