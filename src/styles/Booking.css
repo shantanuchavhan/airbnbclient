@@ -98,6 +98,19 @@
 }
 
 .PaymentMobile_Product_img{
-    height: 120px;
-    width: 120px;
+    height: 400px;
+    width: 400px;
+}
+
+.PaymentMobile_TripDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.PaymentMobile_TripDetails_attributes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

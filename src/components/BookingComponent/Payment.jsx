@@ -30,7 +30,7 @@ const Payment = ({currentProduct, tripData}) => {
             </div>
             </div>
         </div> 
-        <div>
+        <div className="PaymentMobile_TripDetails">
             <h2>Your Trip</h2>
             <div>
                 <div>
