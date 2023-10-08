@@ -13,7 +13,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ];
 
-    let monthName = monthShortNames[endDate.getMonth()]
+    let monthName = monthShortNames[new Date(endDateString).getMonth()]
       
     
     
