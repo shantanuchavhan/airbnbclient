@@ -400,6 +400,14 @@ text-decoration: underline;
 
 
 
+
+
+
+
+
+/* ProductPage mobile css start */
+
+
 .ProductPageMobile__header{
     display: flex;
     align-items: center;
@@ -413,6 +421,10 @@ text-decoration: underline;
     gap: 24px;
 }
 
+
+.ProductPageMobile_photos{
+    height: 300px;
+}
 .ProductPageMobile_photos .carousel .thumbs{
     display: none;
 }
@@ -444,8 +456,8 @@ text-decoration: underline;
 }
 
 .ProductPageMobile_MiddleSection{
-    padding:0px 32px;
-    padding-bottom: 32px;
+    padding:0px 16px;
+    padding-bottom: 24px;
     margin: -40px 0px;
 }
 
