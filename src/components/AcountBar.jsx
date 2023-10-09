@@ -67,9 +67,6 @@ const AcountBar = ({toggle,setToggle,userName,ChangeUsername}) => {
           </Link>
       )}
       </div>
-
-    
-    
      </div>
  
   )
@@ -77,7 +74,7 @@ const AcountBar = ({toggle,setToggle,userName,ChangeUsername}) => {
 
 const mapStateToProps = (state) => {
   return {
-    userName: state.userName, 
+    userName: state.userName.userName, 
     isGuestToggled: state.isGuestToggled // Access the isToggled state from the Redux store
   };
 };
