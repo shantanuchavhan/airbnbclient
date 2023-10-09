@@ -43,8 +43,8 @@ a {
 
   @media screen and (max-width: 550px) {
     .Image-Detail img{
-      max-width: 550px;
-      min-width: 400px; /* Ensure the image doesn't exceed its original size */
+     
+      width: 400px; /* Ensure the image doesn't exceed its original size */
       height: 400px; 
       background-color: antiquewhite;
       border-radius: 10px;
