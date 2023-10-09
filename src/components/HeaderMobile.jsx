@@ -18,7 +18,7 @@ const HeaderMobile = () => {
                 </svg>
             </div>
             <div>
-                <h3>Anywhere</h3>
+                <h4 className="gray" >Anywhere</h4>
                 <h4 className="lightGray marginTop-10">Any week . Add guests</h4>
             </div>
         </div>
