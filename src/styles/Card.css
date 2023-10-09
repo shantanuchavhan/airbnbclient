@@ -2,7 +2,6 @@
   position: relative;
   z-index: 2;
 }
-
 a {
   text-decoration: none;
 }
@@ -12,13 +11,7 @@ a {
   fill: yellow;  /* Set the color for the filled star */
 }
 
-
-
-
-
-
 .Image-Detail{
-    
     color: rgb(26, 25, 25);
     text-align: start;
     padding: 0 16px;
