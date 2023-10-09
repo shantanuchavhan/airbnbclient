@@ -65,15 +65,19 @@ footer{
   }
 
   .FooterMobile{
-    position: fixed;
+    background-color: #fff;
+    bottom: 0;
     display: flex;
-    background-color: white;
+    justify-content: center;
+    align-items: center;
     gap: 32px;
-    padding: 4px 80px;
-    bottom:0%;
     left: 50%;
-    transform: translate(-50%, 5%);
-    z-index: 5 ;
+    width: 93%;
+    padding: 4px 80px;
+    position: fixed;
+    -webkit-transform: translate(-50%,5%);
+    transform: translate(-50%,5%);
+    z-index: 5;
     
   }
 
@@ -87,3 +91,5 @@ footer{
     height: 30px;
 
   }
+
+  
