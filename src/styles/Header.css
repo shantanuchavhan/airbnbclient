@@ -55,8 +55,6 @@
   .div-3{
     flex: 0.4;
     justify-content: space-between;
-    padding-right: 32px;
-    
   }
 
 
@@ -240,9 +238,7 @@
   
   .div-3{
     flex: 2;
-    justify-content: space-around;
-    padding-right: 16px;
-    
+    justify-content: space-between;
   }
 
   
