@@ -113,7 +113,9 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         <div className="ProductPageMobile--details">
             <div className="ProductPageMobile--details_owner">
               <div>
-              <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
+                <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
+                <img src={currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
+              </div>
               <div className='displayFlex alignItemsCenter'>
                   <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h3>
                   <div><h1> </h1></div> 
@@ -124,8 +126,6 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
                   <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.bathroomCount+1||currentProduct.floorplan.bathroom+1} Bathroom</h3>
                   <div><h1> </h1></div>
               </div>
-              </div>
-              <img src={currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
             </div>
         </div>
 
