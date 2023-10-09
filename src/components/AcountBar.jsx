@@ -41,12 +41,17 @@ const AcountBar = ({toggle,setToggle,userName,ChangeUsername}) => {
       
       {
         userName!==""? (
-          <div>
-            <Link to="/Message" onClick={toggleIt}><div><h4>Inbox</h4></div></Link>
-      <Link to="/Trips" onClick={toggleIt}><div><h4>Trips</h4></div></Link>
-      <Link to="/Profile"onClick={toggleIt} > <div ><h4 >Profile</h4></div></Link>
-
-          </div>
+            <Link to="/Message" onClick={toggleIt}><div><h4>Inbox</h4></div></Link>   
+        ):""
+      }
+      {
+        userName!==""? (
+            <Link to="/Trips" onClick={toggleIt}><div><h4>Trips</h4></div></Link> 
+        ):""
+      }
+      {
+        userName!==""? (
+          <Link to="/Profile"onClick={toggleIt} > <div ><h4 >Profile</h4></div></Link>    
         ):""
       }
       <Link to="/Register"onClick={toggleIt} > <div ><h4 >SignUp</h4></div></Link>
