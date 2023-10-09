@@ -43,8 +43,10 @@ a {
 
   @media screen and (max-width: 550px) {
     .Image-Detail img{
-      height: 360px;
-      width: 360px;
+      
+      width: 100%; /* Set the width of the image to 100% of the container */
+      height: 100%; /* Set the height of the image to 100% of the container */
+      object-fit: cover; /* Apply object-fit: cover to the image */
       border-radius: 16px;
       background-color: antiquewhite;
     }
