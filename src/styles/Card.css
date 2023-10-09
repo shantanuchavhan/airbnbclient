@@ -47,7 +47,6 @@ a {
       width: 100%; /* Set the width of the image to 100% of the container */
       height: 450px; /* Set the height of the image to 100% of the container */
       object-fit: cover; /* Apply object-fit: cover to the image */
-      border-radius: 16px;
       background-color: antiquewhite;
     }
     .wishlistIcon{

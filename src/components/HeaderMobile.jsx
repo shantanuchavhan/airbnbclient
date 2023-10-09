@@ -19,7 +19,7 @@ const HeaderMobile = () => {
             </div>
             <div>
                 <h3>Anywhere</h3>
-                <h3 className="gray marginTop-10">Any week . Add guests</h3>
+                <h4 className="gray marginTop-10">Any week . Add guests</h4>
             </div>
         </div>
         <div className="filterMobile">
