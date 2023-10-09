@@ -43,10 +43,10 @@ a {
 
   @media screen and (max-width: 550px) {
     .Image-Detail img{
-      max-width: 400px; /* Ensure the image doesn't exceed its original size */
-      height: 300px; 
-      background-color: antiquewhite;
+      background-color: #faebd7;
       border-radius: 10px;
+      height: 300px;
+      width: 360px;
     }
     .wishlistIcon{
       position: absolute;
