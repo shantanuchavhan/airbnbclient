@@ -111,8 +111,8 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
 
 
         <div className="ProductPageMobile--details">
-            <div className="ProductPageMobile--details_owner">
-              <div>
+            <div >
+              <div className="ProductPageMobile--details_owner">
                 <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
                 <img src={currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
               </div>
