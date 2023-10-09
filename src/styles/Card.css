@@ -12,9 +12,9 @@ a {
 }
 
 .Image-Detail{
-    color: rgb(26, 25, 25);
-    text-align: start;
-    padding: 0 16px;
+  color: #1a1919;
+  padding: 0 40px;
+  text-align: start;
   }
   
   .Image-Detail img{
@@ -40,7 +40,8 @@ a {
       background-color: #faebd7;
       border-radius: 10px;
       height: 340px;
-      width: 360px;
+      width: 400px;
+      min-width: 200px;
     }
     .wishlistIcon{
       position: absolute;
