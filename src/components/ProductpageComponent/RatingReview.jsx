@@ -131,7 +131,7 @@ function deleteComment(listingId, reviewId) {
             ></textarea>
           </div>
           <div style={{width:"20%"}}>
-          <Button onClickAction={addRatingReview} BtnName={'Add review'} />
+          <Button width="80%" onClickAction={addRatingReview} BtnName={'Add review'} />
           </div>
         </div>
       )}
