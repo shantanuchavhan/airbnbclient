@@ -116,7 +116,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
                 <h1>Entire Place Hosted By {currentProduct.ownerName}</h1>
                 <img src={currentProduct.photos[0]} alt="hghj" className="Ownerimg" /> 
               </div>
-              <div className='displayFlex alignItemsCenter'>
+              <div className='displayFlex alignItemsCenter gap8'>
                   <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.guestCount||currentProduct.floorplan.guest} Guests</h3>
                   <div><h1> </h1></div> 
                   <h3 className="ProductPageMobile--details--roomDescribe--check">{currentProduct.floorplan.bedCount||currentProduct.floorplan.bed} Bedroom</h3>
