@@ -34,15 +34,12 @@
     grid-template-columns: repeat(2,1fr);
     row-gap: 16px;
     column-gap: 16px;
-    
-    
 }
 .image-section__imgShow-gridLayout img{
     width: 320px;
-    height: 210px;
+    height: 218px;
 }
 .image-section__imgShow__coverimg{
-   
     width: 440px;
     height: 460px;
 }
