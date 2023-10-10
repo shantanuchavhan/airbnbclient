@@ -113,7 +113,6 @@
     display:flex;
     gap: 1px;
     overflow: scroll;
-    padding: 0 14px;
     padding-bottom: 24px;
   }
   .active{
