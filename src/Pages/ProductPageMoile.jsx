@@ -4,28 +4,17 @@ import { connect } from 'react-redux';
 import '../styles/ProductPage.css';
 import RatingReview from '../components/ProductpageComponent/RatingReview';
 import SetIsBooking from '../Redux/Actions/SetIsBooking';
-
 import PinkButton from '../components/PinkButton';
 import Button from '../components/Button';
-
-
-
-
-
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
 import SetHeaderFooter from '../Redux/Actions/SetHeaderFooter';
 
-const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFooter, isFooterHeader }) => {
+const ProductPageMobile = ({ currentProduct, SetHeaderFooter, isFooterHeader }) => {
   const navigate = useNavigate();
   const [showAllAmenities, setShowAllAmenities] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
 
-  
-
-  
-
-  
   useEffect(() => {
     SetHeaderFooter(false);
   }, [SetHeaderFooter, isFooterHeader]);
@@ -84,7 +73,7 @@ const ProductPageMobile = ({ currentProduct, userName, SetIsBooking, SetHeaderFo
         <Carousel className="ProductPageMobile_photos_Carousel">
           {images.map((image, index) => (
             <div key={index}>
-              <img style={{ height: '280px' }} src={image.src} alt={image.alt} />
+              <img style={{ height: '360px' }} src={image.src} alt={image.alt} />
             </div>
           ))}
         </Carousel>
