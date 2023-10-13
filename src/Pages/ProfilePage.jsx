@@ -45,7 +45,7 @@ const ProfilePage = ({ChangeUsername,userName }) => {
           </div>
       </div>
 
-      <div className="ProfilePage-Section">
+      <div className="ProfilePage-Section ">
           <Link to="/Become-a-Host/overview">
             <div className="setUpSextion-Box">
             <div>

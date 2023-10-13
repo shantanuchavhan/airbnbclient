@@ -20,7 +20,7 @@ const ProductPageMobile = ({ currentProduct, SetHeaderFooter, isFooterHeader }) 
   }, [SetHeaderFooter, isFooterHeader]);
 
   const images = currentProduct.photos.map((photoUrl) => ({
-    src: photoUrl,
+    src: photoUrl,  
     alt: 'Image Alt Text',
   }));
 

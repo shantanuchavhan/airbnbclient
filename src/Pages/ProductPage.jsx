@@ -101,55 +101,52 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
 
    let updatedStartDate=0
    let updatedEndDate=0
-  console.log(currentProduct,'currentttt')
 
   
 
-  function getTotalReservationAmount(data,datename) {
-    if(datename==="updatedStartDate"){
-        console.log(data,endDate,"datehhjhj")
-        setStartDate(data);
-        if (data && endDate) {
-            
-            const start = new Date(data);
-            const end = new Date(updatedEndDate);
-            const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
-    
-            const totalDays = Math.round(Math.abs((end - start) / oneDay)) + 1;
-            console.log(totalDays,"Total Days")
-            const totalAmount = totalDays * currentProduct.price;
-    
-            setTotalReservationAmount(totalAmount); // Update the state with the calculated total amount
-        } else {
-            setTotalReservationAmount(0); // Set total amount to 0 if dates are not selected
+    function getTotalReservationAmount(data,datename) {
+        if(datename==="updatedStartDate"){
+            console.log(data,endDate,"datehhjhj")
+            setStartDate(data);
+            if (data && endDate) {
+                
+                const start = new Date(data);
+                const end = new Date(updatedEndDate);
+                const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
+        
+                const totalDays = Math.round(Math.abs((end - start) / oneDay)) + 1;
+                console.log(totalDays,"Total Days")
+                const totalAmount = totalDays * currentProduct.price;
+        
+                setTotalReservationAmount(totalAmount); // Update the state with the calculated total amount
+            } else {
+                setTotalReservationAmount(0); // Set total amount to 0 if dates are not selected
+            }
+
         }
+        else{
+            setEndDate(data);
 
-    }
-    else{
-        setEndDate(data);
-
-        if (startDate && data) {
+            if (startDate && data) {
+                
+                const start = new Date(startDate);
+                const end = new Date(data);
+                const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
+        
+                const totalDays = Math.round(Math.abs((end - start) / oneDay)) + 1;
+                console.log(totalDays,"Total Days")
+                const totalAmount = totalDays * currentProduct.price;
+        
+                setTotalReservationAmount(totalAmount); // Update the state with the calculated total amount
+                checkAvailability()
             
-            const start = new Date(startDate);
-            const end = new Date(data);
-            const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
-    
-            const totalDays = Math.round(Math.abs((end - start) / oneDay)) + 1;
-            console.log(totalDays,"Total Days")
-            const totalAmount = totalDays * currentProduct.price;
-    
-            setTotalReservationAmount(totalAmount); // Update the state with the calculated total amount
-            checkAvailability()
-           
-        } else {
-            setTotalReservationAmount(0); // Set total amount to 0 if dates are not selected
-            checkAvailability()
-        }
+            } else {
+                setTotalReservationAmount(0); // Set total amount to 0 if dates are not selected
+                checkAvailability()
+            }
 
-    }
-    console.log(startDate,endDate,"dates")
-    
-}
+        }
+        console.log(startDate,endDate,"dates")}
   
   
 
@@ -231,6 +228,7 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
         // No overlap found, so the proposed booking is available
         return true;
       }
+      
       const handleViewPhotosClick = () => {
        setIsViewPhotos(true);
       };
@@ -387,11 +385,8 @@ const ProductPage = ({currentProduct,userName,SetIsBooking}) => {
                             <h4>{amenity}</h4>
                         </div>
                     )
-
-                    )}
-                    
-                </div>
-               
+                    )}    
+                </div>   
             </div>
             {/* <div className="descroptions descroption-6">
                 <h2>Select Check-in date</h2>

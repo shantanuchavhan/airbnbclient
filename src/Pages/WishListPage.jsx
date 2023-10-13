@@ -62,8 +62,6 @@ const mapStateToProps = (state) => {
   return {
     userName: state.userName.userName, 
     allWishList:state.AllWishListReducer.allWishList
-    
-   
   };
 };
 
