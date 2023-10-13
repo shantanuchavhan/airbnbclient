@@ -96,7 +96,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                             <h3>Edit</h3>
                         </div>
                     </div>
-                    <div>
+                    <div className="PaymentMobile_section">
                         <h3>Required for your trip</h3>
                         <div>
                             <div>
@@ -105,6 +105,29 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                             </div>
                             <Button BtnName="Add"/>
                         </div>
+                    </div>
+                    <div className="PaymentMobile_section" >
+                        <h3>Cancellation policy</h3>
+                        <div>
+                            <div>
+                                <p>Free cancellation for 48 hours. Cancel before 27 Oct for a partial refund.</p>
+                            </div>
+                            <Button BtnName="Add"/>
+                        </div>
+                    </div>
+                    <div className="PaymentMobile_section">
+                        <h3>Ground rules</h3>
+                        <div>
+                            <div>
+                                <p>We ask every guest to remember a few simple things about what makes a great guest.
+                                    Follow the house rules
+                                    Treat your Host’s home like your own</p>
+                            </div>
+                            <Button BtnName="Add"/>
+                        </div>
+                    </div>
+                    <div className="PaymentMobile_section">
+                    <PinkButton BtnName="Confirm and pay"/>
                     </div>
                 </div>
                
