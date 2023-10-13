@@ -130,7 +130,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                     <PinkButton BtnName="Confirm and pay"/>
                     </div>
                 </div>
-               
+                
             ) }
             
         
