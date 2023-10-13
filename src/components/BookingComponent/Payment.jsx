@@ -49,8 +49,9 @@ const Payment = ({currentProduct,userName, tripData,setPayment,setTripData}) => 
                 
                 setTripData(data=>{return {...data,startDate:null}});
                 setTripData(data=>{return {...data,endDate:null}});
-                
-                setTotalGuestCount(0)
+                setTripData(data=>{return {...data,guest:null}});
+
+               
             })
             .catch(error => {
                 alert(error); // Display errors and network issues
