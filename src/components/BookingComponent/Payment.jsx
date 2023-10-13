@@ -92,7 +92,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                                 </svg>
                                 <h4>Credit or debit card</h4>
                             </div>
-                            <a href="http://">Edit</a>
+                            <h5>Edit</h5>
                         </div>
 
                     
