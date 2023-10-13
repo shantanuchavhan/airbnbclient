@@ -98,7 +98,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                     </div>
                     <div className="PaymentMobile_section">
                         <h3>Required for your trip</h3>
-                        <div>
+                        <div className="displayFlex justifycontainBtn">
                             <div>
                                 <h4>Phone number</h4>
                                 <p>Add and confirm your number to get trip updates</p>
@@ -112,19 +112,18 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                             <div>
                                 <p>Free cancellation for 48 hours. Cancel before 27 Oct for a partial refund.</p>
                             </div>
-                            <Button BtnName="Add"/>
+                            
                         </div>
                     </div>
                     <div className="PaymentMobile_section">
                         <h3 >
                             Ground rules</h3>
-                        <div className="displayFlex justifycontainBtn">
+                        <div >
                             <div>
                                 <p>We ask every guest to remember a few simple things about what makes a great guest.
                                     Follow the house rules
                                     Treat your Host’s home like your own</p>
                             </div>
-                            <Button BtnName="Add"/>
                         </div>
                     </div>
                     <div className="PaymentMobile_section">
