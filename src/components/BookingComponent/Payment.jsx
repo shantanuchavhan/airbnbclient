@@ -16,9 +16,7 @@ const Payment = ({currentProduct,userName, tripData,setPayment,setTripData}) => 
 
     let monthName = monthShortNames[new Date(endDateString).getMonth()]
     function Reserve() {
-        if(userName===""){
-            setIsLoginRequired(true)
-        }else{
+      
             const data = {
                 user: userName,
                 owner: currentProduct.ownerName,
@@ -56,7 +54,7 @@ const Payment = ({currentProduct,userName, tripData,setPayment,setTripData}) => 
             .catch(error => {
                 alert(error); // Display errors and network issues
             });
-        }    
+          
     }
     
     
