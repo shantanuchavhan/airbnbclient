@@ -85,7 +85,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
             ):(
                 <div>
                     <div className="PaymentMobile_section" >
-                        <h3>Pay with</h3>
+                        <h2>Pay with</h2>
                         <div className="PaymentMobile_paymentType">
                             <div className="displayFlex gap8">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -97,7 +97,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                         </div>
                     </div>
                     <div className="PaymentMobile_section">
-                        <h3>Required for your trip</h3>
+                        <h2>Required for your trip</h2>
                         <div className="displayFlex justifycontainBtn">
                             <div>
                                 <h4>Phone number</h4>
@@ -107,7 +107,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                         </div>
                     </div>
                     <div className="PaymentMobile_section" >
-                        <h3>Cancellation policy</h3>
+                        <h2>Cancellation policy</h2>
                         <div>
                             <div>
                                 <p>Free cancellation for 48 hours. Cancel before 27 Oct for a partial refund.</p>
