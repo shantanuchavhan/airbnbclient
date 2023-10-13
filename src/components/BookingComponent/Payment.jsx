@@ -1,7 +1,7 @@
 import React from 'react'
 import PinkButton from '../PinkButton'
 import { useNavigate } from 'react-router-dom'
-
+import Button from '../Button'
 const Payment = ({currentProduct, tripData,setPayment}) => {
     const navigate=useNavigate()
     const startDateString = tripData.startDate;
@@ -83,7 +83,8 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                     <PinkButton BtnName="Login Required" link="/Login" />
                 </div>
             ):(
-                <div className="PaymentMobile_section" >
+                <div>
+                    <div className="PaymentMobile_section" >
                         <h3>Pay with</h3>
                         <div className="PaymentMobile_paymentType">
                             <div className="displayFlex gap8">
@@ -94,11 +95,21 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                             </div>
                             <h3>Edit</h3>
                         </div>
-
-                    
-                    
+                    </div>
+                    <div>
+                        <h3>Required for your trip</h3>
+                        <div>
+                            <div>
+                                <h4>Phone number</h4>
+                                <p>Add and confirm your number to get trip updates</p>
+                            </div>
+                            <Button BtnName="Add"/>
+                        </div>
+                    </div>
                 </div>
+               
             ) }
+            
         
     </div>
   )
