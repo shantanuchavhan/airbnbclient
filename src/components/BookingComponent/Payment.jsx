@@ -14,7 +14,46 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
     ];
 
     let monthName = monthShortNames[new Date(endDateString).getMonth()]
-      
+    function Reserve() {
+        if(userName===""){
+            setIsLoginRequired(true)
+        }else{
+            const data = {
+                user: userName,
+                owner: currentProduct.ownerName,
+                listing:currentProduct.title,
+                listingId:currentProduct._id,
+                startDate: tripData.startDate,
+                endDate: tripData.endDate,
+                guestCount: totalGuestCount,
+                ReservationAmount:totalReservationAmount
+            };
+            fetch('https://airbnbcloneshantanu.onrender.com/Reserve', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Handle successful response
+                    return response.json(); // If the server sends a JSON response
+                } else {
+                    throw new Error(response.error);
+                }
+            })
+            .then(data => {
+                alert("Reserve Succesfull"); // Display the success response data
+                setStartDate(null)
+                setEndDate(null)
+                setTotalGuestCount(0)
+            })
+            .catch(error => {
+                alert(error); // Display errors and network issues
+            });
+        }    
+    }
     
     
   return (
@@ -127,7 +166,7 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                         </div>
                     </div>
                     <div className="PaymentMobile_section">
-                    <PinkButton BtnName="Confirm and pay"/>
+                    <PinkButton action={Reserve()} BtnName="Confirm and pay"/>
                     </div>
                 </div>
                 
@@ -138,4 +177,16 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
   )
 }
 
-export default Payment
+const mapStateToProps = (state) => {
+    return {
+      currentProduct: state.CurrentProductReducer.currentProduct,
+      userName:state.userName.userName
+    };
+  };
+  
+  const mapDispatchToProps = {
+
+  };
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Payment); 
+
