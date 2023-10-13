@@ -3,7 +3,8 @@ import PinkButton from '../PinkButton'
 import { useNavigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Button from '../Button'
-const Payment = ({currentProduct,userName, tripData,setPayment,setTripData}) => {
+import SetIsBooking from '../../Redux/Actions/SetIsBooking'
+const Payment = ({currentProduct,userName, tripData,setPayment,setTripData, SetIsBooking}) => {
     const navigate=useNavigate()
     const startDateString = tripData.startDate;
     const startDate = new Date(startDateString).getDate();
@@ -121,7 +122,7 @@ const Payment = ({currentProduct,userName, tripData,setPayment,setTripData}) => 
         
             {tripData.currentUser===""?(
                 <div className="PaymentMobile_section" >
-                    <PinkButton BtnName="Login Required" link="/Login" />
+                    <PinkButton BtnName="Login Required" action={()=>SetIsBooking(true)} link="/Login" />
                 </div>
             ):(
                 <div>
@@ -168,7 +169,7 @@ const Payment = ({currentProduct,userName, tripData,setPayment,setTripData}) => 
                         </div>
                     </div>
                     <div className="PaymentMobile_section">
-                    <PinkButton action={Reserve()} BtnName="Confirm and pay"/>
+                    <PinkButton action={()=>Reserve()} BtnName="Confirm and pay"/>
                     </div>
                 </div>
                 
@@ -187,7 +188,7 @@ const mapStateToProps = (state) => {
   };
   
   const mapDispatchToProps = {
-
+    SetIsBooking
   };
   
   export default connect(mapStateToProps, mapDispatchToProps)(Payment); 
