@@ -63,7 +63,7 @@ const TripsPage = ({ userName, setCurrentProduct }) => {
 
   function deleteit(id) {
     console.log(id, "trip");
-    fetch("https://airbnbcloneshantanu.onrender.com/delete", {
+    fetch("https://airbnbcloneshantanu.onrender.com/Trip/delete", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
