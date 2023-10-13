@@ -116,7 +116,8 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                         </div>
                     </div>
                     <div className="PaymentMobile_section">
-                        <h3 >Ground rules</h3>
+                        <h3 >
+                            Ground rules</h3>
                         <div className="displayFlex justifycontainBtn">
                             <div>
                                 <p>We ask every guest to remember a few simple things about what makes a great guest.
