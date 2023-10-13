@@ -1,8 +1,9 @@
 import React from 'react'
 import PinkButton from '../PinkButton'
 import { useNavigate } from 'react-router-dom'
+import { connect } from 'react-redux'
 import Button from '../Button'
-const Payment = ({currentProduct, tripData,setPayment}) => {
+const Payment = ({currentProduct,userName, tripData,setPayment,setTripData}) => {
     const navigate=useNavigate()
     const startDateString = tripData.startDate;
     const startDate = new Date(startDateString).getDate();
@@ -25,8 +26,8 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
                 listingId:currentProduct._id,
                 startDate: tripData.startDate,
                 endDate: tripData.endDate,
-                guestCount: totalGuestCount,
-                ReservationAmount:totalReservationAmount
+                guestCount: tripData.guest,
+                ReservationAmount:tripData.totalAmount
             };
             fetch('https://airbnbcloneshantanu.onrender.com/Reserve', {
                 method: 'POST',
@@ -45,8 +46,10 @@ const Payment = ({currentProduct, tripData,setPayment}) => {
             })
             .then(data => {
                 alert("Reserve Succesfull"); // Display the success response data
-                setStartDate(null)
-                setEndDate(null)
+                
+                setTripData(data=>{return {...data,startDate:null}});
+                setTripData(data=>{return {...data,endDate:null}});
+                
                 setTotalGuestCount(0)
             })
             .catch(error => {
