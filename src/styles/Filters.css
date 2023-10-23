@@ -159,16 +159,14 @@
 @media screen and (min-width: 744px) and (max-width: 990px) {
   .filters-container{
     overflow: hidden;
-    padding: 16px 48px;
+    padding: 16px 16px;
     padding-top: 32px;
     height: 100px;
     margin-top: -60px;
     position: fixed;
     background-color: white;
     z-index: 5;
-  
-  
-  
+    
   }
   
 }
