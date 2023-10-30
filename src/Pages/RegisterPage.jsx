@@ -22,13 +22,11 @@ const RegisterPage = () => {
   const [email, setEmail] = useState('');
   const [username, setName] = useState('');
   const [password, setPassword] = useState('');
-
+  const [isLoading,setIsLoading]=useState(false)
   async function Register(event) {
-     
-  
-    console.log('registering...');
-
+    setIsLoading(true)
     try {
+
       const response = await fetch('https://airbnbcloneshantanu.onrender.com/register', {
         method: 'POST',
         headers: {
@@ -40,6 +38,8 @@ const RegisterPage = () => {
       if (response.ok) {
         console.log('User registered successfully');
         alert("Registration successful")
+        
+        setIsLoading(false)
         setRedirect(true)
         // Redirect to the login page after successful registration
       
@@ -52,6 +52,8 @@ const RegisterPage = () => {
       // Handle network error or other exceptions
     }
   }
+
+  const BtnName=isLoading? "Signin...":"Sign In"
 
   if (redirect) {
     return <Navigate to={'/Login'} />
