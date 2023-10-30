@@ -49,7 +49,7 @@ const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetIsBooking,isBoo
   }
 
 
-  const BtnName=isLoading? "Loading...":"Loading"
+  const BtnName=isLoading? "Login...":"Login"
   return (
     <div className='Login-container'>
        
