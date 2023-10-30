@@ -81,7 +81,7 @@ const RegisterPage = () => {
           placeholder='Password..'
           onChange={(e) => setPassword(e.target.value)}
         />
-        <PinkButton action={Register} BtnName="Sign Up" />
+        <PinkButton action={Register} BtnName={BtnName} />
        
         <ValidityMessge link="/Login" message="Already Login ? Login now" />
       
