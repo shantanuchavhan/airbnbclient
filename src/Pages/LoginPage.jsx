@@ -12,11 +12,12 @@ const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetIsBooking,isBoo
   
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
+  const [isLoading,setIsLoading]=useState(false)
   const navigate=useNavigate()
   console.log(isBooking,"isBooking")
   async function Login(event){
     console.log(email,"email")
-    
+    setIsLoading(true)
     const response = await fetch('https://airbnbcloneshantanu.onrender.com/login', {
         method: 'POST',
         headers: {
@@ -27,9 +28,11 @@ const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetIsBooking,isBoo
       });
     if(response.ok){
       const responseData=await response.json()
+
       const newUserName=responseData.username
       console.log(userName)
       ChangeUsername(newUserName)
+      setIsLoading(false)
       console.log("userName is change to:" , userName)
       alert("Login succesful successful")
       console.log(isListSetupActive,"isList")
@@ -46,7 +49,7 @@ const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetIsBooking,isBoo
   }
 
 
-
+  const BtnName=isLoading? "Loading...":"Loading"
   return (
     <div className='Login-container'>
        
@@ -54,7 +57,7 @@ const LoginPage = ({userName,ChangeUsername,isListSetupActive,SetIsBooking,isBoo
         <h1>Log In</h1>             
         <input className="Login-container__input" name='Email' onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Email..'/> <br />
         <input className="Login-container__input"  name='Password' onChange={(e)=>setPassword(e.target.value)} type="password" id="" placeholder='Password..'/> <br />
-        <PinkButton BtnName="Login" action={Login}/>
+        <PinkButton BtnName={BtnName} action={Login}/>
         <ValidityMessge link="/Register" message="Not Registered yet ? Signup Now " />
        
         
