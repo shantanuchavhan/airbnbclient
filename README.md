@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-# Getting Started with Create React App
 
-https://64fed3d5860af040388682ca--incandescent-twilight-a7ef13.netlify.app/
+
+Web site Link:-  https://airbnbcloneby-shantanu.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
