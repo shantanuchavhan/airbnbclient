@@ -3,7 +3,18 @@
 
 Web site Link:-  https://airbnbcloneby-shantanu.netlify.app/
 
-website link :- https://fooodeat.netlify.app/
+
+
+**Highlights:**
+- Book accommodations easily
+- Cool filters for unique stays
+- Check availability before booking
+- Manage your trips hassle-free
+- Leave reviews and ratings
+- Hosts can list and manage properties
+
+**Tech Stack:**
+I used React with Redux Toolkit for the front-end, Node.js and Express for the back-end, and MongoDB for data storage.
 
 ![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703324481/Screenshot_2023-12-22_164430_vys198.png)
 ![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703324484/Screenshot_2023-12-22_210301_lzxwko.png)
