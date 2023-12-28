@@ -16,9 +16,9 @@ Web site Link:-  https://airbnbcloneby-shantanu.netlify.app/
 **Tech Stack:**
 I used React with Redux Toolkit for the front-end, Node.js and Express for the back-end, and MongoDB for data storage.
 
-![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703324481/Screenshot_2023-12-22_164430_vys198.png)
-![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703324484/Screenshot_2023-12-22_210301_lzxwko.png)
-![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703342885/qlwaunfznhjfjj4ktxou.png)
+![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703766059/wqjq9mm4rc8nntfdzjjt.png)
+![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703766066/zxhsnecxhfbuqt5nupxl.png)
+![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703766140/mj9iy84yjsfz4jbuhhuy.png)
 ![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703324442/Screenshot_2023-12-22_211513_zk70sr.png)
 ![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703324445/Screenshot_2023-12-22_211539_ksrepu.png)
 ![Alt Text](https://res.cloudinary.com/ddw1upvx3/image/upload/v1703324442/Screenshot_2023-12-22_212022_cyduki.png)
